@@ -1,0 +1,844 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 2: Current-Voltage Characteristics and Resistors &#8212; PHYS11006 - Computing Skills Workshop</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_2_Current_Voltage_Characteristics_and_Resistors';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 3: Resistivity, Conductivity and Superconductivity" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html" />
+    <link rel="prev" title="Lecture 1: Charge, Current, Potential Difference and Resistance" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHYS11006 - Computing Skills Workshop</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">S1 Week 8</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_2_Current_Voltage_Characteristics_and_Resistors.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_2_Current_Voltage_Characteristics_and_Resistors.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 2: Current-Voltage Characteristics and Resistors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-current-relationships">Voltage-Current Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-dependencies">Temperature Dependencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-temperature-coefficient-thermistors">Positive Temperature Coefficient Thermistors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-temperature-coefficient-thermistors">Negative Temperature Coefficient Thermistors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistor-combinations">Resistor Combinations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-series">Resistors in Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-parallel">Resistors in Parallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-series-and-parallel-combined">Resistors in Series and Parallel Combined</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-2-current-voltage-characteristics-and-resistors">
+<h1>Lecture 2: Current-Voltage Characteristics and Resistors<a class="headerlink" href="#lecture-2-current-voltage-characteristics-and-resistors" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to draw current-voltage plots for ohmic conductors.</p></li>
+<li><p>Be able to draw current-voltage plots for some non-ohmic conductors.</p></li>
+<li><p>Be able to recall, derive and use the equations for resistors in series.</p></li>
+<li><p>Be able to recall, derive and use the equations for resistors in parallel.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="voltage-current-relationships">
+<h2>Voltage-Current Relationships<a class="headerlink" href="#voltage-current-relationships" title="Permalink to this heading">#</a></h2>
+<p>In the last lecture we saw that for a circuit/component with a given resistance, as voltage is increased the current flowing through the circuit increases linearly.This is the case for an <strong>Ohmic resistor</strong> i.e. a resistor where Ohm’s law applies (V=IR).</p>
+<p>For many circuits/components an increase in EMF does not result in a linear increase in current as shown in the figure below. These would be characterised as non-ohmic resistors and examples include filament lamps, semiconductor diodes and thermistors.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/04e18d13d9bebb1bb0bb93bf401cffd146218893bcca087f2cc9335bd9fad076.png" src="_images/04e18d13d9bebb1bb0bb93bf401cffd146218893bcca087f2cc9335bd9fad076.png" />
+</div>
+</div>
+<p>Although for a non-Ohmic resistor the current is given by a non-linear function of the voltage, the characteristics of this function (the trend in the measured data) are dependent on what type of non-ohmic device the current is being measured across. For example, compare the difference between the current-voltage relationshops of an incandescent lamp and a semiconductor diode:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/2bd3072779f3590106f1391e9f9e60d85bcbcbe1d000bec4a5eaa70b35a555b0.png" src="_images/2bd3072779f3590106f1391e9f9e60d85bcbcbe1d000bec4a5eaa70b35a555b0.png" />
+</div>
+</div>
+<p>In the case of the filament lamp, regardless of whether or not a positive or negative voltage is applied across the component a current will flow (the direction of the current being dependent on the polarity of the voltage). We observe that as the voltage increases, for a given increase in voltage there a smaller increase in current. The resistance of the device therefore increases at higher voltages.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/10e931af040f047c2c51ceadd8d622e4b1115ea993657b32262bf177c45164d9.png" src="_images/10e931af040f047c2c51ceadd8d622e4b1115ea993657b32262bf177c45164d9.png" />
+</div>
+</div>
+<p>The semiconductor also shows a non-linear relationship between voltage and current above a particular voltage known as the <em>threshold voltage</em>. In the diode for any given increase in voltage, we see an even larger increase in the current. The current-voltage relationship is therefore exponential.</p>
+<p>We also observe that when the voltage is reversed (i.e. negative) no current flows. This is a useful characteristic to have as diodes can be used in circuits to only allow current to move in one direction. In reality there would be a small negative current due to a phenonema known as <em>reverse-current leakage</em> and when the applied voltage becomes sufficiently large (<em>the breakdown-voltage</em>), the diode would break and current would be allowed to flow in the opposite direction.</p>
+<hr class="docutils" />
+<div class="section" id="temperature-dependencies">
+<h3>Temperature Dependencies<a class="headerlink" href="#temperature-dependencies" title="Permalink to this heading">#</a></h3>
+<p>Current-voltage relationships of many non-Ohmic materials can be explained by considering if they have a <em>negative temperature coefficient</em> (NTC) or a <em>positive temperature coefficient</em>. Materials with either of these properties are called thermistors.</p>
+<p>To understand the behaviours of these materials we need to consider an alternative expression used to calculate current, I:</p>
+<div class="math notranslate nohighlight">
+\[ I = navq, \]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the density of free charge carries (e.g. number of electrons per square metre) of the material, <span class="math notranslate nohighlight">\(a\)</span> is the cross sectional area of the material (e.g. cross sectional area of wire), <span class="math notranslate nohighlight">\(v\)</span> is the drift velocity of the charge carries and <span class="math notranslate nohighlight">\(q\)</span> is the charge of each individual charge carrier.</p>
+<p>This equation intuatively makes sense - if current is the rate of flow of charge, by having more charge carries, additional charge per carrier, faster moving charges and a larger area for them to flow through we would expect a larger current.</p>
+<div class="section" id="positive-temperature-coefficient-thermistors">
+<h4>Positive Temperature Coefficient Thermistors<a class="headerlink" href="#positive-temperature-coefficient-thermistors" title="Permalink to this heading">#</a></h4>
+<p>One example of a PTC thermistor is the tungsten (metal) filament in the incandescent bulb discussed above. In operation a potential difference is applied across the tungsten filament, inducing an electric field which causes electrons to flow through the wire. This current causes the filament to heat up to a high enough temperature to emit visible light.</p>
+<p>To understand why for a PTC, the resistance increases (current decreases) as a function of voltage, we must first take a look at our filement on the microscopic scale. Tungsten is a metal and as such it has a metalic lattice structure. The individual tungsten atoms are uniformly distributed at repeating points known as <em>lattice points</em>. The outermost electrons of each atom are delocalised and able to move throughout the bulk material (hence why metals are good electrical conductors) as shown in the figure below:</p>
+<p><img alt="LatticeStructure" src="_images/MetallicLatticeStructure.png" /></p>
+<p>The atoms themselves are able to oscillate around their lattice points as shown in the gif below.</p>
+<p><img alt="LatticeVibration" src="_images/LatticeVibration.gif" /></p>
+<p>As the atoms oscilate, they esentially get in the way of the electrons and reduce their drift velocity, <span class="math notranslate nohighlight">\(v\)</span>. The hotter the filament, the more kinetic energy these atoms will have, the larger the amplitude of oscillations and the more they impede the flow of electrons. It therefore follows that the resistance of the wire increases as the temperature of the filament increases. As such, if a given increase in voltage across the filament leads to an increase in its temperature, we should expect the current to increase by a smaller and smaller margin for each step up in voltage.</p>
+</div>
+<div class="section" id="negative-temperature-coefficient-thermistors">
+<h4>Negative Temperature Coefficient Thermistors<a class="headerlink" href="#negative-temperature-coefficient-thermistors" title="Permalink to this heading">#</a></h4>
+<p>In a NTC thermistor we see that for a given increase in voltage, there is an even larger increase in the corresponding current. An NTC thermistor is typically made of a semiconductor material or graphite. In these materials as the temperature of material increases, more and more electrons in the material gain sufficient energy to be liberated from their atoms. Thus the number of free electrons that can contribute to the current increases (the density of free charge carriers <span class="math notranslate nohighlight">\(n\)</span> increases) leading to a larger current. Therefore if an increase voltage results in an increase in the materials temperature, the current will also increase and at an increasing rate (exponential increase).</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="resistor-combinations">
+<h2>Resistor Combinations<a class="headerlink" href="#resistor-combinations" title="Permalink to this heading">#</a></h2>
+<p>Determining the voltage or current for a circuit is simple if there is only one resistor involved, however, it is often the case that a circuit will contain an arrangement of many resistors. We must therefore consider how to determine the equivalent resistance of a combination of resistors. To do this is relatively simple, but we must first be aware of <em>parallel</em> and <em>series</em> arrangements.</p>
+<ul class="simple">
+<li><p>Components arranged in series have the same amount of current flowing through them.</p></li>
+<li><p>Components arranged in parralel are seperated by junctions (a point where current can split into multiple paths).</p></li>
+</ul>
+<p><img alt="Arrangements" src="_images/SeriesParallel.png" /></p>
+<p>When calculating the effective resistance of a combination of resistors we must take into consideration if they are arranged in series, in parallel or both.</p>
+<hr class="docutils" />
+<div class="section" id="resistors-in-series">
+<h3>Resistors in Series<a class="headerlink" href="#resistors-in-series" title="Permalink to this heading">#</a></h3>
+<p>The figure below shows resistors arranged in series.</p>
+<p><img alt="ResistorsInSeries" src="_images/ResistorsInSeries.png" /></p>
+<p>To derive an expression to determine how to calculate the equivalent resistance we must recal/consider two things:</p>
+<ul class="simple">
+<li><p>The total voltage drop across each component in a circuit must be equal to the EMF supplied by the source (conservation of energy).</p></li>
+<li><p>The current flowing through components arranged in series must be equal (conservation of charge).</p></li>
+</ul>
+<p>Using this first principle, we can write an expression for the voltage drops across each resistor:</p>
+<div class="math notranslate nohighlight">
+\[ \epsilon = V_{T} = V_1 + V_2 + V_3, \]</div>
+<p>where <span class="math notranslate nohighlight">\(V_T\)</span> is the total voltage of supplied to the circuit. Assuming that these resistors are Ohmic, we can express these individual voltage drops in terms of the current flowing through each resistor and its resistance (<span class="math notranslate nohighlight">\(V=IR\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ V_{T} = IR_1 + IR_2 + IR_3 \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore V_{T} = I(R_1 + R_2 + R_3) \]</div>
+<p>We can also express <span class="math notranslate nohighlight">\(V_{T}\)</span> in terms of the current and total resistance <span class="math notranslate nohighlight">\(R_{T}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ V_{total} = IR_{T} \]</div>
+<p>By comibining the two equations above we determine the desired expression:</p>
+<div class="math notranslate nohighlight">
+\[ IR_{T} = I(R_1 + R_2 + R_3) \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore R_{T} = R_1 + R_2 + R_3.\]</div>
+<p>We have therefore proven that the equivalent resistance of resistors arranged in series is simply equal to the sum of the individual resistances.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The total equivalent resistance of a combination of resistors arranged in series is given by: <span class="math notranslate nohighlight">\( R_{T} = R_1 + R_2 + R_3\)</span>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="resistors-in-parallel">
+<h3>Resistors in Parallel<a class="headerlink" href="#resistors-in-parallel" title="Permalink to this heading">#</a></h3>
+<p>The figure below shows resistors arranged in parallel.</p>
+<p><img alt="ResistorsInParallel" src="_images/ParallelResistors.png" /></p>
+<p>To determine the total equivalent resistance of resistors arranged in parallel we must understand two additional concept:</p>
+<ul class="simple">
+<li><p>The potential difference measured across components arranged in parallel is always the same.</p></li>
+<li><p>At a junction current is split into smaller currents, the sum of which is equal to the total current.</p></li>
+</ul>
+<p>Taking this into consideration, we can now write an expression for the potential differences across the resistors arranged in parallel and the total voltage supplied ot the circuit:</p>
+<div class="math notranslate nohighlight">
+\[ \epsilon = V_T = V_1 = V_2 = V_3. \]</div>
+<p>Similarly we can write an expression relating the individual currents to the total current, <span class="math notranslate nohighlight">\(I_{T}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ I_{T} = I_1 + I_2 + I_3. \]</div>
+<p>Using Ohms law (<span class="math notranslate nohighlight">\(V=IR\)</span>) this equation becomes:</p>
+<div class="math notranslate nohighlight">
+\[I_{T} = \frac{V_T}{R_T} = \frac{V_T}{R_1} + \frac{V_T}{R_2} + \frac{V_T}{R_3}, \]</div>
+<p>which simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}. \]</div>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The total equivalent resistance of a combination of resistors arranged in parallel is given by: <span class="math notranslate nohighlight">\(\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\)</span>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="resistors-in-series-and-parallel-combined">
+<h3>Resistors in Series and Parallel Combined<a class="headerlink" href="#resistors-in-series-and-parallel-combined" title="Permalink to this heading">#</a></h3>
+<p>It is often the case that a circuit will contain both resistors arranged in series and in parallel. To determine the equivalent resistance of the circuit we simply use the rules above twice. For example consider the circuit below:</p>
+<p><img alt="" src="_images/ResistorCombination2.png" /></p>
+<p>To determine the total resistance:</p>
+<ol class="arabic simple">
+<li><p>Determine the equivalent resistance of the two resistors arranged in series. These two resistors can now be treated as a single resistor.</p></li>
+<li><p>Determine the evivalent resistance of the “two” resistors arranged in parallel.</p></li>
+</ol>
+<p>Similarly, for the circuit below:</p>
+<p><img alt="" src="_images/ResistorCombination1.png" /></p>
+<p>the total equivalent resistance can be determined by doing these steps in the opposite order:</p>
+<ol class="arabic simple">
+<li><p>Determine the equivalent resistance of the two resistors arranged in paralel. These two resistors can now be treated as a single resistor.</p></li>
+<li><p>Determine the evivalent resistance of the “two” resistors arranged in series.</p></li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is imperative that you are comfortable calculating the total equivalent resistance of various arrangements of resistors. This is a core skill needed for circuit calculations.</p>
+<p><strong>You will only develop understanding by actually doing the calculations. Only use the solutions to check your work or if you are stuck!</strong></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Q1 Hint</p>
+<p>For these questions you may find it useful to draw out the circuits to help you visualise what is going on.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Four resistors (<span class="math notranslate nohighlight">\(2.0\,\Omega\)</span>, <span class="math notranslate nohighlight">\(5.0\, \Omega\)</span>, <span class="math notranslate nohighlight">\(7.0\, \Omega\)</span> and <span class="math notranslate nohighlight">\(9.0\, \Omega\)</span>) are arrange <strong>in series</strong> and connected to a <span class="math notranslate nohighlight">\(12\,V\)</span> battery.</p></li>
+</ol>
+<ul class="simple">
+<li><p>a) Determine the total resistance of the circuit.</p></li>
+<li><p>b) Determine the current flowing through the circuit.</p></li>
+<li><p>c) Determine the voltage across the <span class="math notranslate nohighlight">\(5\, \Omega\)</span> resistor.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q1a Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using the resistors in series equation:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(R_T = R_1 + R_2 + R_3 + R_4 \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(R_T = 2\,\Omega + 5.0\,\Omega + 7.0\,\Omega + 9.0\,\Omega \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(R_T = 23\,\Omega\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q1b Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using Ohm’s law and the total resistance allows us to determine the current flowing through the circuit:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = \frac{V}{R_T} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = \frac{12\,V}{23\,\Omega} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = 0.52\,A\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q1c Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Conservation of charge dictates that the current flowing through each of the resistors must be the same, therefore the voltage drop across the <span class="math notranslate nohighlight">\(5\, \Omega\)</span> resistor can be calculated using Ohm’s law:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V=IR \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(V = 0.52\,A \times 5\, \Omega \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(V = 2.6\,V\)</span></p>
+</div>
+</details><ol class="arabic simple" start="2">
+<li><p>Three resistors (<span class="math notranslate nohighlight">\(6.0\,\Omega\)</span>, <span class="math notranslate nohighlight">\(8.0\,\Omega\)</span> and <span class="math notranslate nohighlight">\(15\,\Omega\)</span> are arranged <strong>in parallel</strong> and connected to a battery, which has produces a current of <span class="math notranslate nohighlight">\(3.0\,A\)</span>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>a) Determine the total resistance of the circuit.</p></li>
+<li><p>b) Determine the voltage produced by the battery.</p></li>
+<li><p>c) Determine the current flowing through the <span class="math notranslate nohighlight">\(8.0\,\Omega\)</span> resistor).</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q2a Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using the resistors in parralel equation:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( \therefore \frac{1}{R_T} = \frac{1}{6.0\,\Omega} + \frac{1}{8.0\,\Omega} + \frac{1}{12\,\Omega}\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( \therefore \frac{1}{R_T} = \frac{3}{8} \,\Omega^{-1} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\therefore R_T = \frac{8}{3} \,\Omega \approx 0.38 \,\Omega \)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q2b Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using Ohm’s law and the total resistance allows us to determine the total voltage supplied to the curcuit by the battery:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_T = IR_T \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_T = 3.0 \,A \times 0.38 \,\Omega \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_T = 1.1 \, V \)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q2c Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The potentail difference across components arranged in parallel is going to be the same and in this case simply equal to the voltage of the battery, thus we can determine the current flowing through the <span class="math notranslate nohighlight">\(8.0\,\Omega\)</span> resistor again just using Ohm’s law:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_T = V = IR\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(I = \frac{V}{R} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(I = \frac{1.1\, V}{8.0 \, \Omega} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = 0.14 \, A \)</span></p>
+</div>
+</details><ol class="arabic simple" start="3">
+<li><p>An arrangement of resistors is in a circuit is shown below. The resistances of each resistor are as follows: <span class="math notranslate nohighlight">\(R_1 = 2.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 3.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_3 = 4.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_4 = 6.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_5 = 2.00\, \Omega\)</span>  The circuit includes a <span class="math notranslate nohighlight">\(5.00V\)</span> battery.</p></li>
+</ol>
+<p><img alt="Question3" src="_images/CombinedResistorProblem.png" /></p>
+<ul class="simple">
+<li><p>a) What is the total equivalent resistance of the circuit shown?</p></li>
+<li><p>b) What is the total current flowing through the circuit?</p></li>
+<li><p>c) What is the currents and voltage drops measured for each of the resistors.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Q3a Hint</p>
+<p>If the equivalent resistance of the resistors arranged in parallel is determined, we can simply treat these three resistors as one resistor arranged in series with <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_5\)</span>.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q3a Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First, the equivalent resistance of the resistors arranged in parallel can be determined:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{1}{R_P} = \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( \therefore \frac{1}{R_P} = \frac{1}{3.00\,\Omega} + \frac{1}{4.00\,\Omega} + \frac{1}{6.00\,\Omega}\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( \therefore \frac{1}{R_P} = \frac{3}{4} \,\Omega^{-1} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\therefore R_P = \frac{4}{3} \,\Omega \)</span></p>
+<p class="sd-card-text">Now we can treat this parallel arrangement of resistors as a single resistor <span class="math notranslate nohighlight">\(R_P\)</span> and simply determine the total resistance of the circuit using our formula for resistors arranged in series:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(R_T = R_1 + R_P + R_5 \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(R_T = 2.00\,\Omega + \frac{4}{3}\,\Omega + 2.00\,\Omega \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(R_T = 5.33 \,\Omega\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q3b Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Once the total equivalent resistance of the circuit has been calculated, the total current flowing can be determined using Ohm’s law:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_T = I R_T \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( \therefore I = \frac{V_T}{R_T} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = \frac{5.00 \, V}{5.33 \, \Omega} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = 0.938 \, A \)</span></p>
+</div>
+</details><div class="tip admonition">
+<p class="admonition-title">Q3c Hint</p>
+<p>To find the individual voltages and currents across all of the resistors we must remember that the current for resistors arranged in series is always the same (conservation of charge), the voltage across resistors arranged in parallel is always the same, and the voltage drops across all components in a circuit must be equal to the voltage supplied.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Q3c Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Due to conservation of charge we know that the current flowing through <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> must be equal to the total current. The voltage drop across these resistors can be determined using Ohm’s law and as these have the same resistance we only need to do the calculation once:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V = I R\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V = 0.938 \, A \times 2.00 \, \Omega\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V = 1.88 \, V \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_{R1} = V_{R2} = 1.88 \, V\)</span></p>
+<p class="sd-card-text">The current will be split when passing through the resistors arranged in parallel.  We also know that the voltage drop for all of the resistors arranged in parallel, <span class="math notranslate nohighlight">\(V_{RP}\)</span>, will be the same. To begin let’s determine what this voltage drop would be - we can do this by remembering that the total voltage drop across all components must equal the voltage supplied:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_T = V_{R1} + V_{R2} + V_{RP} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_{RP} = V_T - V_{R1} - V_{R2} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_{RP} = 5.00 \, V - 1.88 \, V - 1.88 \, V \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_{RP} = 1.24 \, V \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( V_{RP} = V_{R2} = V_{R3} = V_{R4} = 1.24 \, V \)</span></p>
+<p class="sd-card-text">Now we know the voltage for all of the resistors arranged in parallel, we can calculate the current flowing through each of them using Ohm’s law:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I = \frac{V}{R} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R2} = \frac{V_{R2}}{R2} = \frac{1.24 \, V}{3.00 \, \Omega} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R2} = 0.413 \, A\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R3} = \frac{V_{R3}}{R3} = \frac{1.24 \, V}{4.00 \, \Omega} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R3} = 0.310 \, A\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R4} = \frac{V_{R4}}{R4} = \frac{1.24 \, V}{6.00 \, \Omega} \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R3} = 0.207 \, A.\)</span></p>
+<p class="sd-card-text">We have therefore sucessfully determined the voltages and currents through each of the resistors in this circuit.</p>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 1: Charge, Current, Potential Difference and Resistance</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 3: Resistivity, Conductivity and Superconductivity</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-current-relationships">Voltage-Current Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-dependencies">Temperature Dependencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-temperature-coefficient-thermistors">Positive Temperature Coefficient Thermistors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-temperature-coefficient-thermistors">Negative Temperature Coefficient Thermistors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistor-combinations">Resistor Combinations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-series">Resistors in Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-parallel">Resistors in Parallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-series-and-parallel-combined">Resistors in Series and Parallel Combined</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
