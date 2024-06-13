@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 5: Internal Resistance &#8212; PHYS009/10 - ELectricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_5_Internal_Resistance';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 4: Electrical Energy and Power" href="Lecture_4_Electrical_Energy_Power.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHYS009/10 - ELectricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5: Internal Resistance</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_5_Internal_Resistance.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_5_Internal_Resistance.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 5: Internal Resistance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-resistance">Internal Resistance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1">Method 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2">Method 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-5-internal-resistance">
+<h1>Lecture 5: Internal Resistance<a class="headerlink" href="#lecture-5-internal-resistance" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Know both methods for calculating the internal resistance of a battery.</p></li>
+<li><p>Be able to explain why one method is preferred over the other.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="internal-resistance">
+<h2>Internal Resistance<a class="headerlink" href="#internal-resistance" title="Permalink to this heading">#</a></h2>
+<p>So far when we have been considering sources of EMF like batteries in this unit, we have assumed that they are <em>ideal</em> batteries meaning that they have no internal resistance. In reality, most batteries will have a small amount of internal resistance i.e some resistance between their positive and negative terminals.</p>
+<p>In many circumstances this internal resistance is negligiable, however if the internal resistance is similar to a considerable fraction of the circuit resistance, it can modify the behaviour of the circuit. It is therefore important that we are able to determine the magnitude of the internal resistance.</p>
+<p>Formally, internal resistance is defined as “<em>Internal resistance is the loss of potential difference per unit current in a source when current passes through a source.</em>”.</p>
+<p>To determine this internal resistor, we will need to consider the battery as a source of EMF connected in series with a small resistor, r, as shown in the diagram below.</p>
+<p><img alt="InternalResistance" src="_images/InternalResistance.png" /></p>
+<p>Normally when we want to determine the resistance of a component we would connect an <em>ameter</em> in series with it to measure how much current is flowing through it and a <em>voltmeter</em> in parallel with it to measure the voltage drop across it. We would then be able to use Ohm’s law to determine the resistance.</p>
+<p>Unfortunately, it is not possible to connect an ameter or voltmeter to the “internal resistor” inside a voltage supply. We must therefore determine it using one of two methods.</p>
+<div class="section" id="method-1">
+<h3>Method 1<a class="headerlink" href="#method-1" title="Permalink to this heading">#</a></h3>
+<p>The first method involves using an <em>ideal voltmeter</em> and an <em>ideal ameter</em>.</p>
+<p>An ideal voltmeter has an infinite amount of resistance meaning that no current can flow through it. This means that when it is connected across a component in parallel, all of the current flows through that component and it perfectly measures the voltage drop across it.</p>
+<p>If we connect an ideal voltmeter to the terminals of the battery when it is connected to no other components (this is known as an <em>unloaded</em> circuit), we will directly measure the voltage drop across the terminals of the battery. This is because there is no current flowing meaning that there is no voltage drop across the “internal resistor” (<span class="math notranslate nohighlight">\(V_r = 0\)</span>). This voltage is known as the <em>open circuit voltage</em>, <span class="math notranslate nohighlight">\(V_{OC}\)</span>.</p>
+<p><img alt="opencircuit" src="_images/opencircuitvoltage.png" /></p>
+<p>An ideal ameter has zero resistance meaning that when placed in series into a circuit, there is no voltage drop across it as the charges flowing through it lose no energy as they do so.</p>
+<p>If we then connect an ideal ameter to the terminals of the battery as an unloaded circuit, the voltage drop across the “internal resistor” must be equal to the open circuit voltage. This is because we know that the total voltage drop across components in a circuit must be equal to the emf supplied and there are no other components with resistance in this circuit. The current we measure using the ameter in this configuration is known as the <em>short circuit current</em>, <span class="math notranslate nohighlight">\(I_{SC}\)</span>.</p>
+<p><img alt="shortcircuit" src="_images/shortcircuitcurrent.png" /></p>
+<p>As we now know the current flowing through the internal resistor and the voltage drop across is, we can determine the internal resistance using Ohm’s law:</p>
+<p><span class="math notranslate nohighlight">\( V_{OC} = I_{SC} r \)</span></p>
+<p><span class="math notranslate nohighlight">\( \therefore r = \frac{V_{OC}}{I_{SC}}.\)</span></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A short circuit is created when the current finds a path of lower resistance to travel along.</p>
+<p>Essentially, by creating a circuit with no resistance as above, we have created a <em>short circuit</em>. <strong>This is very dangerous</strong> and the reason why this method is not used for determining internal resistance.</p>
+<p>For example, consider a <span class="math notranslate nohighlight">\(12\,V\)</span> battery with an internal resistance of <span class="math notranslate nohighlight">\(1\, \Omega\)</span>. The power disipated by this circuit is:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{V^2}{R} \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = \frac{(12\,V)^2}{1\,\Omega} \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 144\, W \)</span></p>
+<p>This is an unsafe amount of power which is why we should not create short circuits!</p>
+</div>
+</div>
+<div class="section" id="method-2">
+<h3>Method 2<a class="headerlink" href="#method-2" title="Permalink to this heading">#</a></h3>
+<p>If we cannot measure the internal resistance directly by creating a short circuit, how do we do it? The answer is to add a  variable resistor, R, to this circuit and take multiple measurements of current flowing through and the voltage drop across it for different values of R. Consider the circuit below:</p>
+<p><img alt="method2" src="_images/Method2.png" /></p>
+<p>As mentioned above, we know that the combined voltage drop across the resistors in the circuit, r and R, must equal the emf supplied, therefore:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = V_{R} + V_{r}. \)</span></p>
+<p>Using Ohm’s law we can express this equation as:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = Ir + V_{R}, \)</span></p>
+<p>which is in the form of an equation of a line <span class="math notranslate nohighlight">\(y=mx+c\)</span>. We can then rearrange this equation so that the gradient of this line is equal to the internal resistance:</p>
+<p><span class="math notranslate nohighlight">\( V_{R} = \epsilon - Ir, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{R} = -rI + \epsilon. \)</span></p>
+<p>Now, if we measure the current through the resistor, <span class="math notranslate nohighlight">\(I\)</span>, and the voltage drop across it, <span class="math notranslate nohighlight">\(V_{R}\)</span>, and plot these on the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axis respectively for mutliple values of R, we will be able to determine the internal resistance of the voltage supply. The intercept of this line at <span class="math notranslate nohighlight">\(x=0\)</span> will also tell us the EMF of the battery.</p>
+<p>**This method provides a safe way to determine the internal resistance of a voltage supply. **</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>It is very important that you understand this approach to determining the internal resistance of a battery, not only because it is relevant to this unit, but also because this general approach will be used in the experimental aspects of your degrees.</p>
+<p>There are many systems in physics that follow a linear model. In a physics lab you may take measurements of <span class="math notranslate nohighlight">\(y\)</span> for a series of values of <span class="math notranslate nohighlight">\(x\)</span> to then determine a property from the gradient of the line of best fit. For example the spring constant, <span class="math notranslate nohighlight">\(k\)</span>, can be determined using the equation <span class="math notranslate nohighlight">\(F = k\Delta x\)</span>, where <span class="math notranslate nohighlight">\(F\)</span> is the force applied to the spring and <span class="math notranslate nohighlight">\(\Delta x\)</span> is the correspondning extension. Therefore if you plot <span class="math notranslate nohighlight">\(F\)</span> on the x-axis and <span class="math notranslate nohighlight">\(\Delta x\)</span> on the y-axis, the gradient of the line of best fit will be equal to <span class="math notranslate nohighlight">\(\frac{1}{k}\)</span>.</p>
+<p>In a lab the measurements you make would also have uncertainties associated with them and not follow the linear model perfectly. This means that when you plot the data points onto a graph, to determine the gradient of our line of best fit you would need to employ a <em>regression analysis</em>.</p>
+<p>A regression analysis is a mathematical approach to determining what the best values for the gradient and intercept of the line of best fit are (i.e. ensures we have the best possible line of best fit). We can use computers to help us do this and this forms a core part of the level-1 physics degree!</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>A circuit containing an ideal ameter, an ideal voltmeter, a cell with an internal resistance <span class="math notranslate nohighlight">\(r\)</span> and a variable resistor is built as shown in the example above. Readings of the current and voltage across the variable resistor are made for various values of resistance. These are tabulated below.</p>
+<p>Determine the internal resistance of the cell and the EMF it provides to the circuit.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Resistance <span class="math notranslate nohighlight">\(\Omega\)</span></p></th>
+<th class="head"><p>Current (mA)</p></th>
+<th class="head"><p>Voltage (V)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R1</p></td>
+<td><p>30.0</p></td>
+<td><p>6.75</p></td>
+</tr>
+<tr class="row-odd"><td><p>R2</p></td>
+<td><p>60.0</p></td>
+<td><p>6.00</p></td>
+</tr>
+<tr class="row-even"><td><p>R3</p></td>
+<td><p>90.0</p></td>
+<td><p>5.25</p></td>
+</tr>
+<tr class="row-odd"><td><p>R4</p></td>
+<td><p>120</p></td>
+<td><p>4.50</p></td>
+</tr>
+<tr class="row-even"><td><p>R5</p></td>
+<td><p>180</p></td>
+<td><p>3.00</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tip admonition">
+<p class="admonition-title">Hint</p>
+<p>Quickly draw a plot for the tabulated data to help visualise it and establish the link this has with the linear equation used to describe the system.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1 Solution</p>
+<p>This data can be modelled using the equation:</p>
+<p><span class="math notranslate nohighlight">\( V_{R} = -rI + \epsilon, \)</span></p>
+<p>meaning we can plot the measurements as shown below (note that <span class="math notranslate nohighlight">\(I\)</span> is plotted on the x-axis and <span class="math notranslate nohighlight">\(V_{R}\)</span> is plotted on the y-axis so that we satisfy the equation above written in the <span class="math notranslate nohighlight">\(y=mx+c\)</span> format):</p>
+<p><img alt="" src="_images/method2plot.png" /></p>
+<p>The gradient of the line is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( m = -r = \frac{\Delta y}{\Delta x}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( m = -r = \frac{y_1 - y_2}{x_1 - x_2}. \)</span></p>
+<p>We can see from the plot that this data is <em>perfectly</em> linear so it does not matter which two data points are used to determine the gradient, but I will use the two most extreme:</p>
+<p><span class="math notranslate nohighlight">\( m = -r = \frac{6.75\, V - 3\, V}{0.0300\, A - 0.180\, A}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( m = -r = -25.0 \,\Omega, \)</span></p>
+<p><span class="math notranslate nohighlight">\( r = 25.0 \,\Omega. \)</span></p>
+<p>Therefore, the internal resistance of the supply is <span class="math notranslate nohighlight">\(25\, \Omega\)</span>. The intercept can also be calculated using the gradient and one of the data points:</p>
+<p><span class="math notranslate nohighlight">\( V_{R} = -rI + \epsilon, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{R} + rI = \epsilon, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \epsilon = 3.00\, V + (0.180 \, A \times 25.0\, \Omega), \)</span></p>
+<p><span class="math notranslate nohighlight">\( \epsilon = 7.50\, V. \)</span></p>
+<p>Therefore the EMF of the supply is <span class="math notranslate nohighlight">\(7.50\, V\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_4_Electrical_Energy_Power.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 4: Electrical Energy and Power</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-resistance">Internal Resistance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1">Method 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2">Method 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

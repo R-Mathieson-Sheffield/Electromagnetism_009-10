@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lecture 3: Resistivity, Conductivity and Superconductivity &#8212; PHYS11006 - Computing Skills Workshop</title>
+    <title>Lecture 3: Resistivity, Conductivity and Superconductivity &#8212; PHYS009/10 - ELectricity and Magnetism</title>
   
   
   
@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_3_Resistivity_Conductivity_SuperConductivity';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 4: Electrical Energy and Power" href="Lecture_4_Electrical_Energy_Power.html" />
     <link rel="prev" title="Lecture 2: Current-Voltage Characteristics and Resistors" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -137,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">PHYS11006 - Computing Skills Workshop</p>
+    <p class="title logo__title">PHYS009/10 - ELectricity and Magnetism</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -150,11 +151,16 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">S1 Week 8</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
 </ul>
 
     </div>
@@ -360,8 +366,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Potential Dividers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Resistivity and Conductivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
 </ul>
 </li>
 </ul>
@@ -520,35 +528,35 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="questions">
 <h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
-<div class="section" id="id1">
-<h3>Potential Dividers<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Determine the voltage measured across resistors R4 and R5 in the following circuit:</p></li>
-</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>Determine the voltage measured across resistors R4 and R5 in the following circuit:</p>
 <p><img alt="PotentialDivider1" src="_images/PotentialDividerProb1.png" /></p>
 <div class="dropdown admonition">
 <p class="admonition-title">Q1 Solution</p>
 <p>To solve this problem we simply use the potential divider formula:</p>
-<div class="math notranslate nohighlight">
-\[ V_{out} = V_{in}\frac{R_x}{R_4 + R_5}. \]</div>
+<p><span class="math notranslate nohighlight">\( V_{out} = V_{in}\frac{R_x}{R_4 + R_5}. \)</span></p>
 <p>Therefore the voltage measured across resistor R1 is:</p>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 24\, V\frac{3.5 \, \Omega}{3.5 \, \Omega + 11 \, \Omega}, \]</div>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 5.8 \, V, \]</div>
+<p><span class="math notranslate nohighlight">\( V_{out} = 24\, V\frac{3.5 \, \Omega}{3.5 \, \Omega + 11 \, \Omega}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{out} = 5.8 \, V, \)</span></p>
 <p>and the voltage measured across resistor R2 is:</p>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 24\, V\frac{11 \, \Omega}{3.5 \, \Omega + 11 \, \Omega}, \]</div>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 18.2 \, V = 18 \, V. \]</div>
+<p><span class="math notranslate nohighlight">\( V_{out} = 24\, V\frac{11 \, \Omega}{3.5 \, \Omega + 11 \, \Omega}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{out} = 18.2 \, V = 18 \, V. \)</span></p>
 <p>We can check that this is correct by adding the total voltage drops across both resistors - this should be the same as the supply voltage:</p>
-<div class="math notranslate nohighlight">
-\[ \Sigma V_{out} = 5.8 \, V + 18.2 \, V = 24 = V_{in}. \]</div>
+<p><span class="math notranslate nohighlight">\( \Sigma V_{out} = 5.8 \, V + 18.2 \, V = 24 = V_{in}. \)</span></p>
 <p>The values in the question are reported to two significant figures, which is how the final answers should also be reported. <span class="math notranslate nohighlight">\(18.2 \, V\)</span> was used above to prove the point that the voltage drops across the resistors add to the supply voltage.</p>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Determine the voltage drop across resistor R1, the resistors R2 and R3 in parallel in the following circuit:</p></li>
-</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>Determine the voltage drop across resistor R1, the resistors R2 and R3 in parallel in the following circuit:</p>
 <p><img alt="PotentialDivider2" src="_images/PotentialDividerProb2.png" /></p>
 <div class="tip admonition">
 <p class="admonition-title">Q2 Hint</p>
@@ -557,36 +565,25 @@ document.write(`
 <div class="dropdown admonition">
 <p class="admonition-title">Q2 Solution</p>
 <p>The voltage drop across the resistors arranged in parallel is going to be the same. We first must determine their equivalent total resistance using the resistors in parallel equation:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{1}{R_p} = \frac{1}{R_2} + \frac{1}{R_3},\]</div>
-<div class="math notranslate nohighlight">
-\[ \frac{1}{R_p} = \frac{1}{4.0\, \Omega} + \frac{1}{16 \, \Omega} = \frac{5}{16}\, \Omega^{-1}, \]</div>
-<div class="math notranslate nohighlight">
-\[ R_p = \frac{16}{5}\, \Omega. \]</div>
+<p><span class="math notranslate nohighlight">\( \frac{1}{R_p} = \frac{1}{R_2} + \frac{1}{R_3},\)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{R_p} = \frac{1}{4.0\, \Omega} + \frac{1}{16 \, \Omega} = \frac{5}{16}\, \Omega^{-1}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R_p = \frac{16}{5}\, \Omega. \)</span></p>
 <p>Now to solve this problem we simply use the potential divider formula again. Let’s start with resistor R1:</p>
-<div class="math notranslate nohighlight">
-\[ V_{out} = V_{in}\frac{R_x}{R_1 + R_p}. \]</div>
+<p><span class="math notranslate nohighlight">\( V_{out} = V_{in}\frac{R_x}{R_1 + R_p}. \)</span></p>
 <p>Therefore the voltage measured across resistor R1 is:</p>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 12\, V\frac{10 \, \Omega}{10 \, \Omega + \frac{16}{5} \, \Omega}, \]</div>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 9.1 \, V, \]</div>
+<p><span class="math notranslate nohighlight">\( V_{out} = 12\, V\frac{10 \, \Omega}{10 \, \Omega + \frac{16}{5} \, \Omega}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{out} = 9.1 \, V, \)</span></p>
 <p>and the voltage measured across resistors R3 and R4 is:</p>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 12\, V\frac{10 \, \Omega}{\frac{16}{5} \, \Omega + \frac{16}{5} \, \Omega}, \]</div>
-<div class="math notranslate nohighlight">
-\[ V_{out} = 2.9 \, V \]</div>
+<p><span class="math notranslate nohighlight">\( V_{out} = 12\, V\frac{10 \, \Omega}{\frac{16}{5} \, \Omega + \frac{16}{5} \, \Omega}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{out} = 2.9 \, V \)</span></p>
 <p>We can check that this is correct by adding the total voltage drops across both resistors - this should be the same as the supply voltage:</p>
-<div class="math notranslate nohighlight">
-\[ \Sigma V_{out} = 9.1 \, V + 2.9 \, V = 12 = V_{in}. \]</div>
+<p><span class="math notranslate nohighlight">\( \Sigma V_{out} = 9.1 \, V + 2.9 \, V = 12 = V_{in}. \)</span></p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="id2">
-<h3>Resistivity and Conductivity<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple" start="3">
-<li><p>A cylindrical wire of length <span class="math notranslate nohighlight">\(0.200 \, m\)</span> has a radius of <span class="math notranslate nohighlight">\(0.500 \, mm\)</span>. The wire is measured to have a resistance of <span class="math notranslate nohighlight">\(4.07 \, m \Omega\)</span>.</p></li>
-</ol>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h3>
+<p>A cylindrical wire of length <span class="math notranslate nohighlight">\(0.200 \, m\)</span> has a radius of <span class="math notranslate nohighlight">\(0.500 \, mm\)</span>. The wire is measured to have a resistance of <span class="math notranslate nohighlight">\(4.07 \, m \Omega\)</span>.</p>
 <ul class="simple">
 <li><p>a) What material is the wire made from: Silver (<span class="math notranslate nohighlight">\(\rho = 1.60 \times 10^{-8}\, \Omega\,m\)</span>), Copper (<span class="math notranslate nohighlight">\(\rho = 1.70 \times 10^{-8}\, \Omega\,m\)</span>) or Aluminium (<span class="math notranslate nohighlight">\(\rho = 2.70 \times 10^{-8}\, \Omega\,m\)</span>)?</p></li>
 <li><p>b) What is the conductivity of the material?</p></li>
@@ -594,51 +591,38 @@ document.write(`
 <div class="dropdown admonition">
 <p class="admonition-title">Q3a Solution</p>
 <p>To determine the resistance we simply use the appropriate equation:</p>
-<div class="math notranslate nohighlight">
-\[ R = \rho \frac{L}{A} .\]</div>
+<p><span class="math notranslate nohighlight">\( R = \rho \frac{L}{A} .\)</span></p>
 <p>The area of wire has a circular cross section so the resistance is given by:</p>
-<div class="math notranslate nohighlight">
-\[ R = \rho \frac{L}{\pi r^2}, \]</div>
-<div class="math notranslate nohighlight">
-\[ R = \rho \frac{L}{\pi r^2}. \]</div>
+<p><span class="math notranslate nohighlight">\( R = \rho \frac{L}{\pi r^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = \rho \frac{L}{\pi r^2}. \)</span></p>
 <p>This equation can be rearranged to give the resistivity:</p>
-<div class="math notranslate nohighlight">
-\[ \rho = R \frac{\pi r^2}{L}, \]</div>
-<div class="math notranslate nohighlight">
-\[ \rho = 4.07\times 10^{-3}\,\Omega \, m \frac{\pi \cdot (0.500\times 10^{-3})^2 \, m^2}{0.200\, m}, \]</div>
-<div class="math notranslate nohighlight">
-\[ \rho = 1.60 \times 10^{-8} \, \Omega \, m. \]</div>
+<p><span class="math notranslate nohighlight">\( \rho = R \frac{\pi r^2}{L}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \rho = 4.07\times 10^{-3}\,\Omega \, m \frac{\pi \cdot (0.500\times 10^{-3})^2 \, m^2}{0.200\, m}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \rho = 1.60 \times 10^{-8} \, \Omega \, m. \)</span></p>
 <p>Therefore the wire is made from silver.</p>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Q3b Solution</p>
 <p>The conductivity is just the reciprocal of the resistivity:</p>
 <p>The area of wire has a circular cross section so the resistance is given by:</p>
-<div class="math notranslate nohighlight">
-\[ \sigma = \frac{1}{\rho}, \]</div>
-<div class="math notranslate nohighlight">
-\[ \sigma = \frac{1}{1.60 \times 10^{-8} \, \Omega \, m}, \]</div>
-<div class="math notranslate nohighlight">
-\[ \sigma = 6.25 \times 10^7 \, S \, m^{-1}. \]</div>
+<p><span class="math notranslate nohighlight">\( \sigma = \frac{1}{\rho}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \sigma = \frac{1}{1.60 \times 10^{-8} \, \Omega \, m}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \sigma = 6.25 \times 10^7 \, S \, m^{-1}. \)</span></p>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>A square wire made from copper has a resistance of <span class="math notranslate nohighlight">\(40.0 \, \Omega\)</span> and is measured to have a length of <span class="math notranslate nohighlight">\(1.40\, m\)</span>. What is the width of the wire? (Copper, <span class="math notranslate nohighlight">\(\rho = 1.70 \times 10^{-8}\, \Omega\,m\)</span>.)</p></li>
-</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this heading">#</a></h3>
+<p>A square wire made from copper has a resistance of <span class="math notranslate nohighlight">\(40.0 \, \Omega\)</span> and is measured to have a length of <span class="math notranslate nohighlight">\(1.40\, m\)</span>. What is the width of the wire? (Copper, <span class="math notranslate nohighlight">\(\rho = 1.70 \times 10^{-8}\, \Omega\,m\)</span>.)</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Q4 Solution</p>
 <p>For this question we again just use the appropriate equation, but now the cross-sectional area of the wire is given as the area of a square rather than a circle:</p>
-<div class="math notranslate nohighlight">
-\[ R = \rho \frac{L}{A}, \]</div>
-<div class="math notranslate nohighlight">
-\[ R = \rho \frac{L}{x^2}, \]</div>
-<div class="math notranslate nohighlight">
-\[ x^2 = \frac{\rho L}{R}, \]</div>
-<div class="math notranslate nohighlight">
-\[ x = \sqrt{\frac{\rho L}{R}} \]</div>
-<div class="math notranslate nohighlight">
-\[ x = \sqrt{\frac{1.70 \times 10^{-8}\, \Omega\,m \times 1.40\, m}{40.0 \, \Omega}}, \]</div>
-<div class="math notranslate nohighlight">
-\[ x = 2.44 \times 10^{-5} \, m = 24.4 \, \mu m.\]</div>
+<p><span class="math notranslate nohighlight">\( R = \rho \frac{L}{A}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = \rho \frac{L}{x^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( x^2 = \frac{\rho L}{R}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( x = \sqrt{\frac{\rho L}{R}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( x = \sqrt{\frac{1.70 \times 10^{-8}\, \Omega\,m \times 1.40\, m}{40.0 \, \Omega}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( x = 2.44 \times 10^{-5} \, m = 24.4 \, \mu m.\)</span></p>
 </div>
 </div>
 </div>
@@ -684,6 +668,15 @@ document.write(`
         <p class="prev-next-title">Lecture 2: Current-Voltage Characteristics and Resistors</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Lecture_4_Electrical_Energy_Power.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 4: Electrical Energy and Power</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -714,8 +707,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Potential Dividers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Resistivity and Conductivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
 </ul>
 </li>
 </ul>

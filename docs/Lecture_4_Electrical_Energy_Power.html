@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 4: Electrical Energy and Power &#8212; PHYS009/10 - ELectricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_4_Electrical_Energy_Power';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 5: Internal Resistance" href="Lecture_5_Internal_Resistance.html" />
+    <link rel="prev" title="Lecture 3: Resistivity, Conductivity and Superconductivity" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHYS009/10 - ELectricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_4_Electrical_Energy_Power.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_4_Electrical_Energy_Power.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 4: Electrical Energy and Power</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrical-power">Electrical Power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency">Efficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-4-electrical-energy-and-power">
+<h1>Lecture 4: Electrical Energy and Power<a class="headerlink" href="#lecture-4-electrical-energy-and-power" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to derive the equations for electrical power and energy.</p></li>
+<li><p>Use the equations for electrical power and energy.</p></li>
+<li><p>Use the equations for energy and power when efficiency is less than 100%.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="electrical-power">
+<h2>Electrical Power<a class="headerlink" href="#electrical-power" title="Permalink to this heading">#</a></h2>
+<p>Power is defined as <em>the rate at which work is done</em>. As work is measured in Joules it is a unit of energy, as such the previous statement can be defined mathematically as:</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{\Delta E}{\Delta t}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> is the power, <span class="math notranslate nohighlight">\(E\)</span> is energy and <span class="math notranslate nohighlight">\(t\)</span> is time. We may also recall that voltage or <em>electric potential</em>, <span class="math notranslate nohighlight">\(V\)</span>, is defined as the electrical energy per unit charge:</p>
+<div class="math notranslate nohighlight">
+\[ V = \frac{\Delta E}{\Delta Q}. \]</div>
+<p>If we are to divide both sides of the equation above by <span class="math notranslate nohighlight">\(\Delta t\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V}{\Delta t} = \frac{\Delta E}{\Delta Q \Delta t}, \]</div>
+<p>multiplying the <span class="math notranslate nohighlight">\(\Delta t\)</span> term from the left hand side to the right hand side gives:</p>
+<div class="math notranslate nohighlight">
+\[ V = \frac{\Delta E \Delta t}{\Delta Q \Delta t} = \frac{\Delta E}{\Delta t}\cdot\frac{\Delta t}{\Delta Q}.\]</div>
+<p>Above we established that the <span class="math notranslate nohighlight">\(\frac{\Delta E}{\Delta t}\)</span> is simply equal to the power, and <span class="math notranslate nohighlight">\(\frac{\Delta t}{\Delta Q}\)</span> is simply the reciprocal of the current. As such the expression above may be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[ V = \frac{P}{I}, \]</div>
+<p>which gives us our expression for power:</p>
+<div class="math notranslate nohighlight">
+\[ P = IV. \]</div>
+<p>Power has the units of J<span class="math notranslate nohighlight">\(\,\)</span>s<span class="math notranslate nohighlight">\(^{-1}\)</span>, which is known as the <strong>Watt, W</strong>.</p>
+<p>Alternative forms of this equation can be derived by introducing Ohm’s law, <span class="math notranslate nohighlight">\(V = IR\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ P = IV,\]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore P = I(IR), \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore P = I^2 R, \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ P = IV, \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore P = \left(\frac{V}{R}\right) V, \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore P = \frac{V^2}{R}. \]</div>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Electrical power is measured in <strong>Watts</strong>, <strong>W</strong>, and can be calculated using the following equations:</p>
+<div class="math notranslate nohighlight">
+\[ P = IV = I^2 R = \frac{V^2}{R}. \]</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="efficiency">
+<h2>Efficiency<a class="headerlink" href="#efficiency" title="Permalink to this heading">#</a></h2>
+<p><img alt="Bulb" src="_images/Bulb.jpeg" /></p>
+<p>When we supply electrical power to a device, we expect it to use that energy to do something useful. For example, when I turn on a light I expect that electrical energy to be converted into light energy to illuminate a space. This light energy is useful energy.</p>
+<p>Some of that electrical energy will also be converted into other types of energy. Taking my light as an example, should I be using an old incandescent bulb, the vast majority of the electrical energy will be converted into heat energy via resistive heating in the tungsten filament. If my aim is to illuiminate my room this is not useful energy.</p>
+<p>The efficiency, <span class="math notranslate nohighlight">\(\eta\)</span>, of a device is the measure of how much energy it converts into useful energy:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{\text{useful energy out}}{\text{total energy in}}. \]</div>
+<p>If we have an incandescent bulb supplied with <span class="math notranslate nohighlight">\(60\,\)</span> J of electrical energy and it produces <span class="math notranslate nohighlight">\(10\,\)</span> J of light energy, the efficiency of the bulb is:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{10 \, J}{60\, J} = 0.167, \]</div>
+<p>therefore the bulb has an efficiency of 16.7%.</p>
+<p>This calculation can also be flipped on its head. Let’s assume that this bulb is actually being used to heat up a chicken coop meaning now the useful energy is the thermal energy it kicks out, which assuming there are no other energy losses would be equal to <span class="math notranslate nohighlight">\(50\, \)</span>J:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{50 \, J}{60\, J} = 0.833, \]</div>
+<p>therefore the bulb has an efficiency of 83.3% when used as a heater.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Efficiency is the ratio of useful energy (or power) output to the total amount of energy (or power) supplied to a device:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{\text{useful energy out}}{\text{total energy in}}. \]</div>
+<p>As efficiency is a ratio it has no units, but can be expressed as a percentage by mutiplying by 100.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>A <span class="math notranslate nohighlight">\(15.0\)</span>V power supply is connected to the circuit shown below. The resistances of R1, R2, R3 and R4 are <span class="math notranslate nohighlight">\(12.0\, \Omega\)</span>, <span class="math notranslate nohighlight">\(4.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(6.00\, \Omega\)</span> and <span class="math notranslate nohighlight">\(8.00\, \Omega\)</span>, respectively.</p>
+<p><img alt="PowerQuestion1" src="_images/PowerQ1.png" /></p>
+<p>a) What is the power of the entire circuit?</p>
+<p>b) How much power is disipated by the resistor R1?</p>
+<p>c) How much power is disipated by resistor R4?</p>
+<div class="tip admonition">
+<p class="admonition-title">Q1 Hint</p>
+<p>Consider the total equivalent resistance of the circuit and what the voltage drop for components arranged in parallel is.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1a Solution </p>
+<p>To determine the total power of the circuit we must first determine the total equivalent resistance of the circuit. The circuit contains both resistors arranged in series and in parallel. We first must determine the equivlent resitance of the resistors arranged in series:</p>
+<p><span class="math notranslate nohighlight">\(R_S = R_2 + R_3 + R_4, \)</span></p>
+<p><span class="math notranslate nohighlight">\(R_S = 4.00\,\Omega + 6.00\,\Omega + 8.00\,\Omega, \)</span></p>
+<p><span class="math notranslate nohighlight">\(R_S = 18.0\,\Omega. \)</span></p>
+<p>We can then determine the total equivalent resistance of the circuit using our resistors in parallel rule:</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_S}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{R_T} = \frac{1}{12.0\, \Omega} + \frac{1}{18.0\, \Omega} = \frac{5}{36} \, \Omega^{-1}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R_T = \frac{36}{5} \Omega. \)</span></p>
+<p>Now that we know the total equivalent resistance of the circuit, we can determine the power it outputs:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{V^2}{R} \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = \frac{(15.0\,V)^2}{\frac{36}{5}\,\Omega} \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 31.3 W \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1b Solution </p>
+<p>We know that the voltage drop across resistor R1 is simply equal to the voltage of the supply as they are arranged in parallel. Therefore we can simply determine the power as:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{V^2}{R} \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = \frac{(15.0\, V)^2}{12.0\, \Omega} \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 18.8 \, V\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1c Solution </p>
+<p>To determine the power output by resistor R4 we either need to know the voltage drop across it or the current flowing through it. Let’s determine what the current flowing through it is. We can calculate the total current flowing through the circuit using Ohm’s law as we know the total equivalent resistance of the circuit:</p>
+<p><span class="math notranslate nohighlight">\( I_T = \frac{V}{R_T}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_T = \frac{15.0\, V}{\left(\frac{36}{5} \Omega.\right)}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_T = \frac{25}{12}\, A. \)</span></p>
+<p>Logically, the current is split at the junction between the R1 and the rest of the resistors. We need to therefore determine how much current is flowing through each section of the circuit. The current flowing through R1 is calculated again using Ohm’s law:</p>
+<p><span class="math notranslate nohighlight">\( I_{R1} = \frac{V}{R_1}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_{R1} = \frac{15.0 \, V }{12.0\, \Omega}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_{R1} = \frac{5}{4}\, A \)</span></p>
+<p>Therefore the remaining current flowing through the rest of the resistors is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( I = I_T - I_{R1,} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{25}{12}\, A - \frac{5}{4} \, A, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{5}{6} \, A \)</span></p>
+<p>We can now determine the power dissipated by R4:</p>
+<p><span class="math notranslate nohighlight">\( P = I^2 R, \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = \left(\frac{5}{6} \, A\right)^2 \cdot 8.00 \,\Omega, \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 5.56 \, W. \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>It takes <span class="math notranslate nohighlight">\(15000\,\)</span>kJ of energy to increase the temperature of a room by 10˚C.</p>
+<p>a) If a 2000W heater with a 100% efficiency is used to increase the temperature of the room, how long does it take for the temperature of the room to increase?</p>
+<p>b) The heater is connected to a <span class="math notranslate nohighlight">\(230\,\)</span>V power supply. What is the current being supplied to the heating element in the heater?</p>
+<p>c) The heating element itself is made of a metal wire. What is the resistance of this wire?</p>
+<p>d) The heater is replaced with a another that has an efficiencty of <span class="math notranslate nohighlight">\(\eta = 0.75\)</span>. How long does it take for this heater to heat the room by the same amount?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2a Solution </p>
+<p>For this question we just need to remember that power is the rate at which work is done, and that power is measured in watts (joules per second):</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{\Delta E}{\Delta t}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta t = \frac{\Delta E}{P}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta t = \frac{15000 \times 10^3\, J}{2000\, W}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta t = 7500\, s. \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2b Solution </p>
+<p>If we know the power and the voltage supplied, we can determine what the current is easily:</p>
+<p><span class="math notranslate nohighlight">\(P = IV \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{P}{V}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{2000\, W}{230\, V}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{200}{23} \, A = 8.7\, A. \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2c Solution </p>
+<p>Again if we know the power and the voltage, we can easily determine the resistance:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{V^2}{R}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = \frac{V^2}{P}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = \frac{\left(230\, V\right)^2}{2000\, W}. \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = 26.5 \, \Omega \)</span></p>
+<p>Alternativlely, as we knew the voltage and we determined the current in the previous question, we could have simply used Ohm’s law:</p>
+<p><span class="math notranslate nohighlight">\( R = \frac{V}{I}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = \frac{230\, V}{\left(\frac{200}{23}\right) \, A}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R = 26.5 \, \Omega. \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2d Solution </p>
+<p>We know that if the efficiency of the heater is lower, less electrical energy is being converted into heat energy and it is going to take longer for the heater to heat the room. We can calculate how long by dividing the time it took for the 100% efficient heater to increase the temperature of the room by the efficiency of the second heater:</p>
+<p><span class="math notranslate nohighlight">\( t = \frac{ t_{100} }{\eta}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = \frac{7500 \,s }{0.75}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = 10000\, s .\)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h3>
+<p>A handheld fan is supplied with <span class="math notranslate nohighlight">\(12\,V\)</span> of EMF and a <span class="math notranslate nohighlight">\(0.5\, A\)</span> current. In 30 seconds only <span class="math notranslate nohighlight">\(120\,J\)</span> of kinetic energy was generated to turn the fan blades. What is the efficiency of the fan?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3 Solution </p>
+<p>To determine the efficiency, we need to determine the total amount of energy supplied to the fan in a 30 second period. We can do this by determining the power:</p>
+<p><span class="math notranslate nohighlight">\( P = IV \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 0.5\, A \times 12\, V\)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 6 \,W = 6\, J\,s^{-1}. \)</span></p>
+<p>If the power input into the fan in one second is <span class="math notranslate nohighlight">\(6\, J\)</span>, then the total amount of energy supplied in a 30 second period is:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{E}{t} ,\)</span></p>
+<p><span class="math notranslate nohighlight">\( E = P t ,\)</span></p>
+<p><span class="math notranslate nohighlight">\( E = 6\, W \times 30\, s,\)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta E = 180 \, J. \)</span></p>
+<p>To determine the efficiency we simply divide the amount of useful energy by the total energy input:</p>
+<p><span class="math notranslate nohighlight">\( \eta = \frac{120\, J}{180\, J}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \eta = 0.67. \)</span></p>
+<p>The efficiency of the fan is therefore 67%.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 3: Resistivity, Conductivity and Superconductivity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture_5_Internal_Resistance.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 5: Internal Resistance</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrical-power">Electrical Power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency">Efficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

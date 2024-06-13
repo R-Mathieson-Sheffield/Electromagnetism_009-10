@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lecture 2: Current-Voltage Characteristics and Resistors &#8212; PHYS11006 - Computing Skills Workshop</title>
+    <title>Lecture 2: Current-Voltage Characteristics and Resistors &#8212; PHYS009/10 - ELectricity and Magnetism</title>
   
   
   
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">PHYS11006 - Computing Skills Workshop</p>
+    <p class="title logo__title">PHYS009/10 - ELectricity and Magnetism</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -151,11 +151,16 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">S1 Week 8</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
 </ul>
 
     </div>
@@ -364,7 +369,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-series-and-parallel-combined">Resistors in Series and Parallel Combined</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -530,16 +540,17 @@ document.write(`
 <h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is imperative that you are comfortable calculating the total equivalent resistance of various arrangements of resistors. This is a core skill needed for circuit calculations.</p>
-<p><strong>You will only develop understanding by actually doing the calculations. Only use the solutions to check your work or if you are stuck!</strong></p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Q1 Hint</p>
+<p class="admonition-title">Hint</p>
 <p>For these questions you may find it useful to draw out the circuits to help you visualise what is going on.</p>
 </div>
-<ol class="arabic simple">
-<li><p>Four resistors (<span class="math notranslate nohighlight">\(2.0\,\Omega\)</span>, <span class="math notranslate nohighlight">\(5.0\, \Omega\)</span>, <span class="math notranslate nohighlight">\(7.0\, \Omega\)</span> and <span class="math notranslate nohighlight">\(9.0\, \Omega\)</span>) are arrange <strong>in series</strong> and connected to a <span class="math notranslate nohighlight">\(12\,V\)</span> battery.</p></li>
-</ol>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>Four resistors (<span class="math notranslate nohighlight">\(2.0\,\Omega\)</span>, <span class="math notranslate nohighlight">\(5.0\, \Omega\)</span>, <span class="math notranslate nohighlight">\(7.0\, \Omega\)</span> and <span class="math notranslate nohighlight">\(9.0\, \Omega\)</span>) are arrange <strong>in series</strong> and connected to a <span class="math notranslate nohighlight">\(12\,V\)</span> battery.</p>
 <ul class="simple">
 <li><p>a) Determine the total resistance of the circuit.</p></li>
 <li><p>b) Determine the current flowing through the circuit.</p></li>
@@ -581,9 +592,11 @@ Q1c Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(V = 0.52\,A \times 5\, \Omega \)</span></p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(V = 2.6\,V\)</span></p>
 </div>
-</details><ol class="arabic simple" start="2">
-<li><p>Three resistors (<span class="math notranslate nohighlight">\(6.0\,\Omega\)</span>, <span class="math notranslate nohighlight">\(8.0\,\Omega\)</span> and <span class="math notranslate nohighlight">\(15\,\Omega\)</span> are arranged <strong>in parallel</strong> and connected to a battery, which has produces a current of <span class="math notranslate nohighlight">\(3.0\,A\)</span>.</p></li>
-</ol>
+</details></div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>Three resistors (<span class="math notranslate nohighlight">\(6.0\,\Omega\)</span>, <span class="math notranslate nohighlight">\(8.0\,\Omega\)</span> and <span class="math notranslate nohighlight">\(15\,\Omega\)</span> are arranged <strong>in parallel</strong> and connected to a battery, which has produces a current of <span class="math notranslate nohighlight">\(3.0\,A\)</span>.</p>
 <ul class="simple">
 <li><p>a) Determine the total resistance of the circuit.</p></li>
 <li><p>b) Determine the voltage produced by the battery.</p></li>
@@ -627,9 +640,11 @@ Q2c Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(I = \frac{1.1\, V}{8.0 \, \Omega} \)</span></p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\( I = 0.14 \, A \)</span></p>
 </div>
-</details><ol class="arabic simple" start="3">
-<li><p>An arrangement of resistors is in a circuit is shown below. The resistances of each resistor are as follows: <span class="math notranslate nohighlight">\(R_1 = 2.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 3.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_3 = 4.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_4 = 6.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_5 = 2.00\, \Omega\)</span>  The circuit includes a <span class="math notranslate nohighlight">\(5.00V\)</span> battery.</p></li>
-</ol>
+</details></div>
+<hr class="docutils" />
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h3>
+<p>An arrangement of resistors is in a circuit is shown below. The resistances of each resistor are as follows: <span class="math notranslate nohighlight">\(R_1 = 2.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 3.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_3 = 4.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_4 = 6.00\, \Omega\)</span>, <span class="math notranslate nohighlight">\(R_5 = 2.00\, \Omega\)</span>  The circuit includes a <span class="math notranslate nohighlight">\(5.00V\)</span> battery.</p>
 <p><img alt="Question3" src="_images/CombinedResistorProblem.png" /></p>
 <ul class="simple">
 <li><p>a) What is the total equivalent resistance of the circuit shown?</p></li>
@@ -702,7 +717,13 @@ Q3c Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\( I_{R3} = 0.207 \, A.\)</span></p>
 <p class="sd-card-text">We have therefore sucessfully determined the voltages and currents through each of the resistors in this circuit.</p>
 </div>
-</details></div>
+</details><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is imperative that you are comfortable calculating the total equivalent resistance of various arrangements of resistors. This is a core skill needed for circuit calculations.</p>
+<p><strong>You will only develop understanding by actually doing the calculations. Only use the solutions to check your work or if you are stuck!</strong></p>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -787,7 +808,12 @@ Q3c Solution<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistors-in-series-and-parallel-combined">Resistors in Series and Parallel Combined</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
