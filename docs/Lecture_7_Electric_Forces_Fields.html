@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 7: Electric Forces and Electric Fields &#8212; PHY009/10 - ELectricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_7_Electric_Forces_Fields';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 6: Kirchhoff’s Laws" href="Lecture_6_Kirchhoffs_Laws.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY009/10 - ELectricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_6_Kirchhoffs_Laws.html">Lecture 6: Kirchhoff’s Laws</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 7: Electric Forces and Electric Fields</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_7_Electric_Forces_Fields.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_7_Electric_Forces_Fields.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 7: Electric Forces and Electric Fields</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-recap">Charge Recap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-forces-and-coulombs-law">Electric Forces and Coulombs Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-fields">Electric Fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-charges">Multiple Charges</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-materials">Charging Materials</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-by-induction">Charging by Induction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-by-conduction">Charging by Conduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-by-friction">Charging by Friction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-7-electric-forces-and-electric-fields">
+<h1>Lecture 7: Electric Forces and Electric Fields<a class="headerlink" href="#lecture-7-electric-forces-and-electric-fields" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to define what electric fields are and calculate the electric field strength around a charge.</p></li>
+<li><p>Be able to define the coulomb force and calculate the force on charged particles in different scenarios.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="charge-recap">
+<h2>Charge Recap<a class="headerlink" href="#charge-recap" title="Permalink to this heading">#</a></h2>
+<p>Charge is a physical property that some particles posses. For example, an electron has a negative charge, whereas a proton has a positive charge. If an object comprises an equal amount of negative and positive charges, it is said to be electrically neutral.</p>
+<p>Charge is measued using the unit <strong>Coulomb</strong> which is denoted as <strong>C</strong>. The charge of an electron is <span class="math notranslate nohighlight">\(-1.602 \times 10^{-19} \, \text{C}\)</span> and the charge of a proton is <span class="math notranslate nohighlight">\(1.602 \times 10^{-19} \, \text{C}\)</span>. Their charges are equal and opposite.</p>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>We can see that the magnitude of an individual charge is very small. As such it is often convinent to refer to an amount of charge in terms of the magnitude of the electron charge. For example, you may see a problem that states “body A has a charge of <span class="math notranslate nohighlight">\(+2e\)</span>”, which means it has a positive charge equal to twice that of the magnitude of the electron charge.</p>
+</div>
+<p>Charges also exert an electric force on one another. If these charges are of the same polarity, the force will be repulsive, and if they are oppositely charged, the force will be attractive.</p>
+<p><img alt="Charges" src="_images/Charges.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="electric-forces-and-coulombs-law">
+<h2>Electric Forces and Coulombs Law<a class="headerlink" href="#electric-forces-and-coulombs-law" title="Permalink to this heading">#</a></h2>
+<p>When a charge is placed in an <em>electric field</em> it will experience a force. The direction of the force is dependant on the direction of the electric field and the polarity of the charge. Charges themselves have their own electric field, which is why charges exert forces on one another.</p>
+<p>The magnitude of the attractive or repulsive force between charges is dependant on two factors:</p>
+<ul class="simple">
+<li><p><strong>The magnitude of each of the charges</strong>, the greater the amount of charge, the greater the force.</p></li>
+<li><p><strong>The seperation between charges</strong>, the greater the distance seperating the charges, the weaker the force will be. This is an inverse-square relationship.</p></li>
+</ul>
+<p>It is possible to draw parallels between the electrostatic force and the graviational force between masses. In the latter case the force was proportional to mass rather than charge, but otherwise very similar. The graviational force can be calculated using the equation:</p>
+<p><span class="math notranslate nohighlight">\( F_G = G\frac{m_1m_2}{r^2}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(G\)</span> is the graviational constant, <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> are the masses of the objects and <span class="math notranslate nohighlight">\(r\)</span> is the distance seperating the two bodies. A very similar equation is used to determine the force acting between charges:</p>
+<p><span class="math notranslate nohighlight">\( F = \frac{1}{4\pi\epsilon_0}\frac{Qq}{r^2}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\epsilon_0\)</span> is the permitivity of free space (<span class="math notranslate nohighlight">\(\epsilon_0 = 8.854 \times 10^{-12}\,m^{-3}\,kg^{-1}\,s^4 \, A^2\)</span>), <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are the magnitudes of the respective charges in coulombs, and <span class="math notranslate nohighlight">\(r\)</span> is the distance seperating the charges in metres. <strong>This is known as Coulomb’s law</strong>, named after Charles-Augustin de Coulomb who discovered it. We assume that the charges are dimensionless points when using Coulomb’s law.</p>
+<p>As the first part of the equation is simply made up of constants, it is also often expressed as:</p>
+<p><span class="math notranslate nohighlight">\( F = k \frac{Qq}{r^2}, \)</span></p>
+<p>where</p>
+<p><span class="math notranslate nohighlight">\( k = \frac{1}{4\pi\epsilon_0}.\)</span></p>
+<p>The constant <span class="math notranslate nohighlight">\(k\)</span> is known as the Coulomb constant and has a value equal to <span class="math notranslate nohighlight">\(8.99 \times 10^9 \,N\,m^2\,C^{-2}\)</span>. <strong>We recomend using this version of the Coulomb’s Law as it is easier to use</strong>.</p>
+<p>Consider two oppositely charged particles. The force acting between them would be negative owing to the fact that the one value of <span class="math notranslate nohighlight">\(Q\)</span> would be positive and the other negative (positive <span class="math notranslate nohighlight">\(\times\)</span> negative = negative). If both charges had the same charge, the force would be positive (positive <span class="math notranslate nohighlight">\(\times\)</span> positive = positive OR negative <span class="math notranslate nohighlight">\(\times\)</span> negative = positive). Therefore, by convention an attractive force is negative and a repulsive force is positive. The magntitude of the force remains the same. When working with two or three dimensional systems of charges, it may be more convinient to simply calculate the magnitude of the force and consider the direction it acts using free body force diagrams.</p>
+<div class="admonition-important-coulomb-s-law admonition">
+<p class="admonition-title">Important - Coulomb’s Law</p>
+<p>Coulomb’s law states that the force acting between two charges is proportional the the magnitudes of the charges and inversely proportional to the square of the distance seperating the charges. The magnitude of the force can be calculated using the equation:</p>
+<p><span class="math notranslate nohighlight">\( F = k \frac{Qq}{r^2}, \)</span></p>
+<p>The magnetude of the force can be calulated by taking the absolute value of the force by disregarding the polarity of the charges:</p>
+<p><span class="math notranslate nohighlight">\( |F| = k \frac{|Qq|}{r^2}. \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="electric-fields">
+<h2>Electric Fields<a class="headerlink" href="#electric-fields" title="Permalink to this heading">#</a></h2>
+<p>As mentioned previously, charges produced their own electric fields, but what is an electric field?</p>
+<p>An electric field is a vector field (has magnitude and direction) generated by charges. Electric fields are represented by <em>field lines</em>, which in the cases of point charges, are directed radially away from or to the charge for a positive and negative charge, respectviely.</p>
+<p>Positive charges travel <strong>down</strong> field lines, whereas negative charges travel <strong>up</strong> field lines (see figure below).</p>
+<p><img alt="fieldlines" src="_images/chargesFieldLines.png" /></p>
+<p>The strength of an electric field, <span class="math notranslate nohighlight">\(E\)</span>, at any given point is defined as the <em>the force per unit charge placed at that point</em>, which can be expressed mathematically as:</p>
+<p><span class="math notranslate nohighlight">\(E = \frac{F}{q}. \)</span></p>
+<p>If we substitute in our expression for the force, this expression becomes:</p>
+<p><span class="math notranslate nohighlight">\( E = k \frac{|Qq|}{r^2} \times \frac{1}{q}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = k \frac{|Q|}{r^2}. \)</span></p>
+<p>The unit of the electric field strength is <span class="math notranslate nohighlight">\(V \,m^{-1}\)</span>.</p>
+<div class="admonition-vectors admonition">
+<p class="admonition-title">Vectors</p>
+<p>You may often see the electric field denoted as <span class="math notranslate nohighlight">\(\vec{E}\)</span>. The line above <span class="math notranslate nohighlight">\(E\)</span> is present to indicate that this is a vector quantity. Esentially, this means that depending on the defined orientation, an electric field line may have <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components such that:</p>
+<p><span class="math notranslate nohighlight">\( \vec{E_{net}} = (E_x, E_y, E_z). \)</span></p>
+<p>The figure below shows how a vector can be resolved into its individual components:</p>
+<p><img alt="3Dvector" src="_images/3Dvector.png" /></p>
+<p>The components can be combined to give the magnitude of the electric field. The magntiude of the vector <span class="math notranslate nohighlight">\(\vec{A}\)</span> can be calculated using Pythagoras as:</p>
+<p><span class="math notranslate nohighlight">\( |\vec{A}| = \sqrt{A_x^2 + A_y^2 + A_z^2}.\)</span></p>
+<p>The  <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components can also be resolved from <span class="math notranslate nohighlight">\(\vec{A}\)</span> using trigonometry.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="multiple-charges">
+<h3>Multiple Charges<a class="headerlink" href="#multiple-charges" title="Permalink to this heading">#</a></h3>
+<p>When a system contains multiple charges, we must consider the <em>net</em> electric field. Esentially, at any given point in space the vector fields of each of the charges are summed together:</p>
+<p><span class="math notranslate nohighlight">\( \vec{E_{net}} = (E_x, E_y, E_z) = \left(\sum{k\frac{Q_n}{r^2_{x,n}}},\sum{k\frac{Q_n}{r^2_{y,n}}}, \sum{k\frac{Q_n}{r^2_{z,n}}}\right).\)</span></p>
+<p>When this is shown on a field map we see that field lines become curved as shown below:</p>
+<p><img alt="fieldlines" src="_images/fieldlines.png" /></p>
+<p>The example with the opposing charges is known as a <em>dipole electric field</em>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="charging-materials">
+<h2>Charging Materials<a class="headerlink" href="#charging-materials" title="Permalink to this heading">#</a></h2>
+<p>When a material has an equal amount of positive and negative charges evenly distriubted through it, it is said to be neutrally charge. This is because the total amount of negative charge will cancel out with the total amount of positive charge.</p>
+<p>If a material is initially neutrally charged that is not to say it can not aquire a <em>net</em> charge. This is typically achieved by changing the amount of negative charge the material posseses by removing or adding electrons. We can do this using any of three methods: <strong>induction</strong>, <strong>conduction</strong> or <strong>friction</strong>.</p>
+<div class="section" id="charging-by-induction">
+<h3>Charging by Induction<a class="headerlink" href="#charging-by-induction" title="Permalink to this heading">#</a></h3>
+<p>Electrostatic induction occurs when a charged object is brought into proximity with a neutrally charged object. The charges in the neutrally charged object in the electric field produced by the charged object experience a force. Assuming that the charged object is positive, when brought near the neutrally charged object, the negatively charged electrons will experience an attractive force pulling them towards the charge object.</p>
+<p>As the negative charged electrons have accumulated on one side of the object, the opposite side will now have a relative excess of positive charge. This seperation of positive and negative charges is known as <em>polarisation</em> and the object is said to be <em>electrically polarised</em>. In this example, should the positively charged object be removed, the electrons would evenly redistribute themselves within the material and the object would return to an electrically neutral state.</p>
+<p>In order to perminantly charge an object by induction we actually need to introduce a second neutrally charged object. Consider the figure below:</p>
+<ol class="arabic simple">
+<li><p>If we bring our two neutrally charged objects into contact with one another and then introduce the positively charged object,</p></li>
+<li><p>the electrons from both objects will accumulate on the object nearest to the positively charged object. Therefore one object has a net negative charge whereas the other is left with a net positive charge.</p></li>
+<li><p>If contact between the two initially electrically neutral objects is broken during this state of electric polarisation, one will be left with the excess electrons and the other with the electron defecit.</p></li>
+<li><p>The two objects have now become oppositely charged. In the absence of an external electric field, the charges will then evenly distribute themselves amongst the surface of the objects.</p></li>
+</ol>
+<p><img alt="inductioncharging" src="_images/ChargingInduction.png" /></p>
+</div>
+<div class="section" id="charging-by-conduction">
+<h3>Charging by Conduction<a class="headerlink" href="#charging-by-conduction" title="Permalink to this heading">#</a></h3>
+<p>A material is electrically conductive if electrons are able to move throughout it. Objects made from different materials will have various levels of electrical conductivity, for example, although all metals are conductive due to their excess of delocalised electrons, some metals are more conductive than others e.g. aluminium is only about 61% as conductive as copper, which is only ~95% as conductive as silver. Naturally, it makes sense that wires are made of copper rather than silver, afterall copper is much more abundant and therefore cheaper than silver but with a very similar level of electrical conductivity.</p>
+<p>If two conductors have a different net charges, an electric field will be established between them. This means that when they are brought into contact with one another, the negative charges on one conductor will experience an electric force. In the case of electrons, this force will direct them up the electric field to the more positively charged conductor. As more and more charges are transferred to the intially more positively charged conductor, the strength of the electric field between the conductors will decrease until the electrons are shared between them, they are equally charged and there is no net electric field between them. This is process is demonstrated in the gif and figure below.</p>
+<p><img alt="chargingconduction" src="_images/chargingConduction.gif" /></p>
+<p>It is worth noting that these two conductors do not necessarily need to be positively and negatively charged. They could both be positively charged or both be negatively charged but to different degrees (i.e one is more negative than the other), or one is charged and the other is neutral. In these scenarios there will will still be an electric field established between the conductors that allows for the movement of charges.</p>
+<p><img alt="chargingconduction" src="_images/chargingConduction2.png" /></p>
+</div>
+<div class="section" id="charging-by-friction">
+<h3>Charging by Friction<a class="headerlink" href="#charging-by-friction" title="Permalink to this heading">#</a></h3>
+<p>The final method that can be used to charge and object is by friction. Esentially, by rubbing two insulating materials together, one can be stripped of its electrons by the other. This exchange of charge leaves one material with a surplus of electrons and a net negative charge and the other with an electron defecit and a net positive charge.</p>
+<p>The direction in which the electrons move is dependant on the material of the objects. For example, if a neutrally charged silk cloth is rubbed against a neutrally charged plastic rod, electrons will be transferred from the cloth to the rod. Hence the rod becomes negatively charged and the cloth positively charged.</p>
+<p><img alt="frictioncharging" src="_images/frictionCharging.png" /></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Neutrally charged materials can become charged by any of three mechanisms: <strong>induction</strong>, <strong>conduction</strong> or <strong>friction</strong>. In any case, charges are transferred from one body to another leaving one body with a surplus of electrons and a negative charge and the other with an electron defecit and a positive charge.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Units have been omitted in calculations below for simplicity. Ensure you know what each value represents.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>Two charges, <span class="math notranslate nohighlight">\(Q = 3.2 \times 10^{-19}\, C\)</span> and <span class="math notranslate nohighlight">\(Q = -1.6 \times 10^{-19}\, C\)</span> are seperated by a distance of <span class="math notranslate nohighlight">\(2 \times 10^{-10} \, m\)</span>.</p>
+<p>What is the magnitude of the force acting between them? Is this force attractive or repulsive?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1 Solution</p>
+<p>The magnitude of the force can be calculated using Coulomb’s Law:</p>
+<p><span class="math notranslate nohighlight">\( |F| = k \frac{|Qq|}{r^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( |F| = 8.99 \times 10^9 \frac{|3.2 \times 10^{-19}\times -1.6 \times 10^{-19}|}{\left( 10^{-10} \right)^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( |F| = 4.6 \times 10^{-9} \, N.\)</span></p>
+<p>The charges have opposite polarities so the force between them is attractive.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>Calculate the net force acting on charge <span class="math notranslate nohighlight">\(Q_2\)</span> in the system illustrated below.</p>
+<p><img alt="linear" src="_images/LinearCharges.png" />.</p>
+<div class="tip admonition">
+<p class="admonition-title">Hint</p>
+<p>Remember to account for the fact that charge <span class="math notranslate nohighlight">\(Q_2\)</span> is positioned between two oppositely charged charges.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2 Solution</p>
+<p>To determine the net force, we simply need to add together the forces acting due to the charges eitherside. As all of the charges are aligned, the force is only going to be acting in the <span class="math notranslate nohighlight">\(x\)</span>-direction. The charge to the right has the same polarity so will force the central charge to the left. The charge on the left is oppositely charged so will the attractive force will also pull the central charge to the left. This means that to determine the total force acting on the central charge we can just add the forces together as they act in the same direction.</p>
+<p><span class="math notranslate nohighlight">\( F_{net} = k \frac{|Q_1 Q_2|}{r_{1,2}^2} + k \frac{|Q_3 Q_2|}{r_{3,2}^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{net} = k \left( \frac{|Q_1 Q_2|}{r_{1,2}^2} +  \frac{|Q_3 Q_2|}{r_{3,2}^2}\right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{net} = 8.99 \times 10^9 \left( \frac{|-1(1.6 \times 10^{-19} \times 2(1.6 \times 10^{-19})|}{\left( 6^{-10} \right)^2} + \frac{|2(1.6 \times 10^{-19} \times 3(1.6 \times 10^{-19})|}{\left( 6^{-10} \right)^2} \right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{net} = 5.1 \times 10^{-9} \, N = 5.1 \, nN. \)</span></p>
+<p>The direction of the force is to the left.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h3>
+<p>Calculate the magnetude of the net force acting on charge <span class="math notranslate nohighlight">\(Q_2\)</span> in the system illustrated below.</p>
+<p><img alt="linear" src="_images/2dcharges.png" />.</p>
+<div class="tip admonition">
+<p class="admonition-title">Hint</p>
+<p>This time the charges are distributed in two dimensions (the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> planes), so you must consider the forces acting in both the x and y directions to determine the net force (and its magnitude).</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3 Solution</p>
+<p>To determine the magnetude of the net force, we simply need to add together the forces acting due to the other charges. Let us first consider the force acting in the x-direction. This is going to be an attractive force that pulls <span class="math notranslate nohighlight">\(Q_2\)</span> to the right:</p>
+<p><span class="math notranslate nohighlight">\( F_{x} = k \frac{Q_2 Q_3}{r_{2,3}^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{x} = 8.99 \times 10^9 \frac{-1(1.6 \times 10^{-19} \times 2(1.6 \times 10^{-19})}{\left( 4^{-10} \right)^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{x} = -2.88 \, nN. \)</span></p>
+<p>Similarly, we can calculate the magnitude of the force in the y-direction. This force is going to be repulsive and therefore push <span class="math notranslate nohighlight">\(Q_2\)</span> downwards:</p>
+<p><span class="math notranslate nohighlight">\( F_{y} = k \frac{Q_1 Q_2}{r_{1,2}^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{y} = 8.99 \times 10^9 \frac{-1(1.6 \times 10^{-19} \times -1(1.6 \times 10^{-19})}{\left( 3^{-10} \right)^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( F_{y} = 2.56 \, nN. \)</span></p>
+<p>Therefore the net force acting on the charge <span class="math notranslate nohighlight">\(Q_2\)</span> is <span class="math notranslate nohighlight">\(F_net = (F_x, F_y) = (-2.88, 2.56) \, nN\)</span>. As these forces are acting perpendiculally to one another, the magnetiude of the net force can be determined simply using Pythagoras:</p>
+<p><span class="math notranslate nohighlight">\( |F_{net}| = \sqrt{F_x^2 + F_y^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( |F_{net}| = \sqrt{-2.88^2 + 2.56^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( |F_{net}| = 3.85 \, nN \)</span>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this heading">#</a></h3>
+<p>What is the electric field strength <span class="math notranslate nohighlight">\(1.2\, m\)</span> away from an object with a charge of <span class="math notranslate nohighlight">\(+5.0 \, \mu C\)</span>?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q4 Solution </p>
+<p>The electric field strength can be calculated directly:</p>
+<p><span class="math notranslate nohighlight">\( E \frac {F}{q} = k \frac{Q}{r^2} \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = \frac{8.99 \times 10^9 \cdot 5\times10^{-6}}{1.2^2} \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = 31215.27 \, V\, m^{-1} \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = 31000 \, V\, m^{-1} \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this heading">#</a></h3>
+<p>Determine the magnitude of the electric field at point <span class="math notranslate nohighlight">\(q_4\)</span> from the diagram below.</p>
+<p><img alt="electricfield" src="_images/ElectricField2d.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Hint</p>
+<p>In this example you will need to find the magnetiude of the electric field in the x and y directions at the point <span class="math notranslate nohighlight">\(q_4\)</span> in the same fashion as you did for the forces in question 3. However, this time there is also a charge in the top right corner which will produce an electric field which has <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components at point <span class="math notranslate nohighlight">\(q_4\)</span>. You will need to resolve these using trig to add them to electric fields in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions from the other charges.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q5 Solution</p>
+<p>First, let us determine the distance that charge <span class="math notranslate nohighlight">\(q_2\)</span> is from point <span class="math notranslate nohighlight">\(q_4\)</span>. This can be done using Pythagoras as we know the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> displacements:</p>
+<p><span class="math notranslate nohighlight">\( r_{2} = \sqrt{0.5^2 + 0.5^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( r_{2} = \sqrt{\frac{1}{2}}. \)</span></p>
+<p>We can also find the angle between <span class="math notranslate nohighlight">\(q_2\)</span> and the <span class="math notranslate nohighlight">\(x\)</span> axis using trigonometry:</p>
+<p><span class="math notranslate nohighlight">\( \tan\theta = \frac{O}{A}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \theta = \tan^-1\left(\frac{0}{A}\right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( \theta = \tan^-1\left(\frac{0.5}{0.5}\right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( \theta = 45˚.\)</span></p>
+<p>This must also mean that the angle between <span class="math notranslate nohighlight">\(q_2\)</span> and the <span class="math notranslate nohighlight">\(y\)</span> axis is also <span class="math notranslate nohighlight">\(45˚\)</span>. We can now determine what the electric field at point <span class="math notranslate nohighlight">\(q_4\)</span> due to charge <span class="math notranslate nohighlight">\(q_2\)</span> is:</p>
+<p><span class="math notranslate nohighlight">\(E_{2} = 8.99 \times 10^9 \cdot \frac{6 \times 10^{-6}}{\sqrt{\frac{1}{2}}^2} \)</span></p>
+<p>This electric field can then be resolved into its <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components by multiplying it by <span class="math notranslate nohighlight">\(\cos\theta\)</span> and <span class="math notranslate nohighlight">\(\sin\theta\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(E_{2,y} = 8.99 \times 10^9 \cdot \frac{6 \times 10^{-6}}{\frac{1}{2}} \cdot\cos\theta, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,y} = 2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6} \cdot \cos\theta, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,y} = 2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6} \cdot \cos(45), \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,y} = 2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6} \cdot \frac{1}{\sqrt{2}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,y} = \frac{2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6}}{\sqrt{2}}. \)</span></p>
+<p>Similarly for the <span class="math notranslate nohighlight">\(x\)</span> component:</p>
+<p><span class="math notranslate nohighlight">\(E_{2,x} = 8.99 \times 10^9 \cdot \frac{6 \times 10^{-6}}{\frac{1}{2}} \cdot\sin\theta, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,x} = 2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6} \cdot \sin\theta, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,x} = 2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6} \cdot \sin(45), \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,x} = 2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6} \cdot \frac{1}{\sqrt{2}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{2,x} = \frac{2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6}}{\sqrt{2}}. \)</span></p>
+<p>We can now determine the total contributions to the electric field at point <span class="math notranslate nohighlight">\(q_2\)</span> by also considering the charges <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_3\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( E_y = E_{2,y} + E_{1} \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_y = \frac{2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6}}{\sqrt{2}} + \frac{8.99 \times 10^9 \cdot 3 \times 10^{-6}}{0.5^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_y = 1.84 \times 10^5 \, V\, m^{-1}, \)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\( E_x = E_{2,x} + E_{3} \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_x = \frac{2\cdot 8.99 \times 10^9 \cdot 6 \times 10^{-6}}{\sqrt{2}} + \frac{8.99 \times 10^9 \cdot 2 \times 10^{-6}}{0.5^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_x = 1.48 \times 10^5 \, V\, m^{-1}. \)</span></p>
+<p>Therefore the electric field is:</p>
+<p><span class="math notranslate nohighlight">\( \vec{E} = (1.48, 1.84) \times 10^5 \, V\, m^{-1}. \)</span></p>
+<p>Finally the magnitude of the electric field can be determined as:</p>
+<p><span class="math notranslate nohighlight">\(|\vec{E}| = \sqrt{\left(1.48 \times 10^5 \right)^2 + \left(1.84 \times 10^5 \right)^2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(|\vec{E}| = 2.36 \times 10^5 \, V \, m^{-1}.\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_6_Kirchhoffs_Laws.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 6: Kirchhoff’s Laws</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-recap">Charge Recap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-forces-and-coulombs-law">Electric Forces and Coulombs Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-fields">Electric Fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-charges">Multiple Charges</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-materials">Charging Materials</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-by-induction">Charging by Induction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-by-conduction">Charging by Conduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-by-friction">Charging by Friction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
