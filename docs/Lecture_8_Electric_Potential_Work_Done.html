@@ -1,0 +1,686 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 8: Electric Potential and Work Done &#8212; PHY009/10 - ELectricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_8_Electric_Potential_Work_Done';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 7: Electric Forces and Electric Fields" href="Lecture_7_Electric_Forces_Fields.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY009/10 - ELectricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_6_Kirchhoffs_Laws.html">Lecture 6: Kirchhoff’s Laws</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_7_Electric_Forces_Fields.html">Lecture 7: Electric Forces and Electric Fields</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 8: Electric Potential and Work Done</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_8_Electric_Potential_Work_Done.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_8_Electric_Potential_Work_Done.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 8: Electric Potential and Work Done</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential-energy">Electric Potential Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential">Electric Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential-and-electric-fields">Electric Potential and Electric Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-fields-examples">Electric Fields Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hollow-charged-sphere">Hollow Charged Sphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charged-parallel-plates">Charged Parallel Plates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-8-electric-potential-and-work-done">
+<h1>Lecture 8: Electric Potential and Work Done<a class="headerlink" href="#lecture-8-electric-potential-and-work-done" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to define and know the equations for electric potential and work done.</p></li>
+<li><p>Be able to sketch the electric field and voltage for a charged hollow sphere and a pair of charged parallel plates.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="electric-potential-energy">
+<h2>Electric Potential Energy<a class="headerlink" href="#electric-potential-energy" title="Permalink to this heading">#</a></h2>
+<p>Perhaps one of the easiest traps to fall into when studying electromagnetism not realising that electric potential and electric potential <em>energy</em> do not refer to the same thing. First, let’s consider electric potential energy by looking at the figure below.</p>
+<p><img alt="" src="_images/ElectricPotentialEnergy.png" /></p>
+<ul class="simple">
+<li><p>In the first half of the figure a negative charge has an initial velocity in the positive <span class="math notranslate nohighlight">\(x\)</span>-direction. As it is negative, the charge will experience a force that acts to accelerate it <strong>up the electric field</strong> in the negative <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
+<li><p>This will mean that the charge is decelerated. It’s kinetic energy, <span class="math notranslate nohighlight">\(K\)</span>, is converted into potential energy <span class="math notranslate nohighlight">\(U\)</span>, resulting in a decrease in its kinetic energy and an increase it its potential energy.</p></li>
+<li><p>In the second half of the figure the charge is initially at rest opposite and the direction of the electric field has been reversed. This means that the charge will experience a force that acts to accelerate it in the positive <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
+<li><p>This means that the velocity of the charge increases, as does its kinetic energy. Thus its potential energy is being converted to kinetic energy.</p></li>
+</ul>
+<p>This example is analogous to a ball being rolled up or down a hill. The ball represents the charge and the steepness of the hill represents the electric field strength.</p>
+<p>In the example above, the electric field is <em>doing work</em> on the charge to cause it to accelerate or decelerate. Conservation of energy dictates that the sum of energies at its initial vs later position must be equal:</p>
+<p><span class="math notranslate nohighlight">\(K_a + U_a = K_b + U_b. \)</span></p>
+<p>The work done by the electric field on the particle must be equal to the change in its kinetic energy:</p>
+<p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = \Delta K, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = K_b - K_a. \)</span></p>
+<p>By rearranging our initial equation, the work done can be expressed in terms of the potential energy:</p>
+<p><span class="math notranslate nohighlight">\(K_a + U_a = K_b + U_b,  \)</span></p>
+<p><span class="math notranslate nohighlight">\( U_a - U_b = K_b - K_a,  \)</span></p>
+<p><span class="math notranslate nohighlight">\( -(U_b - U_a) = K_b - K_a, \)</span></p>
+<p><span class="math notranslate nohighlight">\( - \Delta U = \Delta K ,\)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = - \Delta U.\)</span></p>
+<p>By recalling that work done has an alternative definition, we can write an expression for the potential energy of a charge in an electric field. Work done is also equal to force multiplied by displacement:</p>
+<p><span class="math notranslate nohighlight">\( W = F\Delta s, \)</span></p>
+<p>therefore, continuing from above:</p>
+<p><span class="math notranslate nohighlight">\( F\Delta s = -\Delta U,\)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta U = - (F\Delta s). \)</span></p>
+<p>By considering the Coulomb force acting on the charge we can derive a general expression for the potential energy of two charges:</p>
+<p><span class="math notranslate nohighlight">\( U = \frac{kQq}{r} \)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The derivation for the general expression for the potential energy of two charges is included here for completeness. This derivation is non-examinable, but may be of interest to keen students!</p>
+</div>
+<p>To derive the general expression above, consider a test charge moving from point <span class="math notranslate nohighlight">\(a\)</span> to point <span class="math notranslate nohighlight">\(b\)</span> in an electric field produced by a second charge as shown in the figure below.</p>
+<p><img alt="" src="_images/PotentialEnergyDerivation.png" /></p>
+<p>As the test charge moves along the path shown, the force it experiences will be different at each point along the path. This means that to determine the work done in moving the charge along this path, we must employ some integration:</p>
+<p><span class="math notranslate nohighlight">\( W = \int F dr. \)</span></p>
+<p>The force <span class="math notranslate nohighlight">\(F\)</span> is the Coulomb force and the limits of integration in this case will be the radial distances between the two charges at points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. Therefore the equation above can be expressed as:</p>
+<p><span class="math notranslate nohighlight">\( W = \int^{r_b}_{r_a} k\frac{Qq}{r^2} dr, \)</span></p>
+<p><span class="math notranslate nohighlight">\( W = \int^{r_b}_{r_a} kQq\frac{1}{r^2} dr, \)</span></p>
+<p>which when evaluated becomes:</p>
+<p><span class="math notranslate nohighlight">\( W = kQq\left[-\frac{1}{r} \right]^{r_b}_{r_a}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( W = kQq\left[\frac{1}{r_a} - \frac{1}{r_b} \right], \)</span></p>
+<p><span class="math notranslate nohighlight">\( W = \frac{kQq}{r_a} - \frac{kQq}{r_b}.\)</span></p>
+<p>Recalling that <span class="math notranslate nohighlight">\(W = -\Delta U \)</span>:</p>
+<p><span class="math notranslate nohighlight">\( - \Delta U = \frac{kQq}{r_a} - \frac{kQq}{r_b}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( U_a - U_b =  \frac{kQq}{r_a} - \frac{kQq}{r_b}. \)</span></p>
+<p>Therefore the general expression for the electric potential energy is simply:</p>
+<p><span class="math notranslate nohighlight">\( U = \frac{kQq}{r}. \)</span></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The general expression for electric potential energy is:</p>
+<p><span class="math notranslate nohighlight">\( U = \frac{kQq}{r}. \)</span></p>
+<p>This expression is derived by considering the work done in moving a charge through an electric field and understanding that <span class="math notranslate nohighlight">\(W = - \Delta U\)</span>.</p>
+</div>
+</div>
+<div class="section" id="electric-potential">
+<h2>Electric Potential<a class="headerlink" href="#electric-potential" title="Permalink to this heading">#</a></h2>
+<p>Now that we have an understanding of electric potential energy and an expression to calculate it, it is possible to define what is meant by <em>electric potential</em>.</p>
+<p>The electric field strenght is simply <em>the force per unit charge</em>. Similarly, the electric potential, <span class="math notranslate nohighlight">\(V\)</span>, is simply <em>the potential energy per unit charge</em>. This can be expressed mathematically as:</p>
+<p><span class="math notranslate nohighlight">\(V = \frac{U}{q}, \)</span></p>
+<p>which if we substitute the above derived expression for electric potential energy becomes:</p>
+<p><span class="math notranslate nohighlight">\( V = \frac{kQq}{qr}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = \frac{kQ}{r}. \)</span></p>
+<p>A consistent definition for the electric potential at a point <span class="math notranslate nohighlight">\(r\)</span> in an electric field is <em>the work done per unit positive charge in bringing a test charge from infinity to that point r</em>. This can be expressed mathematically as:</p>
+<p><span class="math notranslate nohighlight">\( W_{\infty \to r} = kQq\left(\frac{1}{r} - \frac{1}{\infty} \right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta U = kQq\left(\frac{1}{r} - \frac{1}{\infty} \right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( U_r - U_\infty = \frac{kQq}{r} - \frac{kQq}{\infty}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( U_r - U_\infty = \frac{kQq}{r} - 0, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \therefore \frac{U}{q} = \frac{kQ}{r}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(  V = \frac{kQ}{r}. \)</span></p>
+<p>The electric potential is a scalar field that can have many different values at different positions around a point charge. In any given position, the electric potential will have a value (magnitude), but no associated direction.</p>
+<p>Recalling that work done is measured in joules, the electric potential has units of joules per coulomb which is the same as a volt.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Electric Potential is the electric potential energy per unit charge and can be calculated using:</p>
+<p><span class="math notranslate nohighlight">\( V = \frac{U}{q} = \frac{kQ}{r}. \)</span></p>
+<p>It has the unit of <strong>Volt</strong>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="electric-potential-and-electric-fields">
+<h2>Electric Potential and Electric Fields<a class="headerlink" href="#electric-potential-and-electric-fields" title="Permalink to this heading">#</a></h2>
+<p>When discussing the transfer of energy from kinetic to potential or vice versa, I used the analogy of a ball rolling up or down a hill, where the steepness of the hill corresponded to the strength of the electric field. This analogy is also useful for understanding the relationship between electric potential and electric field strength.</p>
+<p>First, let’s introduce the idea of <em>equipotential</em>. <em>Equipotential lines</em> follow the regions of <strong>equal electric potential</strong>. For example, if you consider the region of space around a point charge, the electric potential at any distance <span class="math notranslate nohighlight">\(r\)</span> from the point charge will be the same regardless of the direction. Thus we can draw lines of equipotential around the charge. For a point charge, these lines will be circular, however for more complex distributions of charge, these lines form different patterns.</p>
+<p>How do we then relate the electric field strength to the electric potential? Well recall that:</p>
+<p><span class="math notranslate nohighlight">\( \Delta W = - \Delta U, \)</span></p>
+<p><span class="math notranslate nohighlight">\( F \Delta s = - \Delta U,\)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\( E = \frac{F}{q}.\)</span></p>
+<p>Rearranging the latter euquation and subbing into the second gives:</p>
+<p><span class="math notranslate nohighlight">\( F = Eq, \)</span></p>
+<p><span class="math notranslate nohighlight">\( (Eq)\Delta s = - \Delta U, \)</span></p>
+<p>therefore,</p>
+<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta U}{q\Delta s}, \)</span></p>
+<p>as <span class="math notranslate nohighlight">\( \Delta V = -\frac{\ Delta U}{\Delta q}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}. \)</span></p>
+<p>The electric field is therefore proportional the rate of change of the electric potential <span class="math notranslate nohighlight">\(V\)</span> over a given distance <span class="math notranslate nohighlight">\(x\)</span>. <strong>The electric field is the negative potential gradient</strong>.</p>
+<p>An easy way to think about equipotential is to consider a contour plot of a mountain. The countour lines represent regions of equal elevation. The closer together the contour lines, the steeper the mountain. Similarly, as we have shown above <strong>the closer the lines of equipotential, the steeper the gradient and consequently the greater the electric field strength!</strong>.</p>
+<p><img alt="" src="_images/Equipotential.png" /></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Equipotential lines ares lines showing regions of equal potential. The gradient of the line that interects these equipotential lines perpendicularly gives the magnitude of the electric field in that direction. This can be calucated as:</p>
+<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}. \)</span></p>
+<p>The closer together the lines of equipotential, the great the electric field strength.</p>
+</div>
+</div>
+<div class="section" id="electric-fields-examples">
+<h2>Electric Fields Examples<a class="headerlink" href="#electric-fields-examples" title="Permalink to this heading">#</a></h2>
+<p>Thus far we have only really consider the electric fields produced by individual charges. It is however useful to consider the electric fields produced by different macro systems. The examples we will look at are charged parallel plates and a charged hollow sphere.</p>
+<div class="section" id="hollow-charged-sphere">
+<h3>Hollow Charged Sphere<a class="headerlink" href="#hollow-charged-sphere" title="Permalink to this heading">#</a></h3>
+<p>Consider a hollow conducting sphere with charge evenly distributed across it surface. Electric field lines will radiate from the surface and the electric field strength will decay owing to the an inverse square law. The electric field lines will also permiate into the sphere, however, for every field line their will be an equal and opposing field line originating from the opposite side of the sphere. This means that inside the sphere the electric field lines cancel out and there is no net electric field.</p>
+<p>The electric potential will also decay as one moves further from the surface of the sphere. This time the decay will simply be inversely proportional to the distance from the surface. As there is no electric field inside the sphere is equal to zero, this must mean that the rate of change of potential gradient is also equal to zero:</p>
+<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x} = 0, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \therefore \Delta V = 0 \to V = constant.\)</span></p>
+<p>The electric potential remains constant inside the sphere.</p>
+<p><img alt="" src="_images/HollowSphere.png" /></p>
+</div>
+<div class="section" id="charged-parallel-plates">
+<h3>Charged Parallel Plates<a class="headerlink" href="#charged-parallel-plates" title="Permalink to this heading">#</a></h3>
+<p>It is possible to produce a <em>uniform electric field</em> (one which does not change) using two charged parallel plates (ignoring edge effects). If these plates are connected to a the terminals of a power supply, one plate per terminal, they will have different potentials. Consider the example below where the plates are connected to a 9V battery - the top plate has a potential of <span class="math notranslate nohighlight">\(9\,\)</span>V whereas the bottom plate has a potential of <span class="math notranslate nohighlight">\(0\,\)</span>V.</p>
+<p>1<a class="reference download internal" download="" href="_downloads/f3ac3a6e4c205108934c37964b6ad682/ParallelPlates.png"><span class="xref download myst">Figures/ParallelPlates.png</span></a></p>
+<p>The electric field between the plates is simply dependant on the difference in potential and the plate seperation, <span class="math notranslate nohighlight">\(d\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = \frac{V_i - V-f}{d}. \)</span></p>
+<p>In the case of the example above, the electric field would simply equal:</p>
+<p><span class="math notranslate nohighlight">\( E = \frac{9-0}{0.2},\)</span></p>
+<p><span class="math notranslate nohighlight">\( E = 45 \, V\,m^{-1}.\)</span></p>
+<p>Finally, let us consider the work done on a particle moving from one plate to the other. Let’s assume that a negative charge is placed at the positive plate and then accelerated towards the negative plate, the work done on it by the electric field (and its corresponding gain in kinetic energy) can be determined as follows:</p>
+<p><span class="math notranslate nohighlight">\( W = F \Delta s = F d, \)</span></p>
+<p>Rearranging <span class="math notranslate nohighlight">\( E = \frac{F}{q} to \)</span>F=Eq$  and substituting gives:</p>
+<p><span class="math notranslate nohighlight">\( W = Eqd, \)</span></p>
+<p>Recalling <span class="math notranslate nohighlight">\( E = \frac{V}{d} \)</span> and substituting gives:</p>
+<p><span class="math notranslate nohighlight">\( W = \frac{V}{d} q d, \)</span></p>
+<p><span class="math notranslate nohighlight">\( W = qV. \)</span></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The energy gained by a charge moving through a potential difference of <span class="math notranslate nohighlight">\(V\)</span> across a distance <span class="math notranslate nohighlight">\(d\)</span> is given by:</p>
+<p><span class="math notranslate nohighlight">\(E = qV.\)</span></p>
+<p>This is an key equation to remember as charges are routinely accelerated through potentials.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Units have been omitted in calculations below for simplicity. Ensure you know what each value represents.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_7_Electric_Forces_Fields.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 7: Electric Forces and Electric Fields</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential-energy">Electric Potential Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential">Electric Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential-and-electric-fields">Electric Potential and Electric Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-fields-examples">Electric Fields Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hollow-charged-sphere">Hollow Charged Sphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charged-parallel-plates">Charged Parallel Plates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
