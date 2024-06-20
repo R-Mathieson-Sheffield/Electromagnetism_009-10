@@ -547,6 +547,33 @@ When an alternative path in the circuit is created, the capacitor will discharge
 <p class="admonition-title">Q2 Hint</p>
 <p>To answer this question you will need to break this circuit into smaller sections, calculate their equivalent capacitance, and the combine these sections to find the total equivalent capacitance.</p>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2 Solution</p>
+<p>First, capacitors <span class="math notranslate nohighlight">\(C_5\)</span> and <span class="math notranslate nohighlight">\(C_6\)</span> are arranged in parallel, so their equivalent capacitance can be determined:</p>
+<p><span class="math notranslate nohighlight">\( C_{5,6} = C_5 + C_6 ,\)</span></p>
+<p><span class="math notranslate nohighlight">\( C_{5,6} = 6 + 15, \)</span></p>
+<p><span class="math notranslate nohighlight">\( C_{5,6} = 21 \, \mu F. \)</span></p>
+<p>This equivalent capacitor is arranged in series with <span class="math notranslate nohighlight">\(C_4\)</span> meaning that the equivalent capacitance of this section of the circuit can be calculated as:</p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{C_{4,5,6}} = \frac{1}{C_4} + \frac{1}{C_{5,6}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{C_{4,5,6}} = \frac{1}{4} + \frac{1}{21}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{C_{4,5,6}} = \frac{25}{84},  \)</span></p>
+<p><span class="math notranslate nohighlight">\( C_{4,5,6} = \frac{84}{25} \, \mu F. \)</span></p>
+<p>Next, the equivlent capacitance of <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> can be determined in the same way:</p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{C_{1,2}} = \frac{1}{C_1} + \frac{1}{C_2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{C_{1,2}} = \frac{1}{2} + \frac{1}{2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{1}{C_{1,2}} = \frac{2}{2},  \)</span></p>
+<p><span class="math notranslate nohighlight">\( C_{1,2} = 1 \, \mu F. \)</span></p>
+<p>Finally, the total equivalent capacitance of the circuit can be calculated as the two equivalent capacitors <span class="math notranslate nohighlight">\(C_{1,2}\)</span> and <span class="math notranslate nohighlight">\(C_{4,5,6}\)</span> are arranged in parallel with <span class="math notranslate nohighlight">\(C_3\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( C_{total} = C_{1,2} + C_3 + C_{4,5,6} ,\)</span></p>
+<p><span class="math notranslate nohighlight">\( C_{total} = 1 + 8 + \frac{84}{25}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( C_{total} = \frac{309}{25} \, \mu F. \)</span></p>
+<p>Finally, the total charge amount of charge in the circuit can be calculated as:</p>
+<p><span class="math notranslate nohighlight">\( Q = CV, \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q = \frac{309}{25} \times 10^{-6} \times 5 \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q = 6.2 \times 10^{-5} \, C, \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q = 62 \, \mu C. \)</span></p>
+<p>The factor of <span class="math notranslate nohighlight">\(10^{-6}\)</span> above comes from the fact that I have converted the from micro-Farad to Farad. I simply kept my value in fraction from during my calculation to prevent rounding errors being carried forward to my final answer.</p>
+</div>
 </div>
 </div>
 </div>
