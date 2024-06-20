@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_8_Electric_Potential_Work_Done';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 9: Capacitors" href="Lecture_9_Capacitance.html" />
     <link rel="prev" title="Lecture 7: Electric Forces and Electric Fields" href="Lecture_7_Electric_Forces_Fields.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -166,6 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Lecture_7_Electric_Forces_Fields.html">Lecture 7: Electric Forces and Electric Fields</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 8: Electric Potential and Work Done</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_9_Capacitance.html">Lecture 9: Capacitors</a></li>
 </ul>
 
     </div>
@@ -372,6 +374,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
 </ul>
             </nav>
         </div>
@@ -451,6 +455,7 @@ document.write(`
 <p>This expression is derived by considering the work done in moving a charge through an electric field and understanding that <span class="math notranslate nohighlight">\(W = - \Delta U\)</span>.</p>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="electric-potential">
 <h2>Electric Potential<a class="headerlink" href="#electric-potential" title="Permalink to this heading">#</a></h2>
 <p>Now that we have an understanding of electric potential energy and an expression to calculate it, it is possible to define what is meant by <em>electric potential</em>.</p>
@@ -490,7 +495,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\( (Eq)\Delta s = - \Delta U, \)</span></p>
 <p>therefore,</p>
 <p><span class="math notranslate nohighlight">\( E = -\frac{\Delta U}{q\Delta s}, \)</span></p>
-<p>as <span class="math notranslate nohighlight">\( \Delta V = -\frac{\ Delta U}{\Delta q}, \)</span></p>
+<p>as <span class="math notranslate nohighlight">\( \Delta V = -\frac{\Delta U}{\Delta q}, \)</span></p>
 <p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}. \)</span></p>
 <p>The electric field is therefore proportional the rate of change of the electric potential <span class="math notranslate nohighlight">\(V\)</span> over a given distance <span class="math notranslate nohighlight">\(x\)</span>. <strong>The electric field is the negative potential gradient</strong>.</p>
 <p>An easy way to think about equipotential is to consider a contour plot of a mountain. The countour lines represent regions of equal elevation. The closer together the contour lines, the steeper the mountain. Similarly, as we have shown above <strong>the closer the lines of equipotential, the steeper the gradient and consequently the greater the electric field strength!</strong>.</p>
@@ -502,6 +507,7 @@ document.write(`
 <p>The closer together the lines of equipotential, the great the electric field strength.</p>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="electric-fields-examples">
 <h2>Electric Fields Examples<a class="headerlink" href="#electric-fields-examples" title="Permalink to this heading">#</a></h2>
 <p>Thus far we have only really consider the electric fields produced by individual charges. It is however useful to consider the electric fields produced by different macro systems. The examples we will look at are charged parallel plates and a charged hollow sphere.</p>
@@ -517,7 +523,7 @@ document.write(`
 <div class="section" id="charged-parallel-plates">
 <h3>Charged Parallel Plates<a class="headerlink" href="#charged-parallel-plates" title="Permalink to this heading">#</a></h3>
 <p>It is possible to produce a <em>uniform electric field</em> (one which does not change) using two charged parallel plates (ignoring edge effects). If these plates are connected to a the terminals of a power supply, one plate per terminal, they will have different potentials. Consider the example below where the plates are connected to a 9V battery - the top plate has a potential of <span class="math notranslate nohighlight">\(9\,\)</span>V whereas the bottom plate has a potential of <span class="math notranslate nohighlight">\(0\,\)</span>V.</p>
-<p>1<a class="reference download internal" download="" href="_downloads/f3ac3a6e4c205108934c37964b6ad682/ParallelPlates.png"><span class="xref download myst">Figures/ParallelPlates.png</span></a></p>
+<p><img alt="x" src="_images/ParallelPlates.png" /></p>
 <p>The electric field between the plates is simply dependant on the difference in potential and the plate seperation, <span class="math notranslate nohighlight">\(d\)</span>:</p>
 <p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}, \)</span></p>
 <p><span class="math notranslate nohighlight">\( E = \frac{V_i - V-f}{d}. \)</span></p>
@@ -526,7 +532,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\( E = 45 \, V\,m^{-1}.\)</span></p>
 <p>Finally, let us consider the work done on a particle moving from one plate to the other. Let’s assume that a negative charge is placed at the positive plate and then accelerated towards the negative plate, the work done on it by the electric field (and its corresponding gain in kinetic energy) can be determined as follows:</p>
 <p><span class="math notranslate nohighlight">\( W = F \Delta s = F d, \)</span></p>
-<p>Rearranging <span class="math notranslate nohighlight">\( E = \frac{F}{q} to \)</span>F=Eq$  and substituting gives:</p>
+<p>Rearranging <span class="math notranslate nohighlight">\( E = \frac{F}{q}\)</span> to <span class="math notranslate nohighlight">\(F=Eq\)</span>  and substituting gives:</p>
 <p><span class="math notranslate nohighlight">\( W = Eqd, \)</span></p>
 <p>Recalling <span class="math notranslate nohighlight">\( E = \frac{V}{d} \)</span> and substituting gives:</p>
 <p><span class="math notranslate nohighlight">\( W = \frac{V}{d} q d, \)</span></p>
@@ -554,7 +560,60 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>An electron orbits a proton in a hydrogen atom at a distance of <span class="math notranslate nohighlight">\(5.3 \times 10^-11\, m\)</span>. What is the potential energy of the electron?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1 Solution</p>
+<p>Recall that an electron and a proton have the same but opposite charges and use the appropriate equation to determine the electric potential energy:</p>
+<p><span class="math notranslate nohighlight">\( U = \frac {kQq}{r} \)</span></p>
+<p><span class="math notranslate nohighlight">\( U = \frac{8.99\times 10^9 \cdot 1.6\times10^{-19} \cdot 1.6 \times 10^{-19}}{5.3 \times 10^{-11}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( U = 4.4 \times 10^{-18} \, J \)</span></p>
+</div>
+</div>
+</div>
 <hr class="docutils" />
+<div class="section" id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h2>
+<p>An electric charge Q is placed at the origin as shown in the figure below. What is the ratio between the absolute potential at point A and the potential at point B?</p>
+<p><img alt="" src="_images/ElectricPotentialQ2.png" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2 Solution</p>
+<p>To determine the electric potential at either point we simply use the equation:</p>
+<p><span class="math notranslate nohighlight">\(V = \frac{kQ}{r}, \)</span></p>
+<p>such that</p>
+<p><span class="math notranslate nohighlight">\(V_A = \frac{kQ}{r_a}, \)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\(V_B = \frac{kQ}{r_b}. \)</span></p>
+<p>Taking the ratio of these two potentials gives:</p>
+<p><span class="math notranslate nohighlight">\(\frac{V_A}{V_B} = \frac{\frac{kQ}{r_a}}{\frac{kQ}{r_b}},\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{V_A}{V_B} = \frac{kQ}{r_a} \times \frac{r_b}{kQ} \)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{V_A}{V_B} = \frac{r_b}{r_a}. \)</span></p>
+<p>From the figure we can see that <span class="math notranslate nohighlight">\(r_b\)</span> is equal to <span class="math notranslate nohighlight">\(4\)</span> units and <span class="math notranslate nohighlight">\(r_a\)</span> is equal to <span class="math notranslate nohighlight">\(2\)</span> units meaning:</p>
+<p><span class="math notranslate nohighlight">\(\frac{V_A}{V_B} = \frac{4}{2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{V_A}{V_B} = 2.\)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h2>
+<p>Points A and B are each the same distance, r, from two charges, +Q and +2Q, as shown in the figure below. What is the work required to move a charge q from point A to point B?</p>
+<p><img alt="" src="_images/ElectricPotentialQ3.png" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3 Solution</p>
+<p>Recall that the work done is simply equal to the negatice change in potential energy:</p>
+<p><span class="math notranslate nohighlight">\( W_{a \to b} = - \Delta U = U_a - U_b, \)</span></p>
+<p>and that the potential energy is related to the electric potential by:</p>
+<p><span class="math notranslate nohighlight">\( V = \frac{U}{q}, \)</span></p>
+<p>therefore :</p>
+<p><span class="math notranslate nohighlight">\( U = Vq, \)</span></p>
+<p>which when substituted into the initial equation becomes:</p>
+<p><span class="math notranslate nohighlight">\( W_{a \to b} = q(V_a - V_b). \)</span></p>
+<p>As the electric potential is a scaler field, to determine the electric potential at points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> we need only add the contributions from each of the charges:</p>
+<p><span class="math notranslate nohighlight">\(V_a = k\frac{+Q}{r} + k\frac{+2Q}{r} = k\frac{+3Q}{r}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(V_b = k\frac{+Q}{r} + k\frac{+2Q}{r} = k\frac{+3Q}{r}, \)</span></p>
+<p>therefore:</p>
+<p><span class="math notranslate nohighlight">\( W_{a \to b} = q\left(k\frac{+3Q}{r} - k\frac{+3Q}{r}\right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( W_{a \to b} = 0. \)</span></p>
+<p>No work is done!</p>
 </div>
 </div>
 </div>
@@ -599,6 +658,15 @@ document.write(`
         <p class="prev-next-title">Lecture 7: Electric Forces and Electric Fields</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Lecture_9_Capacitance.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 9: Capacitors</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -630,6 +698,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
 </ul>
   </nav></div>
 

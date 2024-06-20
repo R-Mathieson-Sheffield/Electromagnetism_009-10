@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 9: Capacitors &#8212; PHY009/10 - ELectricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_9_Capacitance';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 8: Electric Potential and Work Done" href="Lecture_8_Electric_Potential_Work_Done.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY009/10 - ELectricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_6_Kirchhoffs_Laws.html">Lecture 6: Kirchhoff’s Laws</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_7_Electric_Forces_Fields.html">Lecture 7: Electric Forces and Electric Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_8_Electric_Potential_Work_Done.html">Lecture 8: Electric Potential and Work Done</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 9: Capacitors</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_9_Capacitance.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_9_Capacitance.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 9: Capacitors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitance-and-capacitors">Capacitance and Capacitors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-construction">Capacitor Construction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-operation">Capacitor Operation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-read-a-capacitor">How to read a capacitor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications">Practical Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors-combinations">Capacitors Combinations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors-in-parallel">Capacitors in Parallel:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors-in-series">Capacitors in Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rc-circuits">RC Circuits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-9-capacitors">
+<h1>Lecture 9: Capacitors<a class="headerlink" href="#lecture-9-capacitors" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Know what a capacitor is.</p></li>
+<li><p>Be able to define capacitance and farads.</p></li>
+<li><p>Be able to use the equations for capacitance in circuit problems.</p></li>
+<li><p>Be able to know and use the equations for capacitors in series and in parallel.</p></li>
+</ul>
+<p><img alt="" src="Radio.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="capacitance-and-capacitors">
+<h2>Capacitance and Capacitors<a class="headerlink" href="#capacitance-and-capacitors" title="Permalink to this heading">#</a></h2>
+<p>A <em>capacitor</em> is a component that is used to store electrical charge. The amount of charge that a capacitor can hold is dependant on both its capacitance and the voltage that is supplied to it. Capacitance is measure of a components ability to collect and store energy in the from of electrical charge, and is defined as <em>the charge stored per unit volt</em>, which can be written mathematically as:</p>
+<p><span class="math notranslate nohighlight">\( C = \frac{Q}{V}, \)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(C\)</span> is the capactance, <span class="math notranslate nohighlight">\(Q\)</span> is the charge and <span class="math notranslate nohighlight">\(V\)</span> is the voltage supplied. The unit for capacitance is the <strong>Farad, F</strong>, where <span class="math notranslate nohighlight">\(1\,F\)</span> is simply equal to <span class="math notranslate nohighlight">\(1\, C\,V^{-1}\)</span>. In reality <span class="math notranslate nohighlight">\(1\,F\)</span> is very large and typical capacitors have capacitances in the pico, micro or milli Farad range.</p>
+<p>Now that we have an understanding of what capacitance is, it is worth investigating how capacitors are constructed and how they operate.</p>
+</div>
+<div class="section" id="capacitor-construction">
+<h2>Capacitor Construction<a class="headerlink" href="#capacitor-construction" title="Permalink to this heading">#</a></h2>
+<p>A capacitor simply comprises two conducting metal plates that are seperated by a dielectric material (<em>dielectric simply means electrically insulating</em>). These plates are then connected to the terminals of a power supply either directly or indirectly.</p>
+<p><img alt="" src="_images/CapacitorConstruction.png" /></p>
+<p>In order to find out how much charge can be stored on the capacitor plates, we simply rearrange the equation above:</p>
+<p><span class="math notranslate nohighlight">\( Q = CV. \)</span></p>
+<p>There are three factors that contribute to the capacitance of a capacitor, these are:</p>
+<ul class="simple">
+<li><p><strong>The area of the capacitor plates.</strong></p></li>
+<li><p><strong>The seperation distance between the capacitor plates.</strong></p></li>
+<li><p><strong>The <em>permittivity</em> of the dielectric between the plates.</strong></p></li>
+</ul>
+<p>For a capacitor with no dielectric between the capacitor plates, the capacitance can be calculated as:</p>
+<p><span class="math notranslate nohighlight">\( C = \epsilon_0 \frac{A}{d}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\( \epsilon_0\)</span> is the <em>permitivity of free space</em>, <span class="math notranslate nohighlight">\(A\)</span> is the area of the plates and <span class="math notranslate nohighlight">\(d\)</span> is the distance seperating them. The capacitance of a capacitor with a dielectric between them can be calculated as:</p>
+<p><span class="math notranslate nohighlight">\( C = \epsilon \frac{A}{d} = \left(\epsilon_r \epsilon_0 \right) \frac{A}{d}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the permittivity of the material, which is calculated by multiplying <span class="math notranslate nohighlight">\(\epsilon_0\)</span> by the <em>relative permittivity</em>, <span class="math notranslate nohighlight">\(\epsilon_r\)</span>, of the material:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon = \epsilon_r \cdot \epsilon_0.\)</span></p>
+<p>The relative permitivity is simply a unitless number.</p>
+<p><img alt="" src="_images/CapacitorConstruction2.png" /></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Capacitance is the ability of a capacitor to store charge. Capacitance is measured in <strong>Farads, F</strong>, and can be calculated using either of the equations below (situation dependent):</p>
+<p><span class="math notranslate nohighlight">\( C = QV\)</span></p>
+<p><span class="math notranslate nohighlight">\( C = \epsilon \frac{A}{d} = \left(\epsilon_r \epsilon_0 \right) \frac{A}{d}. \)</span></p>
+<p>For a capacitor containing no dielectric, the capacitance is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( C = \epsilon_0 \frac{A}{d}. \)</span></p>
+</div>
+</div>
+<div class="section" id="capacitor-operation">
+<h2>Capacitor Operation<a class="headerlink" href="#capacitor-operation" title="Permalink to this heading">#</a></h2>
+<p>In operation, when a capacitor in a circuit has a voltage applied across it (e.g. it is connected to a battery), charge flows from one plate and to the other, creating an electric field between the plates. This is known as charging a capacitor.</p>
+<p>When the current in a capacitor reaches the metal plates as it charges, they become ‘stuck’ as they are attracted to the opposite charges, but the dielectric prevents them from crossing to the other plate.
+When an alternative path in the circuit is created, the capacitor will discharge. Charging is shown in the gif below:</p>
+<p><img alt="" src="_images/CapacitorCharge.gif" /></p>
+</div>
+<div class="section" id="how-to-read-a-capacitor">
+<h2>How to read a capacitor<a class="headerlink" href="#how-to-read-a-capacitor" title="Permalink to this heading">#</a></h2>
+<p>Some capacitors will have the value of their capacitance printed onto them. On circular capacitors the first two numbers represent the value in pF (<span class="math notranslate nohighlight">\(\times 10^{-12}\,F\)</span>), whilst the third number represents how orders of magnitude larger the value actually is.</p>
+<p><img alt="" src="_images/ReadingCapacitor.png" /></p>
+</div>
+<div class="section" id="practical-applications">
+<h2>Practical Applications<a class="headerlink" href="#practical-applications" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Energy Storage</strong> - as capacitors store energy in the form of charge, they are primarily used as a “temporary battery”.</p></li>
+<li><p><strong>Tuning</strong> - variable capacitors are used in tuning circuits in radio systems. In a radio a capacitor is coupled with an <em>inductor</em>. This <em>inductor-capacitor-oscillator</em> charges and discharges the capacitor in regular intervals. If the frequency of the intervals matches the frequency of a nearby broadcast, the radio will pick it up.</p></li>
+<li><p><strong>Sensors</strong> - capacitors are sensitive to changes in external factors such as humidity and mechanical strain, this means that they can be used to sense these changes by monitoring the loss or gain of capacitance. These changes change either the distance between the capacitor plates or the properties of the dielectric between them.</p></li>
+</ul>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Inductors (L) store energy in magnetic fields. We will learn more about inductors later in this course, but for now, just remember that they can be combined with a capacitor to form a system that oscillates between storing energy in a magnetic field and as charge. The frequency of this oscillation is dependant on the capacitance of the capacitor and the <em>inducatance</em> of the inductor. LC resonance is shown in the gif below:</p>
+<p><img alt="" src="_images/LCResonance.gif" /></p>
+</div>
+</div>
+<div class="section" id="capacitors-combinations">
+<h2>Capacitors Combinations<a class="headerlink" href="#capacitors-combinations" title="Permalink to this heading">#</a></h2>
+<p>As is the case when a circuit contains mutliple resistors, we must take considerations of how to determine equivalent capacitance when we have multiple capacitors in a circuit. How we combine them depends on whether or not the capacitors are arranged in series or in parallel.</p>
+<p>With multiple capacitors, we must use the equivalent capacitance to find the amount of charge flowing through a circuit - if we know the change in time we can also determine the current! Let’s consider the circuits in terms of charge rather than current.</p>
+<div class="section" id="capacitors-in-parallel">
+<h3>Capacitors in Parallel:<a class="headerlink" href="#capacitors-in-parallel" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/CapacitorsParallel.png" /></p>
+<p>When arranged in parallel the current, and therefore charge, is split via the circuit junctions, but the potential difference across each of the capacitors will remain the same, thus:</p>
+<p><span class="math notranslate nohighlight">\(Q_{tot} = Q_1 + Q_2 + Q_3,\)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\(V_{tot} = V_1 = V_2 = V_3,\)</span></p>
+<p>Using the relationship <span class="math notranslate nohighlight">\(Q=CV\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(C_{tot}V = C_1V + C_2V + C_3V,\)</span></p>
+<p><span class="math notranslate nohighlight">\( \therefore C_{tot} = C_1 + C_2 + C_3. \)</span></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The general expression for determining the equivilent capacitance of <span class="math notranslate nohighlight">\(n\)</span> capacitors arranged in parallel is:</p>
+<p><span class="math notranslate nohighlight">\(  C_{tot} = C_1 + C_2 + ... + C_n \)</span></p>
+</div>
+</div>
+<div class="section" id="capacitors-in-series">
+<h3>Capacitors in Series<a class="headerlink" href="#capacitors-in-series" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/CapacitorsSeries.png" /></p>
+<p>When arrange in series the current, and therefore charge, is the same for each of the capacitors, however there will be a different voltage drop across each capacitor. Thus:</p>
+<p><span class="math notranslate nohighlight">\( Q_{tot} = Q_1 = Q_2 = Q_3, \)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\(V_{tot} = V_1 + V_2 + V_3, \)</span></p>
+<p>Using the relationship <span class="math notranslate nohighlight">\(V = \frac{Q}{C}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\frac{Q}{C_{tot}} = \frac{Q}{C_1} + \frac{Q}{C_2} + \frac{Q}{C_3}, \)</span></p>
+<p><span class="math notranslate nohighlight">\(\therefore \frac{1}{C_{tot}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}.\)</span></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The general expression for determining the equivilent capacitance of <span class="math notranslate nohighlight">\(n\)</span> capacitors arranged in series is:</p>
+<p><span class="math notranslate nohighlight">\(  C_{tot} = \frac{1}{C_{tot}} = \frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n}.\)</span></p>
+</div>
+<p>As is the case for resistors, a circuit may contain capacitors arranged in both series and parallel and you may be required to use a combination of the rules above to determine the total equivalent capacitance.</p>
+<p><strong>You should note that the rules for combining capacitors and resistors in series and in parallel are the opposite of one another! If you can remember the rules for resistors, you can remember the rules for capacitors.</strong></p>
+</div>
+</div>
+<div class="section" id="rc-circuits">
+<h2>RC Circuits<a class="headerlink" href="#rc-circuits" title="Permalink to this heading">#</a></h2>
+<p>LC circuits are mentioned above, but it is also worth briefly considering RC circuits. These are circuits made up of a resistor and a capacitor as shown below.</p>
+<p><img alt="" src="_images/RCCircuit.png" /></p>
+<p>Recall that the sum of the voltage drops across components in a circuit must equal the EMF supplied:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon = V_R + V_C, \)</span></p>
+<p><span class="math notranslate nohighlight">\(\epsilon = IR + \frac{Q}{C}, \)</span></p>
+<p>meaning that as charge accumulates on the plates of the capacitor, the current flowing through the circuit must decrease to compenstate as <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are fixed. This means that the voltage measured across the resistor varies as a function of time as the capacitor charges or discharges.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Units have been omitted in calculations below for simplicity. Ensure you know what each value represents.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>A capacitor is formed of a two square conducting plates with length <span class="math notranslate nohighlight">\(0.0200\,m\)</span>. The plates are seperated by a distance of <span class="math notranslate nohighlight">\(0.00500\, m\)</span> by a dielectric with a relative permitivity of <span class="math notranslate nohighlight">\(5.60\)</span>. Calculate the capacitance of the capacitor.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1 Solution </p>
+<p>To solve this question we simply need to use the formula to determine the capacitance:</p>
+<p><span class="math notranslate nohighlight">\( C = \epsilon_r \epsilon_0 \frac{A}{d} \)</span></p>
+<p>As the capacitor plates are square, the area is simply the side length squared, thus:</p>
+<p><span class="math notranslate nohighlight">\( C = 5.6 \times 8.854\times 10^{-12} \frac{0.02 \times 0.02}{0.005}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( C =  3.97 \times 10^{-10} \, F,\)</span></p>
+<p><span class="math notranslate nohighlight">\( C =  39.7 \,nF.\)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>The circuit shown below is supplied by a 5 V source. What is the total amount of charge in the circuit?</p>
+<p><img alt="" src="_images/CapacitorQuestion.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Q2 Hint</p>
+<p>To answer this question you will need to break this circuit into smaller sections, calculate their equivalent capacitance, and the combine these sections to find the total equivalent capacitance.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_8_Electric_Potential_Work_Done.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 8: Electric Potential and Work Done</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitance-and-capacitors">Capacitance and Capacitors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-construction">Capacitor Construction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-operation">Capacitor Operation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-read-a-capacitor">How to read a capacitor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications">Practical Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors-combinations">Capacitors Combinations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors-in-parallel">Capacitors in Parallel:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors-in-series">Capacitors in Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rc-circuits">RC Circuits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
