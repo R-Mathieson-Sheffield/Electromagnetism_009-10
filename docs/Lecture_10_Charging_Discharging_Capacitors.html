@@ -1,0 +1,817 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 10: Charging and Discharging Capacitors &#8212; PHY009/10 - Electricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_10_Charging_Discharging_Capacitors';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 11: Magnetic Fields and Forces" href="Lecture_11_Magnetic_Fields_Forces.html" />
+    <link rel="prev" title="Lecture 9: Capacitors" href="Lecture_9_Capacitance.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY009/10 - Electricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_6_Kirchhoffs_Laws.html">Lecture 6: Kirchhoff’s Laws</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_7_Electric_Forces_Fields.html">Lecture 7: Electric Forces and Electric Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_8_Electric_Potential_Work_Done.html">Lecture 8: Electric Potential and Work Done</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_9_Capacitance.html">Lecture 9: Capacitors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 10: Charging and Discharging Capacitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_11_Magnetic_Fields_Forces.html">Lecture 11: Magnetic Fields and Forces</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_10_Charging_Discharging_Capacitors.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_10_Charging_Discharging_Capacitors.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 10: Charging and Discharging Capacitors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-charging-plots">Capacitor Charging Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charge">Charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current">Current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage">Voltage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-discharging-plots">Capacitor Discharging Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Voltage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-time-constant">The Time Constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-and-discharging-equations">Charging and Discharging Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-stored-by-a-capacitor">Energy Stored by a Capacitor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-10-charging-and-discharging-capacitors">
+<h1>Lecture 10: Charging and Discharging Capacitors<a class="headerlink" href="#lecture-10-charging-and-discharging-capacitors" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to sketch, the behaviour of current, voltage and charge when charging or discharging capacitors.</p></li>
+<li><p>Know and use the equations for current, charge and voltage when charging or discharging capacitors.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="capacitor-charging-plots">
+<h2>Capacitor Charging Plots<a class="headerlink" href="#capacitor-charging-plots" title="Permalink to this heading">#</a></h2>
+<p>When an initially uncharged capacitor is connected to a source of EMF such as a battery, the electrons at the negative terminal of the battery will be repelled away and accumulate the plate of the capacitor connected to it. Electrons on the other capacitor plate will also be attracted to the positive terminal of the battery and repelled from the opposing negatively charged plate, this in turn leaves the second capacitor plate with an overall positive charge.</p>
+<p>As the charge accumulates on the capacitor plates, an increasingly strong electric field that opposes the one produced by the battery is established. Charges will continue to move round the circuit until the electric field established between through the circuit due to the potential difference of the capacitor plates is equal to that produced by the battery. At this point the net electric field is zero and charges will no longer move around the circuit. <strong>The capacitor has become fully charged</strong>. If an alternative pathway in the circuit is activiated (e.g. by closing a switch), the capacitor will discharge.</p>
+<p>Now let’s consider how the current, potential difference, and charge change as a function of time as a capacitor charges.</p>
+<div class="section" id="charge">
+<h3>Charge<a class="headerlink" href="#charge" title="Permalink to this heading">#</a></h3>
+<p>Initially, when the capacitor is uncharged, it is very easy for electrons to move around the circuit. However, as more and more negative charge accumulates on one of the capacitor plates, the coulomb repulsion between the electrons becomes greater and greater. This means that as time progresses, the charge accumulating on the capacitor will increase, but at a decreasing rate as it becomes increasingly difficult for charge to move around the circuit. This is shown graphically as:</p>
+<p><img alt="" src="_images/CapacitorCharging.gif" /></p>
+<p>This behaviour can also be represented graphically showing the capacitor charge as a function of time:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x800 with 1 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="current">
+<h3>Current<a class="headerlink" href="#current" title="Permalink to this heading">#</a></h3>
+<p>As discussed above, as the capacitor charges, it becomes more and more difficult for charge to move around the circuit. This means that the rate at which charge moves round the circuit, the current, decreases as a function of time. This is shown graphically as:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/ab3b8205dee73ba91184db5da591911b67510625ccc319b9bef653f40706cdc8.png" src="_images/ab3b8205dee73ba91184db5da591911b67510625ccc319b9bef653f40706cdc8.png" />
+</div>
+</div>
+</div>
+<div class="section" id="voltage">
+<h3>Voltage<a class="headerlink" href="#voltage" title="Permalink to this heading">#</a></h3>
+<p>As the difference in charge increases, the potential difference across the capacitor increases until it reaches the source voltage. This behaviour is to be expected as it was established in the last lecture that the charge and voltage are directly proportional to one another, the the constant of proportionality being equal to the capacitance <span class="math notranslate nohighlight">\(Q = CV \)</span>. Accordingly, the plot of voltage across the capacitor as a function of time is simply a scaled verion of the plot of charge against time as shown below.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/15b12d546d34fb20c3b1fce374b6b74c8aaea352985787fdd0723b9b4d370a5b.png" src="_images/15b12d546d34fb20c3b1fce374b6b74c8aaea352985787fdd0723b9b4d370a5b.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="capacitor-discharging-plots">
+<h2>Capacitor Discharging Plots<a class="headerlink" href="#capacitor-discharging-plots" title="Permalink to this heading">#</a></h2>
+<p>A switch that allows connects the capacitor to either the EMF source or another portion of a circuit allows us to swap between charging and discharging. When the switch is set so that the capacitor is connected to the source of EMF, the capacitor will charge. When the switch is set so that the capacitor is connected to another circuit without an EMF source, the capacitor will discharge. Similar trends in the charge, current and voltage are observed when discharging the capacitor.</p>
+<p><img alt="" src="_images/CapacitorSwitch.png" /></p>
+<div class="section" id="id1">
+<h3>Charge<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>A fully charged capacitor has a high electron density on one capacitor plate. This means that when discharging, initially that electrons at the negative capacitor plate will experience a strong coulomb repulsion and be easily repelled from the capacitor plate. As time progresses, the electric field that is accelerating the electrons becomes weaker and weaker until there is no net electric field and both capacitor plates are neutrally charged. As such, the rate at which the capacitor plate becomes depleted of charge decreases as a function of time. This is shown in the plot below:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/3f8c8d2ab935d4d573e3dd15c419fc535f448ca2f90bce577b9ee32caa94001b.png" src="_images/3f8c8d2ab935d4d573e3dd15c419fc535f448ca2f90bce577b9ee32caa94001b.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Current<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>As was the case for charging, as the charge of the capacitor plates reduces, so to does the electric field between them, meaning the rate at which charge moves throughout the circuit reduces. Therefore the current reduces as a function of time and at a decreasing rate.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/78a1aeacfb27632258bfe161507e50196a59074e5ae3c48de072cb9db135d52a.png" src="_images/78a1aeacfb27632258bfe161507e50196a59074e5ae3c48de072cb9db135d52a.png" />
+</div>
+</div>
+<p>Note the negative y-axis here. The current is in the opposite direction now!</p>
+</div>
+<div class="section" id="id3">
+<h3>Voltage<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>Once again, the voltage plot mirrors that of the charge plot, and therefore we see that the voltage decreases as a function of time at a decreasing rate:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0f4e6d98c74b20fa3a2b2979d8ebbf6d7c2aef0ebc88beac77c43d0c585339c6.png" src="_images/0f4e6d98c74b20fa3a2b2979d8ebbf6d7c2aef0ebc88beac77c43d0c585339c6.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-time-constant">
+<h2>The Time Constant<a class="headerlink" href="#the-time-constant" title="Permalink to this heading">#</a></h2>
+<p>You will have noticed that the plots above show exponential functions, more specifically exponential relationships that are functions of time. To be able to perform meaningful calculations we must introduce a new concept - <strong>the time constant, <span class="math notranslate nohighlight">\(\tau\)</span></strong>.</p>
+<p>When discharging a capacitor, the time constant is defined as <em>the amount of time it takes for the charge, voltage or current to fall to <strong><span class="math notranslate nohighlight">\(\e^{-1} \,(\approx 37%)\)</span></strong> of the inital value</em>. <strong>The time constant is therefore how long it takes for <em>any exponential</em> to get to <span class="math notranslate nohighlight">\((\approx 37%)\)</span> of its original value</strong>.</p>
+<p>The larger the time constant, the longer it will take for the exponential function to decay. <strong>The time constant has units of time e.g. seconds</strong>.</p>
+<p>For an RC circuit (one made of a resistor and a capacitor), <span class="math notranslate nohighlight">\(\tau = RC\)</span>, because the charge discharge time will depend on how much charge the capacitor is capable of holding and how much the resistor impedes the flow of charge.</p>
+<p>So so how many time constants does it take for a capacitor to become fully charged or discharged? Well as an exponential never actually reaches zero (it just gets closer and closer), we take a sensible approach and say that that it is <strong><span class="math notranslate nohighlight">\(5\)</span> time constants</strong>, as after this amount of time in the case of discharging, only approximately 0.69% of the intial charge, current or voltage will remain - this is good enough…</p>
+<p>It is important that you do not confuse the time constant with <em>halflife</em>. The half-life is defined as <em>the time it takes for either the charge, current or voltage to fall to <span class="math notranslate nohighlight">\(50%\)</span> of its original value</em> and is represented by the symbol <strong><span class="math notranslate nohighlight">\(t_{1/2}\)</span></strong>. The principle of half-life is shown on the plot below:</p>
+<p><img alt="" src="_images/halflifeplot.png" /></p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The time constant is the time it takes for an exponential to fall to ~37% of its original value. The time constant of a capacitor is calculated as:</p>
+<p><span class="math notranslate nohighlight">\(\tau = RC.\)</span></p>
+<p>The half-life is the time it takes for an exponential to fall to half of its initial value. We therefore expect the time constant to be greater than the half-life.</p>
+<p><strong>Ensure that you understand these concepts - these are relevent to all exponential functions including radioactive decay (where we will revisit these ideas in semester 2!).</strong></p>
+</div>
+</div>
+<div class="section" id="charging-and-discharging-equations">
+<h2>Charging and Discharging Equations<a class="headerlink" href="#charging-and-discharging-equations" title="Permalink to this heading">#</a></h2>
+<p>With an understanding of the behaviour of exponential functions, we are able to determine the amount of charge held by the capacitor, the magnetude of the charging/discharging current, or voltage across the capacitor at any given time using the following equations. <strong>These are key equations. Ensure that you commit them to memory</strong>.</p>
+<div class="admonition-charging-discharging-equations admonition">
+<p class="admonition-title">Charging Discharging Equations</p>
+<p><strong>Charging:</strong></p>
+<p><span class="math notranslate nohighlight">\( Q = Q_{max} \left( 1 - e^{-t/RC} \right) = Q_{max} \left( 1 - e^{-t/\tau} \right), \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the charge, <span class="math notranslate nohighlight">\(Q_{max}\)</span> is the maximum amount of charge the capacitor can hold, <span class="math notranslate nohighlight">\(t\)</span> is the time, <span class="math notranslate nohighlight">\(R\)</span> is the resistance, <span class="math notranslate nohighlight">\(C\)</span> is the capacitance and <span class="math notranslate nohighlight">\(\tau\)</span> is the time constant.</p>
+<p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} = I_0 e^{-t/\tau}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the current and <span class="math notranslate nohighlight">\(I_0\)</span> is the initial current.</p>
+<p><span class="math notranslate nohighlight">\( V = V_0 \left( 1 - e^{-t/RC} \right) = V_0 \left( 1 - e^{-t/\tau} \right), \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the voltage and <span class="math notranslate nohighlight">\(V_0\)</span> is the EMF, <span class="math notranslate nohighlight">\(\epsilon\)</span> supplied by the battery (i.e. the voltage the capacitor will charge to). Often to avoid confusion, this equation is written as:</p>
+<p><span class="math notranslate nohighlight">\( V = \epsilon \left( 1 - e^{-t/RC} \right) = \epsilon \left( 1 - e^{-t/\tau} \right). \)</span></p>
+<p><strong>Discharging</strong></p>
+<p><span class="math notranslate nohighlight">\( Q = Q_0 e^{-t/RC} = Q_{0} e^{-t/\tau}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} = I_{0} e^{-t/\tau}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = V_0 e^{-t/RC} = V_{0} e^{-t/\tau}, \)</span></p>
+<p>where the subscript zero, simply means the initial value of charge, current or voltage at the instant it begins discharging.</p>
+</div>
+</div>
+<div class="section" id="energy-stored-by-a-capacitor">
+<h2>Energy Stored by a Capacitor<a class="headerlink" href="#energy-stored-by-a-capacitor" title="Permalink to this heading">#</a></h2>
+<p>The work done to charge a capacitor is given by:</p>
+<p><span class="math notranslate nohighlight">\(W = \frac{1}{2}QV, \)</span></p>
+<p>recalling that <span class="math notranslate nohighlight">\( Q = CV\)</span>, the work done can also be expressed as:</p>
+<p><span class="math notranslate nohighlight">\( W = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}. \)</span></p>
+<p>This tells us how much energy is stored by a capacitor if we start with zero voltage:</p>
+<p><span class="math notranslate nohighlight">\( E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}. \)</span></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Units have been omitted in calculations below for simplicity. Ensure you know what each value represents.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>a. Sketch the plots of charge, current and voltage for a capacitor as it charges and discharges.</p></li>
+<li><p>b. What are the capacitor charge and discharging equations?</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1a Solution</p>
+<p><img alt="" src="_images/capacitorplots.png" /></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1b Solution</p>
+<p><strong>Charging:</strong></p>
+<p><span class="math notranslate nohighlight">\( Q = Q_{max} \left( 1 - e^{-t/RC} \right) = Q_{max} \left( 1 - e^{-t/\tau} \right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} = I_0 e^{-t/\tau}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = \epsilon \left( 1 - e^{-t/RC} \right) = \epsilon \left( 1 - e^{-t/\tau} \right). \)</span></p>
+<p><strong>Discharging:</strong></p>
+<p><span class="math notranslate nohighlight">\( Q = Q_0 e^{-t/RC} = Q_{0} e^{-t/\tau}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} = I_{0} e^{-t/\tau}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = V_0 e^{-t/RC} = V_{0} e^{-t/\tau}. \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>A 1100μF capacitor is connected to a 8.0 V battery with a internal resistance of 6.0 kΩ.</p>
+<ul class="simple">
+<li><p>a. Calculate the initial charge and the maximum charge on the capacitor.</p></li>
+<li><p>b. Calculate the time it takes to fully charge the capacitor.</p></li>
+<li><p>c. After <span class="math notranslate nohighlight">\(10\,\)</span>s of charging, what is the voltage across the capacitor?</p></li>
+<li><p>d. What is the voltage across the RESISTOR after <span class="math notranslate nohighlight">\(10\,\)</span>s?</p></li>
+<li><p>e. What is the maximum energy that the capacitor can hold?</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2a Solution</p>
+<p>The capacitor is initially uncharged so:</p>
+<p><span class="math notranslate nohighlight">\( Q_0 = 0\, C\)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\( Q_{max} = CV_{max}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q_{max} = 1100 \times 10^{-6} \cdot 8, \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q_{max} = 8.8 \, mC.\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2b Solution</p>
+<p>The time taken for the capacitor to full charge or discharge is approximated as 5 time constants worth of time:</p>
+<p><span class="math notranslate nohighlight">\( t = 5\tau = 5RC \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = 5 \cdot 6000 \cdot 1100 \times 10^{-6} \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = 33 \, s. \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2c Solution</p>
+<p>We can determine the voltage across the capacitor after <span class="math notranslate nohighlight">\(10\,\)</span>s of charging using the correct capacitor charging equation:</p>
+<p><span class="math notranslate nohighlight">\( V = \epsilon \left( 1 - e^{-t/RC} \right) \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = 8 \left( 1 - e^{\frac{-10}{ 6000 \cdot 1100 \times 10^{-6}}} \right) \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = 6.2 \, V\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2d Solution</p>
+<p>To determine the voltage across the resistor we can determine the current flowing <span class="math notranslate nohighlight">\(10\,\)</span>s after the capacitor began to charge and then use Ohm’s law. The initial current is given as the maximum current that can flow around the circuit, which itself can be calculated using Ohm’s law:</p>
+<p><span class="math notranslate nohighlight">\( I_0 = \frac{V}{R} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} \to I = \frac{V}{R} e^{-t/RC} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{8}{6000} e^{\frac{-10}{ 6000 \cdot 1100 \times 10^{-6}}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = 0.29 \, A\)</span></p>
+<p>Therefore, the voltagw across the resistor is given as:</p>
+<p><span class="math notranslate nohighlight">\( V = IR \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = 0.29 \times 6000 \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = 1740 \, V\)</span></p>
+<p>The voltage across the resistor <span class="math notranslate nohighlight">\(10\)</span>s after the capacitor began charging is <span class="math notranslate nohighlight">\(1700\, V\)</span> to two significant figures.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2e Solution</p>
+<p>To determine the amount of energy that the capacitor can store, we simply use the appropriate equation:</p>
+<p><span class="math notranslate nohighlight">\( E \frac{1}{2}CV^2 \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = \frac{1}{2}\cdot 1100 \times 10^{-6} \cdot 8^2 \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = 0.035 \, J \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = 35 \, mJ \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h3>
+<p>A <span class="math notranslate nohighlight">\(100 \,\mu F\)</span> capacitor is fully charged and holds <span class="math notranslate nohighlight">\(10.0\,mC\)</span> of charge. It is then discharged through two resistors arranged in series. The resistors have resistances of <span class="math notranslate nohighlight">\(2.00 \,M\Omega\)</span> and <span class="math notranslate nohighlight">\(3.00\, M\Omega\)</span>.</p>
+<ul class="simple">
+<li><p>a) Calculate the amount of charge remaining on the capacitor after <span class="math notranslate nohighlight">\(50\,s\)</span>.</p></li>
+<li><p>b) Calculate the time for the potential difference to drop to <span class="math notranslate nohighlight">\(12 \,V\)</span>.</p></li>
+<li><p>c) Find the voltage drop across the <span class="math notranslate nohighlight">\(3\,M\Omega\)</span> resistor after <span class="math notranslate nohighlight">\(100\,s\)</span>.</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3a Solution</p>
+<p>The first thing to do is to calculate the total equivalent resistance of the circuit that the capacitor will discharge through. As the resistors are arranged in series:</p>
+<p><span class="math notranslate nohighlight">\(R_{total} = R_1 + R_2, \)</span></p>
+<p><span class="math notranslate nohighlight">\( R_{total} = 2 \times 10^6 + 3 \times 10^6 \)</span></p>
+<p><span class="math notranslate nohighlight">\( R_{total} = 5\times 10^6 \, \Omega.\)</span></p>
+<p>Now the capacitor discharge equation for charge can be used:</p>
+<p><span class="math notranslate nohighlight">\( Q = Q_0 e^{-t/RC} \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q = 10 \times 10^{-3} \cdot e^{\frac{-50}{5\times 10^6 \cdot 100 \times 10^{-6}}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( Q = 9.05 \times 10^{-3} \, C = 9.05 \, mC.\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3b Solution</p>
+<p>To determine the time it takes for the voltage to below a given threshold, the voltage discharge equation will be used. This means that the initial voltage needs to be calculated from the capacitance and charge:</p>
+<p><span class="math notranslate nohighlight">\(V_0 = \frac{Q_0}{C}\)</span></p>
+<p><span class="math notranslate nohighlight">\(V_0 = \frac{10 \times 10^{-3}}{100 \times 10^{-6}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(V_0 = 100\, V\)</span></p>
+<p>Now the voltage discharge equation can be rearranged for <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( V = V_0 e^{-t/RC} \)</span></p>
+<p><span class="math notranslate nohighlight">\( \frac{V}{V_0} = e^{-t/RC} \)</span></p>
+<p>To get rid of an exponenital, take the natural log:</p>
+<p><span class="math notranslate nohighlight">\( ln{\frac{V}{V_0}} = - \frac{t}{RC} \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = -RC \cdot \ln{\frac{V}{V_0}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = - 5\times 10^6 \cdot  100 \times 10^{-6} \cdot \ln{\frac{12}{100}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( t = 1060 \,s \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3c Solution</p>
+<p>The resistors are arranged in series meaning that if the current flowing through the circuit at a given time is found, this same current must be flowing through each of the resistors. Ohm’s law can then therefore be used to determine the voltage drop across the resistors. As was the case with the voltage, we must first find the initial current:</p>
+<p><span class="math notranslate nohighlight">\( I_0 = \frac{V_0}{R} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_0 = \frac{100}{5\times 10^6} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_0 = 20 \times 10^{-3}\, A \)</span></p>
+<p>Now we can use the capacitor discharge equation for current to determine what the current is after <span class="math notranslate nohighlight">\(100\,s\)</span> of discharging:</p>
+<p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = 20 \times 10^{-3} e^{\frac{-100}{5\times 10^6 \cdot 100 \times 10^{-6}}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = 16.4 \, \mu A. \)</span></p>
+<p>Therefore the voltage drop across the resistor is:</p>
+<p><span class="math notranslate nohighlight">\( V = IR \)</span></p>
+<p><span class="math notranslate nohighlight">\( V = 16.4 \times 10^{-6} \cdot 3 \times 10^{6}\)</span></p>
+<p><span class="math notranslate nohighlight">\( V = 49.2 \, V.\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_9_Capacitance.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 9: Capacitors</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture_11_Magnetic_Fields_Forces.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 11: Magnetic Fields and Forces</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-charging-plots">Capacitor Charging Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charge">Charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current">Current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage">Voltage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor-discharging-plots">Capacitor Discharging Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Voltage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-time-constant">The Time Constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charging-and-discharging-equations">Charging and Discharging Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-stored-by-a-capacitor">Energy Stored by a Capacitor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
