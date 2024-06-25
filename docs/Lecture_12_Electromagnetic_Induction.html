@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 12: Electromagnetic Induction &#8212; PHY009/10 - Electricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_12_Electromagnetic_Induction';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 11: Magnetic Fields and Forces" href="Lecture_11_Magnetic_Fields_Forces.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY009/10 - Electricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_6_Kirchhoffs_Laws.html">Lecture 6: Kirchhoff’s Laws</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_7_Electric_Forces_Fields.html">Lecture 7: Electric Forces and Electric Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_8_Electric_Potential_Work_Done.html">Lecture 8: Electric Potential and Work Done</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_9_Capacitance.html">Lecture 9: Capacitors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Semester 1 Week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_10_Charging_Discharging_Capacitors.html">Lecture 10: Charging and Discharging Capacitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_11_Magnetic_Fields_Forces.html">Lecture 11: Magnetic Fields and Forces</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 12: Electromagnetic Induction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_12_Electromagnetic_Induction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_12_Electromagnetic_Induction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 12: Electromagnetic Induction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-induction">Electromagnetic Induction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motional-emf">Motional EMF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-flux-and-flux-linkage">Magnetic Flux and Flux Linkage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faraday-and-lenz-s-law">Faraday and Lenz’s Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-12-electromagnetic-induction">
+<h1>Lecture 12: Electromagnetic Induction<a class="headerlink" href="#lecture-12-electromagnetic-induction" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to define electromagnetic induction, magnetic flux and magnetic flux linkage.</p></li>
+<li><p>Be able to state Faraday’s and Lenz’s law and use them to calculate the induction in a coil.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="electromagnetic-induction">
+<h2>Electromagnetic Induction<a class="headerlink" href="#electromagnetic-induction" title="Permalink to this heading">#</a></h2>
+<p>Electromagnetic induction is the process of generating a current by time-varying a magnetic field - this is <em>Faraday’s Law</em>.</p>
+<p>An induced current is the current that results from a changing magnetic field. This is not caused by a battery - this is a new way to generate a current! A current can be induced in two ways:</p>
+<ol class="arabic simple">
+<li><p>By changing the magnetic field through a stationary circuit.</p></li>
+<li><p>By moving the circuit orientation in a stationary magnetic field.</p></li>
+</ol>
+<p>The currents produced by electromagnetic induction are the same as those produced by batteries, just created in a different way. The effect that induces current may also be referred to as motional emf. The gif below shows how a current can be induced by a change in <em>magnetic flux</em> using a bar magnet.</p>
+<p><img alt="" src="FaradayLaw.gif" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="motional-emf">
+<h2>Motional EMF<a class="headerlink" href="#motional-emf" title="Permalink to this heading">#</a></h2>
+<p>Motional EMF occurs when a conducting material is moved within an external magnetic field. The charge carriers in the conductor will experience a magnetic force and begin to move:</p>
+<p><span class="math notranslate nohighlight">\(F_B = Bqv.\)</span></p>
+<p>This results in a seperation of positve and negative charges across the material (it becomes polarised) which results in an electric field being induced across the material. <strong>The magnitude of the E-field will increase until it is large enough to balance the magnetic force driving the movement of charge carriers</strong>. The potential difference across the system is calculated using:</p>
+<p><span class="math notranslate nohighlight">\( \Delta V = \epsilon = vlB, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is velocity, <span class="math notranslate nohighlight">\(l\)</span> is length and <span class="math notranslate nohighlight">\(B\)</span> is the magnetic field. This process is shown in the figure below:</p>
+<p><img alt="" src="_images/MotionalEMF.png" /></p>
+<p>If a <em>circuit</em> is moved within a stationary magnetic field, motional EMF will be generated which will induce current in the circuit.The conductor in the previous example had an EMF induced across it, but could not sustain a current as the charges had nowhere to go. This moving conductor can be incorporated into a circuit - negating the need for a battery to drive current!</p>
+<p><img alt="" src="InducedCurrent.png" /></p>
+<p>Assuming that the internal resistance of the wires is <span class="math notranslate nohighlight">\(R\)</span>, the current can be calculated as:</p>
+<p><span class="math notranslate nohighlight">\(I = \frac{\epsilon}{R}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I = \frac{vlB}{R}. \)</span></p>
+<p>The current in the wire is induced by the changing magnetic field, and as a current is simply a series of moving charges - the current itself induces its own magnetic field! Using right-hand-rule 2, the direction of the induced magnetic field can be determined to be opposite to that of the initial magnetic field. The induced magnetic field is shown using the purple spots on the figure below:</p>
+<p><img alt="" src="_images/InducedCurrentB.png" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="magnetic-flux-and-flux-linkage">
+<h2>Magnetic Flux and Flux Linkage<a class="headerlink" href="#magnetic-flux-and-flux-linkage" title="Permalink to this heading">#</a></h2>
+<p>Faraday found that a current is induced when the ‘amount of magnetic field’ passing through a coil or a loop of wire changes. What is the ‘amount of magnetic field’ passing through the wire? To answer this we must define a new term: <strong><em>the magnetic flux</em> <span class="math notranslate nohighlight">\(\Phi_B\)</span></strong>.</p>
+<p>If the cross-sectional area of the circuit above intercepting the magnetic field increased, more of the magnetic field would pass through the wire. Thus magnetic flux is the amount of a magnetic field passing through the cross-sectional area of a loop:</p>
+<p><img alt="" src="_images/MagneticFlux.png" /></p>
+<p>The mathematical expression for magnetic flux is written as:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = \vec{B} \cdot \vec{A}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\cdot\)</span> indicates that we are taking the <em>vector dot product</em> of the two vectors <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. In this expression <span class="math notranslate nohighlight">\(A\)</span> is the area vector, which is simply a vector with a direction perpendicular to the plane of the area intersecting the magnetic field. The magnetiude of the area vector is proportional to the area itself. The expression above can also be written as:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = |\vec{B}||\vec{A}| \cos{\theta}, \)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the vectors <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The reason for using the vector dot product becomes apparent when this stystem is visualised as below:</p>
+<p><img alt="" src="_images/FluxProjection.png" /></p>
+<p>In the figure above, we see that by taking the cosine of angle between the two vectors, we are actually determining the projection of one of the vectors onto the other. This means that when the two vectors are perfectly aligned (i.e. the area vector is fully projected onto the magnetic field vector), there will be maximum flux as the entire area is being intersected by the magnetic field lines. If on the otherhand the area vector was perpendicular to the magnetic field lines, there would be no flux as none of the area is being intersected by the field lines.</p>
+<p>When we have multiple loops in one wire (i.e. a solenoid), we can define the magnetic flux linkage as the magnetic flux through a coil of area A multiplied by the number of turns <span class="math notranslate nohighlight">\(N\)</span> of the coil.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The magnetic flux, <span class="math notranslate nohighlight">\(\Phi_B\)</span> can be calculated by taking the vector dot product of the area vector <span class="math notranslate nohighlight">\(A\)</span>, with the magnetic field <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = \vec{B} \cdot \vec{A} = |\vec{B}||\vec{A}| \cos{\theta}. \)</span></p>
+<p><strong>Magnetic flux has units of Webber (<span class="math notranslate nohighlight">\(Wb\)</span>)</strong> which is equivilent to <span class="math notranslate nohighlight">\(T \, m^2\)</span>. Magnetic flux linkage for a solenoid can be calculated as:</p>
+<p><span class="math notranslate nohighlight">\( \text{Flux linkage} = N \Phi_B = N \left(B \cdot  A \right). \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="faraday-and-lenz-s-law">
+<h2>Faraday and Lenz’s Law<a class="headerlink" href="#faraday-and-lenz-s-law" title="Permalink to this heading">#</a></h2>
+<p>In our previous examples, the motional emf has been attributed to magnetic forces, but it was also discovered that a current will be induced if a stationary loop of wire is placed within a changing magnetic field. Magnetic forces cannot explain why stationary charges in the loop begin to move. Their motion must be being driven by an electric force. If there is an electric force, there must be a net electric field! A changing magnetic field induces an “induced” emf which produces an electric field and drives current. This electric field is established by a change in the magnetic field, rather than by charges.</p>
+<p>This brings us onto the formal definition of Faraday’s law that states “<em>the induced emf in an conductor is equal to the rate of change of the magnetic flux</em>”. This can be written mathematically as:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = \int \vec{E} \cdot d\vec{l} = - \frac{\Delta \Phi_B}{\Delta t}.\)</span></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following derivation is provided to bolster your understanding, but there is no need to memorise it for your exams.</p>
+</div>
+<p>With reference to the figure below, let us now consider where the expression for the motional EMF, <span class="math notranslate nohighlight">\(\epsilon = vlB\)</span>, came from using Faraday’s law. First let us write the equation above in terms of the magnetic field and area vectors:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon =  \frac{\Delta \left(\vec{B} \cdot \vec{A}\right)}{\Delta t},\)</span></p>
+<p>If the magnetic field remains constant and acts perpendicularly to the motion of the wire, the change in flux is only attributed to the change in area of the circuit, therefore:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = \frac{\vec{B} \Delta \vec{A}}{\Delta t},\)</span></p>
+<p>The change in area can be calculated multiplying the length of the wire by the distance it has moved horizontally, which itself can be determined using displacement = velocity <span class="math notranslate nohighlight">\(\times\)</span> time, therefore:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = \frac{\vec{B} \left(vl \Delta t\right)}{\Delta t},\)</span></p>
+<p>which can be simplified to:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = vlB.\)</span></p>
+<p><img alt="" src="_images/FaradayLawDerive.png" /></p>
+<div class="admonition-note-of-interest admonition">
+<p class="admonition-title">Note of Interest</p>
+<p>It is worth noting that changing electric fields also induce magnetic fields! (More on this next year). Maxwell soon realized that it might be possible to establish self-sustaining electric and magnetic fields that would be entirely independent of any charge or currents.</p>
+<p>The changing electric field E, creates a magnetic field B, which then changes in the just the right way to recreate the electric field, which then changes in just the right way to again recreate the magnetic field. The fields are continually created through electromagnetic induction without any reliance on currents or charges. This process is described using two of Maxwells’s equations (which you will meet formally next year):</p>
+<p><span class="math notranslate nohighlight">\( \oint \vec{E} d \vec{l} = - \frac{d}{dt} \int \vec{B} \cdot d\vec{A}, \)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\( \oint \vec{B} d \vec{l} = \mu_0 \epsilon_0 \frac{d}{dt} \int \vec{E} \cdot d\vec{A}. \)</span></p>
+<p><img alt="" src="_images/EMWave.png" /></p>
+</div>
+<p>Referring back to Faraday and Lenz’s law, it is important to understand the significance of the minus sign. <strong>This is attributed to Lenz’s law</strong>, which states: <em>if an induced current flows, the direction of flow is always such that it will oppose the change in flux that produced it.</em></p>
+<p>Let us consider what this actually means using the figure below:</p>
+<p><img alt="" src="_images/Lenz.png" /></p>
+<p>For the image on the left, as the bar magnet approaches, there is an increase (change) in the magnetic flux in the wire loop. This change in flux induces An emf within the wire according to Faraday and Lenz’s law.</p>
+<p>The induced emf will drive a current that induces a magnetic field that opposes the change in flux - this magnetic field will point in the opposite direction to subtract from the increasing downward field!</p>
+<p>If the the induced magnetic field is pointing upwards then the current will flow counter clockwise (RHR2 - thumbs up!)</p>
+<p>For the image on the right, as the bar magnet moves away from the loop, the magnetic flux decreases, but this is still a change in magnetic flux. The induced magnetic field will now oppose the change in flux by contributing towards the diminishing downward field.</p>
+<p>As the induced magnetic field is pointing downwards, the current must be flowing clockwise.</p>
+<p>If the change in flux is increasing (<span class="math notranslate nohighlight">\(\frac{dB}{dt}\)</span> positive), the induced emf will be negative, but if the change in flux is decreasing (<span class="math notranslate nohighlight">\(\frac{dB}{dt}\)</span> negative), the induced emf will be positive.</p>
+<p><strong>The emf induced by a changing magnetic field is essentially driven by a conservation of energy:</strong></p>
+<ul class="simple">
+<li><p>If the change in flux induced a current in the direction opposite to what we observe, then the direction of the induced magnetic field would also be opposite to what we observe.</p></li>
+<li><p>This would mean that a positive change in flux would induce a current that in turn induces a magnetic field that further adds to the positive change in flux.</p></li>
+<li><p>This positive flux would perpetually increase as would the magnitude of the induced current, which clearly violates the principle of conservation of energy.</p></li>
+</ul>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Faraday’s law states that <em>the induced emf in an conductor is equal to the rate of change of the magnetic flux</em>.</p>
+<p>Lenz’s law states that <em>if an induced current flows, the direction of flow is always such that it will oppose the change in flux that produced it</em>.</p>
+<p>Expressed mathematically, Faraday and Lenz’s law is expressed as:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon = \frac{\Delta \Phi_B}{\Delta t}, \)</span></p>
+<p>where</p>
+<p><span class="math notranslate nohighlight">\(\Phi_B = \vec{B} \cdot \vec{A}.\)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Units have been omitted in calculations below for simplicity. Ensure you know what each value represents.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>A square conductor moves through a uniform magnetic field. Which of the figures shows the correct charge distribution on the conductor?</p>
+<div class="tip admonition">
+<p class="admonition-title">Q1 Hint</p>
+<p>Use right hand rule 1!</p>
+</div>
+<p><img alt="" src="_images/L12_Q1.png" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1 Solution</p>
+<p>The magnetic field lines in this image are coming out of the page. This means that if we use right-hand-rule 1 and orient our hand so that our index finger (B-field) is pointing out of the page, and our thumb (velocity) is pointing upwards, our middle finger (force on positive charge) is pointing to the right. Therefore the electrons will move left leaving an area of positive charge on the right establishing a horizontal electric field.</p>
+<p>Option “d” is therefore the correct answer.</p>
+<p><img alt="" src="_images/L12_Q1_Solution.png" /></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>A uniform <span class="math notranslate nohighlight">\(2.00\,T\)</span> magnetic field, <span class="math notranslate nohighlight">\(\vec{B}\)</span>, permeates through a rectangular cross section (<span class="math notranslate nohighlight">\(2.00\,m\)</span> by <span class="math notranslate nohighlight">\(3.00\,m\)</span>). The area vector, <span class="math notranslate nohighlight">\(\vec{A}\)</span>, is at an angle of <span class="math notranslate nohighlight">\(30.0°\)</span> to the magnetic field lines.</p>
+<ul class="simple">
+<li><p>a) Calculate the magnetic flux.</p></li>
+<li><p>b) Calculate the magnetic flux if the cross section was replaced with a circle with radius <span class="math notranslate nohighlight">\(r = 0.50\,m\)</span>.</p></li>
+<li><p>c) Calculate the magnetic flux if the angle between the area vector and the magnetic field became <span class="math notranslate nohighlight">\(90°\)</span>.</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2a Solution</p>
+<p>It is useful to sketch what this stystem actually looks like:</p>
+<p><img alt="" src="_images/L12_Q2a.png" /></p>
+<p>To calculate the flux we simply use the flux equation:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = \vec{B} \cdot \vec{A}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = |\vec{B}||\vec{A}|\cos{\theta}, \)</span></p>
+<p>In this example the magnitude of the area vector is simply the area of the rectangular cross-section:</p>
+<p><span class="math notranslate nohighlight">\( |\vec{A}| = 2 \times 3, \)</span></p>
+<p><span class="math notranslate nohighlight">\( |\vec{A}| = 6 \, m^2. \)</span></p>
+<p>Thus the flux is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = 2 \times 6 \times \cos{30} \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = 10.4 \, Wb.\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2b Solution</p>
+<p>This problem is exactly the same as above, bar the fact that the area of the cross-section has now changed:</p>
+<p>In this example the magnitude of the area vector is simply the area of the rectangular cross-section:</p>
+<p><span class="math notranslate nohighlight">\( |\vec{A}| = \pi r^2, \)</span></p>
+<p><span class="math notranslate nohighlight">\( |\vec{A}| = \pi \left(0.5\right)^2, \)</span></p>
+<p>Thus the flux is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = 2 \times \pi \left(0.5\right)^2 \times \cos{30} \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = 1.36 \, Wb.\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2c Solution</p>
+<p>If the two vectors are perpendicular, and the area vector is perpendicular to the cross-section, this means that there are no longer any field lines intersecting it:</p>
+<p><img alt="" src="_images/L12_Q2c.png" /></p>
+<p>Thus the flux is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = \vec{B} \cdot \vec{A}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = |\vec{B}||\vec{A}|\cos{\theta}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = |\vec{B}||\vec{A}|\cos{90}, \)</span></p>
+<p>As <span class="math notranslate nohighlight">\(\cos{90}=0\)</span>, there the flux is equal to <span class="math notranslate nohighlight">\(0\, Wb\)</span>, which agrees with expectation when looking at the diagram.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h3>
+<p>This question is taken from a textbook. Read the question carefully before answering.</p>
+<p><img alt="" src="_images/TextbookQ.png" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q3 Solution</p>
+<p>In this example, we also need to determine the angle between the area vector and the direction of the B-field as an additional step. It is otherwise the same as above:</p>
+<p><img alt="" src="_images/TextbookA.png" /></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_11_Magnetic_Fields_Forces.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 11: Magnetic Fields and Forces</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-induction">Electromagnetic Induction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motional-emf">Motional EMF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-flux-and-flux-linkage">Magnetic Flux and Flux Linkage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faraday-and-lenz-s-law">Faraday and Lenz’s Law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
