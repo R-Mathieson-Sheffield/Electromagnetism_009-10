@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 13: AC Circuits and Transformers &#8212; PHY009/10 - Electricity and Magnetism</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture_13_AC_Circuits_Transformers';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 12: Electromagnetic Induction" href="Lecture_12_Electromagnetic_Induction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="Introduction.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY009/10 - Electricity and Magnetism</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Unit 2: Electricity and Magnetism
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuit Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_1_Charge_Current_Potential_Difference_Resistance.html">Lecture 1: Charge, Current, Potential Difference and Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_2_Current_Voltage_Characteristics_and_Resistors.html">Lecture 2: Current-Voltage Characteristics and Resistors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_3_Resistivity_Conductivity_SuperConductivity.html">Lecture 3: Resistivity, Conductivity and Superconductivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_4_Electrical_Energy_Power.html">Lecture 4: Electrical Energy and Power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_5_Internal_Resistance.html">Lecture 5: Internal Resistance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_6_Kirchhoffs_Laws.html">Lecture 6: Kirchhoff’s Laws</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric Fields</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_7_Electric_Forces_Fields.html">Lecture 7: Electric Forces and Electric Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_8_Electric_Potential_Work_Done.html">Lecture 8: Electric Potential and Work Done</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_9_Capacitance.html">Lecture 9: Capacitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_10_Charging_Discharging_Capacitors.html">Lecture 10: Charging and Discharging Capacitors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Magnetism</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture_11_Magnetic_Fields_Forces.html">Lecture 11: Magnetic Fields and Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture_12_Electromagnetic_Induction.html">Lecture 12: Electromagnetic Induction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 13: AC Circuits and Transformers</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLecture_13_AC_Circuits_Transformers.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Lecture_13_AC_Circuits_Transformers.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 13: AC Circuits and Transformers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternating-current">Alternating Current</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-square-averages">Root Mean Square Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-ac-current">Generating AC Current</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inductors">Inductors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformers">Transformers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformer-losses">Transformer Losses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-13-ac-circuits-and-transformers">
+<h1>Lecture 13: AC Circuits and Transformers<a class="headerlink" href="#lecture-13-ac-circuits-and-transformers" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>By the end of this lecture you should:</p>
+<ul class="simple">
+<li><p>Be able to explain what is meant by AC current.</p></li>
+<li><p>Understand how transformers operate.</p></li>
+<li><p>Be able to define electromagnetic induction, magnetic flux, and magnetic flux linkge.</p></li>
+<li><p>Be able to state Faraday’s and Lenz’s laws and use them to calculate the induction in a coil.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="alternating-current">
+<h2>Alternating Current<a class="headerlink" href="#alternating-current" title="Permalink to this heading">#</a></h2>
+<p>In this course so far we have only considered direct current (DC current), which is where the current flows in one direction only. An Alternating current (AC) is a current which changes direction and amplitude as a function of tome. AC currents are the type that the grid operates with. The current (and voltage) take the form of a sine wave, which itself will have a characteristic frequency.</p>
+<p><span class="math notranslate nohighlight">\( I = I_{peak} \sin{\left(\omega t\right)}, \)</span></p>
+<p>or</p>
+<p><span class="math notranslate nohighlight">\( V = V_{peak} \sin{\left(\omega t\right)}, \)</span></p>
+<p>where</p>
+<p><span class="math notranslate nohighlight">\( \omega = 2 \pi f \)</span>,</p>
+<p>where <span class="math notranslate nohighlight">\(\omega\)</span> is the angular frequency and <span class="math notranslate nohighlight">\(f\)</span> is the frequency. The peak voltages and currents are good values to describe an AC current as they can be determined directly by reading the maximum amplitude of the sine wave that characterises the alternating current/voltage using an oscillioscope.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/cfec6ea4dbfd23f8a2478bd56919f6ffd01fd129129786bd1bcaf95fdb153c18.png" src="_images/cfec6ea4dbfd23f8a2478bd56919f6ffd01fd129129786bd1bcaf95fdb153c18.png" />
+</div>
+</div>
+<p>When looking at a circuit diagram, it is clear if an alternative current is being used as the supply will have the following symbol:</p>
+<p><img alt="" src="_images/ACSymbol.png" /></p>
+<hr class="docutils" />
+<div class="section" id="root-mean-square-averages">
+<h3>Root Mean Square Averages<a class="headerlink" href="#root-mean-square-averages" title="Permalink to this heading">#</a></h3>
+<p>Another characteristic of an oscillating current/voltage is the root-mean-square (RMS) current/voltage. This is an adjusted average of the current/voltage described by the sine wave, which is more useful when performing calculations as the instantaneous current/voltage is constantly changing. The RMS current is an adjusted current as from the sine plot above it is clear that the waveform is is equal parts negative to positive, which would make the absolute average equal to zero.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This derivation of the RMS current is included below for completeness, but there is no need to memorise it for your exams. You should however, memorise the equation for the root-mean-square current and voltage.</p>
+</div>
+<p>To determine the RMS value of current the instantaneous current is then squared:</p>
+<p><span class="math notranslate nohighlight">\( I^2 = \left( I_{peak}\sin\left(\omega t\right) \right) ^2, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I^2 = I^2_{peak} \sin^2(\omega t) \)</span></p>
+<p>The double angle formula from trigonometry can then be used to get rid of the <span class="math notranslate nohighlight">\(\sin^2(\omega t)\)</span> term:</p>
+<p><span class="math notranslate nohighlight">\( \sin^2(\theta) = \frac{1}{2} \left( 1 - \sin(2\theta) \right), \)</span></p>
+<p>Therefore:</p>
+<p><span class="math notranslate nohighlight">\( I^2 = I^2_{peak} \cdot \frac{1}{2} \left( 1 - \sin(2\omega t) \right), \)</span></p>
+<p><span class="math notranslate nohighlight">\( I^2 = \frac{1}{2}I^2_{peak} - \frac{1}{2}I^2_{peak}\sin(2\omega t), \)</span></p>
+<p>The time average value of <span class="math notranslate nohighlight">\(\sin(2\omega t)\)</span> is zerom as half of the time the value is positive and the other half negative, this means that:</p>
+<p><span class="math notranslate nohighlight">\( I^2 = \frac{1}{2}I^2_{peak}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_{RMS} = \sqrt{\frac{1}{2}I^2_{peak}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{I_{peak}}{\sqrt{2}}. \)</span></p>
+<p>The same is also true for the voltage output. Thus measuring the current flowing through a resistive element allows the voltage to be calculated:</p>
+<p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{V_{peak}}{\sqrt{2}}. \)</span></p>
+<p>The plot below shows the RMS voltage superimposed onto a alternating voltage waveform.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8696d3ae7ed555e4ed34d7cf4e8c2fd43702ba9601a8bfa6ba9b02daad1b9803.png" src="_images/8696d3ae7ed555e4ed34d7cf4e8c2fd43702ba9601a8bfa6ba9b02daad1b9803.png" />
+</div>
+</div>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>The root-mean-square value is an adjusted average that can be used to characterise alterning current and voltages:</p>
+<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{I_{peak}}{\sqrt{2}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{V_{peak}}{\sqrt{2}}. \)</span></p>
+<p>The power of an AC circuit may then be calculated as:</p>
+<p><span class="math notranslate nohighlight">\( P_{RMS} = I_{RMS}V_{RMS} \)</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="generating-ac-current">
+<h3>Generating AC Current<a class="headerlink" href="#generating-ac-current" title="Permalink to this heading">#</a></h3>
+<p>AC current is generated by rotating a magnet in within a coil of wire (or vice versa). This is known as an alternator.</p>
+<p>In electricity production, electrical energy is produced by providing energy to rotate the magnet.This is typically achieved by converting water into steam. The steam then drives a turbine which provides the rotational energy to the alternator. Methods of heating the water to convert it into steam include burning fossil fuels, extracting geothermal energy, or by nuclear power. Alternators can also be driven without the need to heat up a fluid using the kinetic energy from wind turbines or hyrdoelectric damns.</p>
+<p>The schematic below shows how the EMF which drives current is produced using an alternator. This is an example of Faraday and Lenz’s law:</p>
+<p><img alt="" src="_images/Alternator.png" /></p>
+<p>Recalling that the induced EMF is proportional to the rate of change of magnetic flux through the circuit, it is clear to see the relationship between the two lines shown on the plot. The flux here is shown to follow a cosine waveform:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_B = \Phi_{B,0} \cos{(\omega t)}, \)</span></p>
+<p>using Faraday and Lenz’s law:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon = - \frac{d \Phi_B}{dt} = - \frac{d}{dt} \Phi_{B,0} \cos{(\omega t)}, \)</span></p>
+<p>The differential of <span class="math notranslate nohighlight">\(\cos(\theta)\)</span> is <span class="math notranslate nohighlight">\(-\sin(\theta)\)</span>, therefore:</p>
+<p><span class="math notranslate nohighlight">\( \epsilon = - ( - \sin{(\omega t)}), \)</span></p>
+<p><span class="math notranslate nohighlight">\( \epsilon = \sin{(\omega t)}. \)</span></p>
+<p>Therefore we would expect the EMF to be a sine waveform, which is exactly what we see in the plot above! In the figure above, the slip rings and brushes are present to allow the coil of wire to continue to rotate without becoming twisted.</p>
+</div>
+</div>
+<div class="section" id="inductors">
+<h2>Inductors<a class="headerlink" href="#inductors" title="Permalink to this heading">#</a></h2>
+<p>In previous lectures, we have briefly considered inductors, for example when conisdering LC resonance. An inductor is simply a coil of wire which produces a mangetic field. An inductor stores electrical energy in the form of magnetic energy.</p>
+<p>COnsidering Faraday’s law, any circuit with a changing current will have a <strong>self-induced EMF</strong> in the circuit due to the variation in magnetic flux. Considering Lenz’s law, the induced EMF will oppose the change in current that induced it, thus makig variations in current more difficult. In an AC circuit, the inductor will suppress rapid variations in current. This means that inductors can be used as filters to surpress high frequency signals.</p>
+<p>An example of a circuit containing an inductor is an LR circuit (an inductor and a resistor) - the equations used to describe current/voltage charactersitics in an LR circuit are very similar to those for an LC circuit, however the time constant in these circuits is simply <span class="math notranslate nohighlight">\(\tau = \frac{L}{R}\)</span>.</p>
+<p><img alt="" src="_images/LRCircuit.png" /></p>
+<p>If an LR circuit is connected to a DC supply, as shown above, as there is no change in the current flowing through it, it produces a static magnetic field. In this instance, as there is no change in magnetic flux through the the inductor there is no potential difference induced across the device… the inductor does not effectively store magnetic energy in a DC circuit and behaves as a normal wire. Inductors work most effectively when using an AC current.</p>
+</div>
+<div class="section" id="transformers">
+<h2>Transformers<a class="headerlink" href="#transformers" title="Permalink to this heading">#</a></h2>
+<p>A transformer comprises two or more inductors and a transformer core and operates via the principle of mutual induction. One of the inductors is powered using an alternating current, which in turn generates an alternating magnetic field/flux. The magnetic field is directed to the second inductor via the transformer core (this maximises efficiency). The magnetic field then induces a second alternating current across the other inductor.</p>
+<p><img alt="" src="_images/Transformer.png" /></p>
+<p>Transformers are used to convert very large voltages to smaller, more manageable voltages, like the ones we use in our homes. The power grid uses much larger voltages than those that are needed to used in homes. The large voltage is used as it means a much smaller current is required to transport the same amount of power across the grid (P=IV). Over the gird wires, we loser power (P=I2R), but this is much less than would be lost if using a smaller voltage!</p>
+<p>Approximately <span class="math notranslate nohighlight">\(400\,kV\)</span> of ENF goes through the power grid over long distances. Therefore if we want <span class="math notranslate nohighlight">\(100\,W\)</span> of power, this would result in a current of <span class="math notranslate nohighlight">\(0.25\, mA\)</span>. Assuming a reasonable resistance, the power loss across the line will be relatively small.</p>
+<p>For safety reasons, we want to minimize household voltages - we must put the power through a transformer to lower the voltage going into our homes! Occasionally we want to increase the amount of voltage using transformers - for example, microwave ovens!</p>
+<p><img alt="" src="_images/TransformerGrid.png" /></p>
+<p>In an ideal transformer, the flux is perfeclty conserved:</p>
+<p><span class="math notranslate nohighlight">\( \Phi_1 = \Phi_2. \)</span></p>
+<p>Using Faraday and Lenz’s laws the (induced) voltage in the inductor coils is calculated as:</p>
+<p><span class="math notranslate nohighlight">\( V_1 = - N_1 \frac{\Delta \Phi}{\Delta t}, \)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\( V_2= - N_2 \frac{\Delta \Phi}{\Delta t}. \)</span></p>
+<p>As the rate of change of flux is the same for each indutor in an ideal transformer, the two equations can be rearranged as:</p>
+<p><span class="math notranslate nohighlight">\( \frac{V_1}{N_1} = - \frac{\Delta \Phi}{\Delta t}, \)</span></p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\( \frac{V_2}{N_2} = - \frac{\Delta \Phi}{\Delta t}, \)</span></p>
+<p>therefore the equations can be equated as:</p>
+<p><span class="math notranslate nohighlight">\( \frac{V_1}{N_1} = \frac{V_2}{N_2}. \)</span></p>
+<p><strong>The equation above can be used to determine the voltage step-up or step-down for transformers!</strong></p>
+<div class="section" id="transformer-losses">
+<h3>Transformer Losses<a class="headerlink" href="#transformer-losses" title="Permalink to this heading">#</a></h3>
+<p>Whilst it may be useful to perform calculations assuming that the trasnfromer is perfectly efficient, in reality, whilst the efficiency of transformers is very high, they still lose energy from electrical losses. They are not 100% efficient. Examples of loss include:</p>
+<ol class="arabic simple">
+<li><p><strong>Eddy Currents</strong> - The changing magnetic fields in the transformer core induce currents within the core leading to losses.</p></li>
+</ol>
+<p><img alt="" src="_images/EddieCurrents.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Magnetic Field Leakage</strong> - The magnetic field may not be completely contained between coils and may generate currents in other surrounding conducting materials.</p></li>
+<li><p><strong>Winding Resistance</strong> - Current flowing through the windings of the inductors causes resistive heating and energy being radiated away.</p></li>
+<li><p><strong>Mechanical losses</strong> - The alternating B-field causes fluctuating EM forces between the coils of wire, transformer core and surrounding metals - this induces vibrations and noise (energy consumption).</p></li>
+<li><p><strong>Hysteresis loss</strong> - In an AC field, the magnetization cannot change as rapidly as the AC field which leads to energy loss due to this lag.</p></li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Atempt the questions before looking at the solutions otherwise you will not learn!</strong></p>
+<p>Students who look at mark schemes without going through the motions of a question often think “<em>yes, that’s what I would have done</em>”, but are then unable to perfom on exams as the knowledge was never consolidated through practise.</p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Units have been omitted in calculations below for simplicity. Ensure you know what each value represents.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
+<p>An AC current is supplied to a circuit containing a <span class="math notranslate nohighlight">\(12.0 \, \Omega\)</span> resistor. An oscilloscope measures the voltage across the resistor as a function of time. The peak voltage measured is <span class="math notranslate nohighlight">\(36.0 \, V\)</span>. Determine the average power produced by the resistor.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Q1 Solution</p>
+<p>The first thing to do is determine the average volage, the RMS voltage:</p>
+<p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{V_{peak}}{\sqrt{2}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{36.0}{\sqrt{2}}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_{RMS} =  25.5 \, V.\)</span></p>
+<p>Next, using the resistance, the average current can be determined using Ohms law:</p>
+<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{V_{RMS}}{R}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{25.5}{12.0}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_{RMS} = 2.12 \, A. \)</span></p>
+<p>Finally the power can be determined:</p>
+<p><span class="math notranslate nohighlight">\( P = I_{RMS} V_{RMS}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 54.1 \, W. \)</span></p>
+</div>
+</div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
+<p>A transformer has 500 turns of wire on the primary winding and 10.0 turns of wire on the secondary winding.</p>
+<ul class="simple">
+<li><p>a) Determine the secondary voltage if the primary voltage is <span class="math notranslate nohighlight">\(120\, V\)</span>.</p></li>
+<li><p>b) Determine the current in the primary and secondary winding given that the secondary winding is connected to a resistance load of <span class="math notranslate nohighlight">\(15.0\, \Omega\)</span>.</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2a Solution</p>
+<p>To solve this question we simply use the transformer equation:</p>
+<p><span class="math notranslate nohighlight">\(\frac{V_1}{N_1} = \frac{V_2}{N_2},\)</span></p>
+<p><span class="math notranslate nohighlight">\( V_2 = \frac{V_1N_2}{N_1}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_2  = \frac{120 \times 10}{500}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_2 = 2.40 \, V. \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Q2b Solution</p>
+<p>First, we can determine the current flowing through the second winding using Ohm’s law:</p>
+<p><span class="math notranslate nohighlight">\( I_2 = \frac{V_2}{2}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_2 = \frac{2.4}{15}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_2 = 0.160 \, A. \)</span></p>
+<p>The current in the primary coil can be determined if we assume that the transformer is lossles, meaning that the power in one coil is equal to that in the other:</p>
+<p><span class="math notranslate nohighlight">\( P_1 = P_2, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_1 V_1 = I_2 V_2, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_1 = \frac{I_2V_2}{V_1}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_1 = \frac{0.16 \times 2.4}{120}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_1 = \frac{0.16 \times 2.4}{120}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_1 = 0.0032 \, A, \)</span></p>
+<p><span class="math notranslate nohighlight">\( I_1 = 3.20 \, mA. \)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture_12_Electromagnetic_Induction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 12: Electromagnetic Induction</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternating-current">Alternating Current</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-square-averages">Root Mean Square Averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-ac-current">Generating AC Current</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inductors">Inductors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformers">Transformers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformer-losses">Transformer Losses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Ross Mathieson
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
