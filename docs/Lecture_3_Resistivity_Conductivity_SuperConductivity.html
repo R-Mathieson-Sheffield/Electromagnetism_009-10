@@ -412,7 +412,7 @@ document.write(`
 <h2>Potential Dividers<a class="headerlink" href="#potential-dividers" title="Permalink to this heading">#</a></h2>
 <p>The role of a potential divider is to divide voltage. A potential divider can be made as a simple circuit containing a source of EMF and two (or more) resistors. An example is shown in the figure below:</p>
 <p><img alt="PotentialDivider" src="_images/PotentialDivider.png" /></p>
-<p>We know that the voltage drop across all components in a circuit must equal the EMF of the supply, $V_{in}:</p>
+<p>We know that the voltage drop across all components in a circuit must equal the EMF of the supply, <span class="math notranslate nohighlight">\(V_{in}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ V_{in} = V_1 + V_2, \]</div>
 <p>therefore by changing the values of resistance of the resistors, we can change the voltage across them. Let’s show this using Ohm’s law to find the current flowing through the resistors:</p>
@@ -443,15 +443,15 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="potential-divider-applications">
 <h3>Potential Divider Applications<a class="headerlink" href="#potential-divider-applications" title="Permalink to this heading">#</a></h3>
-<p>Potential dividers are very useful owing to their simplicity. It may be the case that a fixed input voltage needs to be transformed into a different output voltage for optimisation purposes. For example, one such potentiometers (a variable potential divider - imaged below) were historically used to manually adjust picture settings of analogue televisions or control the volume of audio equipment.</p>
+<p>Potential dividers are very useful owing to their simplicity. It may be the case that a fixed input voltage needs to be transformed into a different output voltage for optimisation purposes. For example, potentiometers (a variable potential divider - imaged below) were historically used to manually adjust picture settings of analogue televisions or control the volume of audio equipment.</p>
 <p><img alt="Potentiometer" src="_images/Potentiometer.png" /></p>
-<p>Potential dividers can also be used as sensors. For example, should resistor 2 in the in the potential divider be replaced with a light or temperature dependent resistor, <span class="math notranslate nohighlight">\(V_{out}\)</span> would vary as a function of either of these conditions. A circuit could then be made where if <span class="math notranslate nohighlight">\(V_out\)</span> falls below a certain threshold, a signal is sent to your boiler to command it to turn on the heating.</p>
+<p>Potential dividers can also be used as sensors. For example, should resistor 2 in the in the potential divider be replaced with a light or temperature dependent resistor, <span class="math notranslate nohighlight">\(V_{out}\)</span> would vary as a function of either of these conditions. A circuit could then be made where if <span class="math notranslate nohighlight">\(V_{out}\)</span> falls below a certain threshold, a signal is sent to your boiler to command it to turn on the heating.</p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="resistivity-and-conductivity">
 <h2>Resistivity and Conductivity<a class="headerlink" href="#resistivity-and-conductivity" title="Permalink to this heading">#</a></h2>
-<p>Throught this course so far we have discussed resistors without really stating what they are. Essentially a resistor is any component in a circuit that has resistance, however we would usually be referring to an actual “resistor” with a set resistance.</p>
+<p>Through out this course so far we have discussed resistors without really stating what they are. Essentially a resistor is any component in a circuit that has resistance, however we would usually be referring to an actual “resistor” with a set resistance.</p>
 <p>In reality wires connecting circuit components also have a resistance, however we usually neglect their contribution to the total circuit resistance as wires are made of materials chosen due to their high conductivity. From the last sentance it is clear that resistance and conductivity are related to one another, but it is first worth considering how we quantify how much resistance a circuit component provides.</p>
 <p>Let’s consider a metal wire. Intuatively, we can make some reasonable assumptions as to what factors would influence its overall resistance:</p>
 <ol class="arabic simple">
@@ -461,14 +461,13 @@ document.write(`
 <p><strong>Resistance is proportional to length and inversely proportional to the cross-sectional area</strong>, which can be expressed mathematically as:</p>
 <div class="math notranslate nohighlight">
 \[ R \propto \frac{L}{A}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(R\)</span> is the resistance, <span class="math notranslate nohighlight">\(L\)</span> is the length of the wire and <span class="math notranslate nohighlight">\(A\)</span> is the cross sectional area. When we see a linearly proportional relationship we can add a constant of proportionality, in this case this is equal to the <em>resistivity</em>, <span class="math notranslate nohighlight">\(\rho\)</span>, of the material the wire is made from.</p>
-<p>The conductivity, <span class="math notranslate nohighlight">\(\sigma\)</span>, of a material is simply the reciprocal of the resistivity i.e. if a material has a low resistivity it has a high conductivity and vice vera.</p>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the resistance, <span class="math notranslate nohighlight">\(L\)</span> is the length of the wire and <span class="math notranslate nohighlight">\(A\)</span> is the cross sectional area. When we see a linearly proportional relationship we can add a constant of proportionality, in this case this is equal to the <em>resistivity</em>, <span class="math notranslate nohighlight">\(\rho\)</span>, of the material the wire is made from. The conductivity, <span class="math notranslate nohighlight">\(\sigma\)</span>, of a material is simply the reciprocal of the resistivity i.e. if a material has a low resistivity it has a high conductivity and vice vera.</p>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
-<p>Resistivity, <span class="math notranslate nohighlight">\(\rho\)</span> is a characteristic property of materials, has units of <strong><span class="math notranslate nohighlight">\(\Omega\, m\)</span></strong>, and can be determined using the equation:</p>
+<p>Resistivity, <span class="math notranslate nohighlight">\(\rho\)</span>, is a characteristic property of materials, has units of <strong><span class="math notranslate nohighlight">\(\Omega\, m\)</span></strong>, and can be determined using the equation:</p>
 <div class="math notranslate nohighlight">
 \[ R = \rho\frac{L}{A}. \]</div>
-<p>Conductivity, <span class="math notranslate nohighlight">\(\sigma\)</span> is simply the reciprocal of the resistivity, has units of <span class="math notranslate nohighlight">\(\Omega^{-1}\, m^{-1}\)</span> or <span class="math notranslate nohighlight">\(S\, m^-{1}\)</span> (Siemens is simply inverse Ohm):</p>
+<p>Conductivity, <span class="math notranslate nohighlight">\(\sigma\)</span>, is simply the reciprocal of the resistivity, has units of <span class="math notranslate nohighlight">\(\Omega^{-1}\, m^{-1}\)</span> or <span class="math notranslate nohighlight">\(S\, m^-{1}\)</span> (Siemens is simply inverse Ohm):</p>
 <div class="math notranslate nohighlight">
 \[ \sigma = \frac{1}{\rho} = \frac{L}{RA}.\]</div>
 </div>
@@ -476,20 +475,21 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="superconductivity">
 <h2>Superconductivity<a class="headerlink" href="#superconductivity" title="Permalink to this heading">#</a></h2>
-<p>Whilst most materials are electrically resistive, in certain conditions some metals or alloys become <em>superconductive</em>, which is to say that they exhibit <strong>zero resistance</strong>. This means that when a current has been established in the superconductor, it will exist indefinetly without losing energy. A second key property of superconductors is that a magnetic field is unable to penetrate to bulk of the material (provided that they are sufficiently weak). This is known as the <em>Meissner</em> effect and is what allows superconducting materials to levitate!</p>
+<p>Whilst most materials are electrically resistive, in certain conditions some metals or alloys become <em>superconductive</em>, which is to say that they exhibit <strong>zero resistance</strong>. This means that when a current has been established in the superconductor, it will exist indefinitely without losing energy.</p>
+<p>A second key property of superconductors is that a magnetic field is unable to penetrate to bulk of the material (provided that they are sufficiently weak). This is known as the <em>Meissner</em> effect and is what allows superconducting materials to levitate!</p>
 <p><img alt="Levitation" src="_images/Levitation.gif" /></p>
-<p>In order to achieve superconductivity, these materials must be cooled to an incredibly low <em>critical temperature</em> <span class="math notranslate nohighlight">\(T_C\)</span> using a cryogenic like liquid nitrogen or liquid helium (temperatures of -<span class="math notranslate nohighlight">\(196\,°C\)</span> and <span class="math notranslate nohighlight">\(-269\,°C\)</span> respectively). At these temperatures the materials undergo a phase change to become super conductive.</p>
+<p>In order to achieve superconductivity, these materials must be cooled to an incredibly low <em>critical temperature</em>, <span class="math notranslate nohighlight">\(T_C\)</span>, using a cryogenic like liquid nitrogen or liquid helium (temperatures of -<span class="math notranslate nohighlight">\(196\,°C\)</span> and <span class="math notranslate nohighlight">\(-269\,°C\)</span>, respectively). At these temperatures the materials undergo a phase change to become super conductive.</p>
 <p>These materials are very important as they can be used to generate very strong magnetic fields, such as those required for MRI scans, particle accelerators, maglev trains or those that will be used in future fusion power plants to contain highly energetic charged particles.</p>
 <hr class="docutils" />
 <div class="section" id="type-i-and-type-ii-superconductivity">
 <h3>Type-I and Type-II Superconductivity<a class="headerlink" href="#type-i-and-type-ii-superconductivity" title="Permalink to this heading">#</a></h3>
 <p>Superconductive materials can be categorised into two types:</p>
 <ul class="simple">
-<li><p>Type-I: When cooled below the ciritical temperature, these materials exhibit superconductivity provided that the external magnetic field is not above a critical value or the current density of charges within the material does not exceed a particular limit. If either of these conditions are true, the material becomes non-superconductive. The value of external magnetic field required to destroy the super conducting state is critical temperature dependant as shown in the figure below:</p></li>
+<li><p><strong>Type-I</strong>: When cooled below the ciritical temperature, these materials exhibit superconductivity provided that the external magnetic field is not above a critical value or the current density of charges within the material does not exceed a particular limit. If either of these conditions are true, the material becomes non-superconductive. The value of external magnetic field required to destroy the super conducting state is critical temperature dependant as shown in the figure below:</p></li>
 </ul>
 <p><img alt="TypeI" src="_images/TypeIPlot.png" /></p>
 <ul class="simple">
-<li><p>Type-II: This type of superconductor behaves the same as a type-I below a critical threshold of the external magnetic field and is in the normal state above a second critical threshold of magnetic field, however, between these two critical thresholds the material exits in a “<em>mixed state</em>”. In this state, when the material is penetrated by an external magnetic field (<em>magnetic-flux</em>), it still contains regions of superconductivity. The mechamnism for this is as follows:</p>
+<li><p><strong>Type-II</strong>: This type of superconductor behaves the same as a type-I below a critical threshold of the external magnetic field and is in the normal state above a second critical threshold of magnetic field, however, between these two critical thresholds the material exits in a “<em>mixed state</em>”. In this state, when the material is penetrated by an external magnetic field (<em>magnetic-flux</em>), it still contains regions of superconductivity. The mechamnism for this is as follows:</p>
 <ul>
 <li><p>the magnetic field lines penetrate the bulk of the material,</p></li>
 <li><p>current vortexes occur around the field lines,</p></li>
@@ -519,12 +519,12 @@ document.write(`
 <p>Using this information, we are able to provide a basic overview of the mechanism that drives superconductivity:</p>
 <ul class="simple">
 <li><p>In a superconducting material, individual electrons are able to pair up with other electrons. This is known as a <strong>Cooper pair</strong>.</p></li>
-<li><p>This only occurs as at very low temperatures where the amplitude of atomic osciallaitons around their lattice points becomes negligiable, meaning when an electron approaches, the positively charged ion cores of the atoms are attracted to the negatively charged electron.</p></li>
-<li><p>This distorts the lattice and creates a region of increased positive charge density. This positive region then attracts a second electrons by overcoming the repulsion between the two electrons. This mechanism is illustrated in the following gif:</p></li>
+<li><p>This only occurs as at very low temperatures where the amplitude of atomic osciallaitons around their lattice points becomes negligiable, meaning when an electron approaches, the positively charged cores of the atoms are attracted to the negatively charged electron.</p></li>
+<li><p>This distorts the lattice and creates a region of increased positive charge density. This positive region then attracts a second electron by overcoming the repulsion between the two electrons. This mechanism is illustrated in the following gif:</p></li>
 </ul>
 <p><img alt="CooperPairs" src="_images/CooperPairs.gif" /></p>
 <ul class="simple">
-<li><p>These electrons are now bound together as a Cooper pair. These Cooper pair no longer behaves like bosons rather than a fermions, meaning they no longer obey the exclusion principle and can instead “condense” into a single quantum state.</p></li>
+<li><p>These electrons are now bound together as a Cooper pair. Cooper pairs behaves like bosons rather than fermions, meaning they no longer obey the exclusion principle and can instead “condense” into a single quantum state.</p></li>
 <li><p>When accelerated by an electric field, individual electrons will gain momentum in their own way and are able to interact with the atomic lattice which manifests as electric resistance.</p></li>
 <li><p>As Cooper pairs are all in the same quantum state, they must all gain the same amount of momentum when accelerated by an electric field, this means that individual electrons are unable to interact with the atomic lattice and there is no electrical resistance!</p></li>
 <li><p>Electrons in Cooper pairs are only very weakly bound and a small increase in temperature can provide sufficent energy to split break them apart. This is why superconductivity occurs at very low temperatures.</p></li>
@@ -532,7 +532,7 @@ document.write(`
 <p>The mechanism above is known as BSC theory (Bardeen–Cooper–Schrieffer theory - named after John Bardeen, Leon Cooper, and John Robert Schrieffer who came up with it). Superconductivity is a very complex topic and one that is still not completely understood. For example, the BCS theory is unable to explain Type-II superconductivity nor explain how higher temperature superconductors may work.</p>
 <div class="admonition-resource admonition">
 <p class="admonition-title">Resource</p>
-<p>The figures above were taken from Dissemination of IT for the Promotion of Materials Science by the Univertsity of Cambridge, which is a fantastic resources to look at if you would like to learn more about superconductivity. These resources can be found at https://www.doitpoms.ac.uk/tlplib/superconductivity/index.php .</p>
+<p>The figures above were taken from Dissemination of IT for the Promotion of Materials Science by the Univertsity of Cambridge, which is a fantastic resources to look at if you would like to learn more about superconductivity. These resources can be found <a class="reference external" href="https://www.doitpoms.ac.uk/tlplib/superconductivity/index.php">here</a>.</p>
 </div>
 </div>
 </div>

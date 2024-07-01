@@ -370,7 +370,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential">Electric Potential</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential-and-electric-fields">Electric Potential and Electric Fields</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-fields-examples">Electric Fields Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hollow-charged-sphere">Hollow Charged Sphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charged-hollow-sphere">Charged Hollow Sphere</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charged-parallel-plates">Charged Parallel Plates</a></li>
 </ul>
 </li>
@@ -405,16 +405,16 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="electric-potential-energy">
 <h2>Electric Potential Energy<a class="headerlink" href="#electric-potential-energy" title="Permalink to this heading">#</a></h2>
-<p>Perhaps one of the easiest traps to fall into when studying electromagnetism not realising that electric potential and electric potential <em>energy</em> do not refer to the same thing. First, let’s consider electric potential energy by looking at the figure below.</p>
+<p>Perhaps one of the easiest traps to fall into when studying electromagnetism is not realising that electric potential and electric potential <em>energy</em> do not refer to the same thing. First, let’s consider electric potential energy by looking at the figure below.</p>
 <p><img alt="" src="_images/ElectricPotentialEnergy.png" /></p>
 <ul class="simple">
 <li><p>In the first half of the figure a negative charge has an initial velocity in the positive <span class="math notranslate nohighlight">\(x\)</span>-direction. As it is negative, the charge will experience a force that acts to accelerate it <strong>up the electric field</strong> in the negative <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
-<li><p>This will mean that the charge is decelerated. It’s kinetic energy, <span class="math notranslate nohighlight">\(K\)</span>, is converted into potential energy <span class="math notranslate nohighlight">\(U\)</span>, resulting in a decrease in its kinetic energy and an increase it its potential energy.</p></li>
+<li><p>This will mean that the charge is decelerated. It’s kinetic energy, <span class="math notranslate nohighlight">\(K\)</span>, is converted into potential energy <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
 <li><p>In the second half of the figure the charge is initially at rest opposite and the direction of the electric field has been reversed. This means that the charge will experience a force that acts to accelerate it in the positive <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
 <li><p>This means that the velocity of the charge increases, as does its kinetic energy. Thus its potential energy is being converted to kinetic energy.</p></li>
 </ul>
 <p>This example is analogous to a ball being rolled up or down a hill. The ball represents the charge and the steepness of the hill represents the electric field strength.</p>
-<p>In the example above, the electric field is <em>doing work</em> on the charge to cause it to accelerate or decelerate. Conservation of energy dictates that the sum of energies at its initial vs later position must be equal:</p>
+<p>In the example above, the electric field is <em>doing work</em> on the charge to cause it to accelerate or decelerate. Conservation of energy dictates that the sum of energies at its initial vs final position must be equal:</p>
 <p><span class="math notranslate nohighlight">\(K_a + U_a = K_b + U_b. \)</span></p>
 <p>The work done by the electric field on the particle must be equal to the change in its kinetic energy:</p>
 <p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = \Delta K, \)</span></p>
@@ -462,8 +462,7 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="electric-potential">
 <h2>Electric Potential<a class="headerlink" href="#electric-potential" title="Permalink to this heading">#</a></h2>
-<p>Now that we have an understanding of electric potential energy and an expression to calculate it, it is possible to define what is meant by <em>electric potential</em>.</p>
-<p>The electric field strenght is simply <em>the force per unit charge</em>. Similarly, the electric potential, <span class="math notranslate nohighlight">\(V\)</span>, is simply <em>the potential energy per unit charge</em>. This can be expressed mathematically as:</p>
+<p>Now that we have an understanding of electric potential energy and an expression to calculate it, it is possible to define what is meant by <em>electric potential</em>. The electric field strength is simply <em>the force per unit charge</em>. Similarly, the electric potential, <span class="math notranslate nohighlight">\(V\)</span>, is simply <em>the potential energy per unit charge</em>. This can be expressed mathematically as:</p>
 <p><span class="math notranslate nohighlight">\(V = \frac{U}{q}, \)</span></p>
 <p>which if we substitute the above derived expression for electric potential energy becomes:</p>
 <p><span class="math notranslate nohighlight">\( V = \frac{kQq}{qr}, \)</span></p>
@@ -494,7 +493,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\( F \Delta s = - \Delta U,\)</span></p>
 <p>and</p>
 <p><span class="math notranslate nohighlight">\( E = \frac{F}{q}.\)</span></p>
-<p>Rearranging the latter euquation and subbing into the second gives:</p>
+<p>Rearranging the latter equation and subbing into the second gives:</p>
 <p><span class="math notranslate nohighlight">\( F = Eq, \)</span></p>
 <p><span class="math notranslate nohighlight">\( (Eq)\Delta s = - \Delta U, \)</span></p>
 <p>therefore,</p>
@@ -506,7 +505,7 @@ document.write(`
 <p><img alt="" src="_images/Equipotential.png" /></p>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
-<p>Equipotential lines ares lines showing regions of equal potential. The gradient of the line that interects these equipotential lines perpendicularly gives the magnitude of the electric field in that direction. This can be calucated as:</p>
+<p>Equipotential lines ares lines showing regions of equal potential. The gradient of the line that interects these equipotential lines perpendicularly gives the magnitude of the electric field in that direction. This can be calculated as:</p>
 <p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}. \)</span></p>
 <p>The closer together the lines of equipotential, the great the electric field strength.</p>
 </div>
@@ -514,10 +513,10 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="electric-fields-examples">
 <h2>Electric Fields Examples<a class="headerlink" href="#electric-fields-examples" title="Permalink to this heading">#</a></h2>
-<p>Thus far we have only really consider the electric fields produced by individual charges. It is however useful to consider the electric fields produced by different macro systems. The examples we will look at are charged parallel plates and a charged hollow sphere.</p>
-<div class="section" id="hollow-charged-sphere">
-<h3>Hollow Charged Sphere<a class="headerlink" href="#hollow-charged-sphere" title="Permalink to this heading">#</a></h3>
-<p>Consider a hollow conducting sphere with charge evenly distributed across it surface. Electric field lines will radiate from the surface and the electric field strength will decay owing to the an inverse square law. The electric field lines will also permiate into the sphere, however, for every field line their will be an equal and opposing field line originating from the opposite side of the sphere. This means that inside the sphere the electric field lines cancel out and there is no net electric field.</p>
+<p>Thus far we have only really consider the electric fields produced by individual charges. It is however useful to consider the electric fields produced by different macroscopic systems. The examples we will look at are charged parallel plates and a charged hollow sphere.</p>
+<div class="section" id="charged-hollow-sphere">
+<h3>Charged Hollow Sphere<a class="headerlink" href="#charged-hollow-sphere" title="Permalink to this heading">#</a></h3>
+<p>Consider a hollow conducting sphere with charge evenly distributed across it surface. Electric field lines will radiate from the surface and the electric field strength will decay owing to the inverse square law. The electric field lines will also permiate into the sphere, however, for every field line their will be an equal and opposing field line originating from the opposite side of the sphere. This means that inside the sphere the electric field lines cancel out and there is no net electric field.</p>
 <p>The electric potential will also decay as one moves further from the surface of the sphere. This time the decay will simply be inversely proportional to the distance from the surface. As there is no electric field inside the sphere is equal to zero, this must mean that the rate of change of potential gradient is also equal to zero:</p>
 <p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x} = 0, \)</span></p>
 <p><span class="math notranslate nohighlight">\( \therefore \Delta V = 0 \to V = constant.\)</span></p>
@@ -530,7 +529,7 @@ document.write(`
 <p><img alt="x" src="_images/ParallelPlates.png" /></p>
 <p>The electric field between the plates is simply dependant on the difference in potential and the plate seperation, <span class="math notranslate nohighlight">\(d\)</span>:</p>
 <p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( E = \frac{V_i - V-f}{d}. \)</span></p>
+<p><span class="math notranslate nohighlight">\( E = \frac{V_i - V_f}{d}. \)</span></p>
 <p>In the case of the example above, the electric field would simply equal:</p>
 <p><span class="math notranslate nohighlight">\( E = \frac{9-0}{0.2},\)</span></p>
 <p><span class="math notranslate nohighlight">\( E = 45 \, V\,m^{-1}.\)</span></p>
@@ -564,7 +563,7 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
-<p>An electron orbits a proton in a hydrogen atom at a distance of <span class="math notranslate nohighlight">\(5.3 \times 10^-11\, m\)</span>. What is the potential energy of the electron?</p>
+<p>An electron orbits a proton in a hydrogen atom at a distance of <span class="math notranslate nohighlight">\(5.3 \times 10^{-11}\, m\)</span>. What is the potential energy of the electron?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Q1 Solution</p>
 <p>Recall that an electron and a proton have the same but opposite charges and use the appropriate equation to determine the electric potential energy:</p>
@@ -577,7 +576,7 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h2>
-<p>An electric charge Q is placed at the origin as shown in the figure below. What is the ratio between the absolute potential at point A and the potential at point B?</p>
+<p>An electric charge Q is placed at the origin as shown in the figure below. What is the ratio between the potential at point A and the potential at point B?</p>
 <p><img alt="" src="_images/ElectricPotentialQ2.png" /></p>
 <div class="dropdown admonition">
 <p class="admonition-title">Q2 Solution</p>
@@ -599,7 +598,7 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="question-3">
 <h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h2>
-<p>Points A and B are each the same distance, r, from two charges, +Q and +2Q, as shown in the figure below. What is the work required to move a charge q from point A to point B?</p>
+<p>Points A and B are each the same distance, <span class="math notranslate nohighlight">\(r\)</span>, from two charges, <span class="math notranslate nohighlight">\(+Q\)</span> and <span class="math notranslate nohighlight">\(+2Q\)</span>, as shown in the figure below. What is the work required to move a charge <span class="math notranslate nohighlight">\(q\)</span> from point A to point B?</p>
 <p><img alt="" src="_images/ElectricPotentialQ3.png" /></p>
 <div class="dropdown admonition">
 <p class="admonition-title">Q3 Solution</p>
@@ -694,7 +693,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential">Electric Potential</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential-and-electric-fields">Electric Potential and Electric Fields</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-fields-examples">Electric Fields Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hollow-charged-sphere">Hollow Charged Sphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charged-hollow-sphere">Charged Hollow Sphere</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charged-parallel-plates">Charged Parallel Plates</a></li>
 </ul>
 </li>

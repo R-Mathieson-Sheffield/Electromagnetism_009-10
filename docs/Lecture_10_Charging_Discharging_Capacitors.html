@@ -405,8 +405,8 @@ document.write(`
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
 <p>By the end of this lecture you should:</p>
 <ul class="simple">
-<li><p>Be able to sketch, the behaviour of current, voltage and charge when charging or discharging capacitors.</p></li>
-<li><p>Know and use the equations for current, charge and voltage when charging or discharging capacitors.</p></li>
+<li><p>Be able to sketch the behaviour of current, voltage and charge when charging or discharging capacitors.</p></li>
+<li><p>Know and be able to use the equations for current, charge and voltage when charging or discharging capacitors.</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -422,9 +422,7 @@ document.write(`
 <p>This behaviour can also be represented graphically showing the capacitor charge as a function of time:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x800 with 1 Axes&gt;
-</pre></div>
-</div>
+<img alt="_images/d4d4359430f03b65eaedb020df4247a269578fb6ef5c5c9769c68d7201dd42b4.png" src="_images/d4d4359430f03b65eaedb020df4247a269578fb6ef5c5c9769c68d7201dd42b4.png" />
 </div>
 </div>
 </div>
@@ -439,7 +437,7 @@ document.write(`
 </div>
 <div class="section" id="voltage">
 <h3>Voltage<a class="headerlink" href="#voltage" title="Permalink to this heading">#</a></h3>
-<p>As the difference in charge increases, the potential difference across the capacitor increases until it reaches the source voltage. This behaviour is to be expected as it was established in the last lecture that the charge and voltage are directly proportional to one another, the the constant of proportionality being equal to the capacitance <span class="math notranslate nohighlight">\(Q = CV \)</span>. Accordingly, the plot of voltage across the capacitor as a function of time is simply a scaled verion of the plot of charge against time as shown below.</p>
+<p>As the charge accumulates on the capacitor plates, the potential difference across the capacitor increases until it reaches the source voltage. This behaviour is to be expected as it was established in the last lecture that the charge and voltage are directly proportional to one another, the the constant of proportionality being equal to the capacitance <span class="math notranslate nohighlight">\(Q = CV \)</span>. Accordingly, the plot of voltage across the capacitor as a function of time is simply a scaled verion of the plot of charge against time as shown below.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/15b12d546d34fb20c3b1fce374b6b74c8aaea352985787fdd0723b9b4d370a5b.png" src="_images/15b12d546d34fb20c3b1fce374b6b74c8aaea352985787fdd0723b9b4d370a5b.png" />
@@ -453,7 +451,7 @@ document.write(`
 <p><img alt="" src="_images/CapacitorSwitch.png" /></p>
 <div class="section" id="id1">
 <h3>Charge<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>A fully charged capacitor has a high electron density on one capacitor plate. This means that when discharging, initially that electrons at the negative capacitor plate will experience a strong coulomb repulsion and be easily repelled from the capacitor plate. As time progresses, the electric field that is accelerating the electrons becomes weaker and weaker until there is no net electric field and both capacitor plates are neutrally charged. As such, the rate at which the capacitor plate becomes depleted of charge decreases as a function of time. This is shown in the plot below:</p>
+<p>A fully charged capacitor has a high electron density on one capacitor plate. This means that when discharging, initially the electrons at the negative capacitor plate will experience a strong coulomb repulsion and be easily repelled from the capacitor plate. As time progresses, the electric field that is accelerating the electrons becomes weaker and weaker until there is no net electric field and both capacitor plates are neutrally charged. As such, the rate at which the capacitor plate becomes depleted of charge decreases as a function of time. This is shown in the plot below:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/3f8c8d2ab935d4d573e3dd15c419fc535f448ca2f90bce577b9ee32caa94001b.png" src="_images/3f8c8d2ab935d4d573e3dd15c419fc535f448ca2f90bce577b9ee32caa94001b.png" />
@@ -483,11 +481,11 @@ document.write(`
 <div class="section" id="the-time-constant">
 <h2>The Time Constant<a class="headerlink" href="#the-time-constant" title="Permalink to this heading">#</a></h2>
 <p>You will have noticed that the plots above show exponential functions, more specifically exponential relationships that are functions of time. To be able to perform meaningful calculations we must introduce a new concept - <strong>the time constant, <span class="math notranslate nohighlight">\(\tau\)</span></strong>.</p>
-<p>When discharging a capacitor, the time constant is defined as <em>the amount of time it takes for the charge, voltage or current to fall to <strong><span class="math notranslate nohighlight">\(\e^{-1} \,(\approx 37%)\)</span></strong> of the inital value</em>. <strong>The time constant is therefore how long it takes for <em>any exponential</em> to get to <span class="math notranslate nohighlight">\((\approx 37%)\)</span> of its original value</strong>.</p>
+<p>When discharging a capacitor, the time constant is defined as <em>the amount of time it takes for the charge, voltage or current to fall to <span class="math notranslate nohighlight">\(e^{-1}\)</span> ~37% of the inital value</em>. <strong>The time constant is therefore how long it takes for <em>any exponential</em> to get to ~37% of its original value</strong>.</p>
 <p>The larger the time constant, the longer it will take for the exponential function to decay. <strong>The time constant has units of time e.g. seconds</strong>.</p>
 <p>For an RC circuit (one made of a resistor and a capacitor), <span class="math notranslate nohighlight">\(\tau = RC\)</span>, because the charge discharge time will depend on how much charge the capacitor is capable of holding and how much the resistor impedes the flow of charge.</p>
-<p>So so how many time constants does it take for a capacitor to become fully charged or discharged? Well as an exponential never actually reaches zero (it just gets closer and closer), we take a sensible approach and say that that it is <strong><span class="math notranslate nohighlight">\(5\)</span> time constants</strong>, as after this amount of time in the case of discharging, only approximately 0.69% of the intial charge, current or voltage will remain - this is good enough…</p>
-<p>It is important that you do not confuse the time constant with <em>halflife</em>. The half-life is defined as <em>the time it takes for either the charge, current or voltage to fall to <span class="math notranslate nohighlight">\(50%\)</span> of its original value</em> and is represented by the symbol <strong><span class="math notranslate nohighlight">\(t_{1/2}\)</span></strong>. The principle of half-life is shown on the plot below:</p>
+<p><strong>How many time constants does it take for a capacitor to become fully charged or discharged?</strong> Well as an exponential never actually reaches zero (it just gets closer and closer), we take a sensible approach and say that that it is <strong><span class="math notranslate nohighlight">\(5\)</span> time constants</strong>, as after this amount of time in the case of discharging, only approximately 0.69% of the intial charge, current or voltage will remain - this is good enough…</p>
+<p>It is important that you do not confuse the time constant with <em>half- life</em>. The half-life is defined as <em>the time it takes for either the charge, current or voltage to fall to 50% of its original value</em> and is represented by the symbol <strong><span class="math notranslate nohighlight">\(t_{1/2}\)</span></strong>. The principle of half-life is shown on the plot below:</p>
 <p><img alt="" src="_images/halflifeplot.png" /></p>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
@@ -499,17 +497,20 @@ document.write(`
 </div>
 <div class="section" id="charging-and-discharging-equations">
 <h2>Charging and Discharging Equations<a class="headerlink" href="#charging-and-discharging-equations" title="Permalink to this heading">#</a></h2>
-<p>With an understanding of the behaviour of exponential functions, we are able to determine the amount of charge held by the capacitor, the magnetude of the charging/discharging current, or voltage across the capacitor at any given time using the following equations. <strong>These are key equations. Ensure that you commit them to memory</strong>.</p>
+<p>With an understanding of the behaviour of exponential functions, we are able to determine the amount of charge held by the capacitor, the magnitude of the charging/discharging current, or voltage across the capacitor at any given time using the following equations. <strong>These are key equations. Ensure that you commit them to memory</strong>.</p>
 <div class="admonition-charging-discharging-equations admonition">
 <p class="admonition-title">Charging Discharging Equations</p>
 <p><strong>Charging:</strong></p>
 <p><span class="math notranslate nohighlight">\( Q = Q_{max} \left( 1 - e^{-t/RC} \right) = Q_{max} \left( 1 - e^{-t/\tau} \right), \)</span></p>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is the charge, <span class="math notranslate nohighlight">\(Q_{max}\)</span> is the maximum amount of charge the capacitor can hold, <span class="math notranslate nohighlight">\(t\)</span> is the time, <span class="math notranslate nohighlight">\(R\)</span> is the resistance, <span class="math notranslate nohighlight">\(C\)</span> is the capacitance and <span class="math notranslate nohighlight">\(\tau\)</span> is the time constant.</p>
+<hr class="docutils" />
 <p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} = I_0 e^{-t/\tau}, \)</span></p>
 <p>where <span class="math notranslate nohighlight">\(I\)</span> is the current and <span class="math notranslate nohighlight">\(I_0\)</span> is the initial current.</p>
+<hr class="docutils" />
 <p><span class="math notranslate nohighlight">\( V = V_0 \left( 1 - e^{-t/RC} \right) = V_0 \left( 1 - e^{-t/\tau} \right), \)</span></p>
 <p>where <span class="math notranslate nohighlight">\(V\)</span> is the voltage and <span class="math notranslate nohighlight">\(V_0\)</span> is the EMF, <span class="math notranslate nohighlight">\(\epsilon\)</span> supplied by the battery (i.e. the voltage the capacitor will charge to). Often to avoid confusion, this equation is written as:</p>
 <p><span class="math notranslate nohighlight">\( V = \epsilon \left( 1 - e^{-t/RC} \right) = \epsilon \left( 1 - e^{-t/\tau} \right). \)</span></p>
+<hr class="docutils" />
 <p><strong>Discharging</strong></p>
 <p><span class="math notranslate nohighlight">\( Q = Q_0 e^{-t/RC} = Q_{0} e^{-t/\tau}, \)</span></p>
 <p><span class="math notranslate nohighlight">\( I = I_0 e^{-t/RC} = I_{0} e^{-t/\tau}, \)</span></p>

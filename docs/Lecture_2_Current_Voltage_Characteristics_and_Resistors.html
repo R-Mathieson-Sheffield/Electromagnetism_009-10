@@ -413,7 +413,7 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="voltage-current-relationships">
 <h2>Voltage-Current Relationships<a class="headerlink" href="#voltage-current-relationships" title="Permalink to this heading">#</a></h2>
-<p>In the last lecture we saw that for a circuit/component with a given resistance, as voltage is increased the current flowing through the circuit increases linearly.This is the case for an <strong>Ohmic resistor</strong> i.e. a resistor where Ohm’s law applies (V=IR).</p>
+<p>In the last lecture we saw that for a circuit/component with a given resistance, as voltage is increased the current flowing through the circuit increases linearly. This is the case for an <strong>Ohmic resistor</strong> i.e. a resistor where Ohm’s law applies (V=IR).</p>
 <p>For many circuits/components an increase in EMF does not result in a linear increase in current as shown in the figure below. These would be characterised as non-ohmic resistors and examples include filament lamps, semiconductor diodes and thermistors.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -437,16 +437,16 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="temperature-dependencies">
 <h3>Temperature Dependencies<a class="headerlink" href="#temperature-dependencies" title="Permalink to this heading">#</a></h3>
-<p>Current-voltage relationships of many non-Ohmic materials can be explained by considering if they have a <em>negative temperature coefficient</em> (NTC) or a <em>positive temperature coefficient</em>. Materials with either of these properties are called thermistors.</p>
-<p>To understand the behaviours of these materials we need to consider an alternative expression used to calculate current, I:</p>
+<p>Current-voltage relationships of many non-Ohmic materials can be explained by considering if they have a <em>negative temperature coefficient</em> (NTC) or a <em>positive temperature coefficient</em> (PTC). Materials with either of these properties are called thermistors.</p>
+<p>To understand the behaviours of these materials we need to consider an alternative expression used to calculate current, <span class="math notranslate nohighlight">\(I\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ I = navq, \]</div>
 <p>where <span class="math notranslate nohighlight">\(n\)</span> is the density of free charge carries (e.g. number of electrons per square metre) of the material, <span class="math notranslate nohighlight">\(a\)</span> is the cross sectional area of the material (e.g. cross sectional area of wire), <span class="math notranslate nohighlight">\(v\)</span> is the drift velocity of the charge carries and <span class="math notranslate nohighlight">\(q\)</span> is the charge of each individual charge carrier.</p>
-<p>This equation intuatively makes sense - if current is the rate of flow of charge, by having more charge carries, additional charge per carrier, faster moving charges and a larger area for them to flow through we would expect a larger current.</p>
+<p>This equation intuatively makes sense. If current is the rate at which charges move aroud a circuit, by having more charge carriers, additional charge per carrier, faster moving charges and a larger area for them to flow through, we would expect a larger current.</p>
 <div class="section" id="positive-temperature-coefficient-thermistors">
 <h4>Positive Temperature Coefficient Thermistors<a class="headerlink" href="#positive-temperature-coefficient-thermistors" title="Permalink to this heading">#</a></h4>
 <p>One example of a PTC thermistor is the tungsten (metal) filament in the incandescent bulb discussed above. In operation a potential difference is applied across the tungsten filament, inducing an electric field which causes electrons to flow through the wire. This current causes the filament to heat up to a high enough temperature to emit visible light.</p>
-<p>To understand why for a PTC, the resistance increases (current decreases) as a function of voltage, we must first take a look at our filement on the microscopic scale. Tungsten is a metal and as such it has a metalic lattice structure. The individual tungsten atoms are uniformly distributed at repeating points known as <em>lattice points</em>. The outermost electrons of each atom are delocalised and able to move throughout the bulk material (hence why metals are good electrical conductors) as shown in the figure below:</p>
+<p>To understand why for a PTC the resistance increases (current decreases) as a function of voltage, we must first take a look at our filement on the microscopic scale. Tungsten is a metal and as such it has a metalic lattice structure. The individual tungsten atoms are uniformly distributed at repeating points known as <em>lattice points</em>. The outermost electrons of each atom are delocalised and able to move throughout the bulk material (hence why metals are good electrical conductors) as shown in the figure below:</p>
 <p><img alt="LatticeStructure" src="_images/MetallicLatticeStructure.png" /></p>
 <p>The atoms themselves are able to oscillate around their lattice points as shown in the gif below.</p>
 <p><img alt="LatticeVibration" src="_images/LatticeVibration.gif" /></p>
@@ -454,7 +454,7 @@ document.write(`
 </div>
 <div class="section" id="negative-temperature-coefficient-thermistors">
 <h4>Negative Temperature Coefficient Thermistors<a class="headerlink" href="#negative-temperature-coefficient-thermistors" title="Permalink to this heading">#</a></h4>
-<p>In a NTC thermistor we see that for a given increase in voltage, there is an even larger increase in the corresponding current. An NTC thermistor is typically made of a semiconductor material or graphite. In these materials as the temperature of material increases, more and more electrons in the material gain sufficient energy to be liberated from their atoms. Thus the number of free electrons that can contribute to the current increases (the density of free charge carriers <span class="math notranslate nohighlight">\(n\)</span> increases) leading to a larger current. Therefore if an increase voltage results in an increase in the materials temperature, the current will also increase and at an increasing rate (exponential increase).</p>
+<p>In a NTC thermistor we see that for a given increase in voltage, there is an even larger increase in the corresponding current. An NTC thermistor is typically made of a semiconductor material or graphite. In these materials as the temperature of material increases, more and more electrons in the material gain sufficient energy to be liberated from their atoms. This means that the number of free electrons that can contribute to the current increases (the density of free charge carriers <span class="math notranslate nohighlight">\(n\)</span> increases) leading to a larger current. It follows that if an increase voltage results in an increase in the materials temperature, the current will also increase and at an increasing rate (exponential increase).</p>
 </div>
 </div>
 </div>
@@ -483,15 +483,15 @@ document.write(`
 \[ \epsilon = V_{T} = V_1 + V_2 + V_3, \]</div>
 <p>where <span class="math notranslate nohighlight">\(V_T\)</span> is the total voltage of supplied to the circuit. Assuming that these resistors are Ohmic, we can express these individual voltage drops in terms of the current flowing through each resistor and its resistance (<span class="math notranslate nohighlight">\(V=IR\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[ V_{T} = IR_1 + IR_2 + IR_3 \]</div>
+\[ V_{T} = IR_1 + IR_2 + IR_3, \]</div>
 <div class="math notranslate nohighlight">
-\[ \therefore V_{T} = I(R_1 + R_2 + R_3) \]</div>
+\[ \therefore V_{T} = I(R_1 + R_2 + R_3). \]</div>
 <p>We can also express <span class="math notranslate nohighlight">\(V_{T}\)</span> in terms of the current and total resistance <span class="math notranslate nohighlight">\(R_{T}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ V_{total} = IR_{T} \]</div>
-<p>By comibining the two equations above we determine the desired expression:</p>
+\[ V_{total} = IR_{T}. \]</div>
+<p>By comibining the two equations above we determine get the following expression:</p>
 <div class="math notranslate nohighlight">
-\[ IR_{T} = I(R_1 + R_2 + R_3) \]</div>
+\[ IR_{T} = I(R_1 + R_2 + R_3), \]</div>
 <div class="math notranslate nohighlight">
 \[ \therefore R_{T} = R_1 + R_2 + R_3.\]</div>
 <p>We have therefore proven that the equivalent resistance of resistors arranged in series is simply equal to the sum of the individual resistances.</p>
@@ -508,7 +508,7 @@ document.write(`
 <p>To determine the total equivalent resistance of resistors arranged in parallel we must understand two additional concept:</p>
 <ul class="simple">
 <li><p>The potential difference measured across components arranged in parallel is always the same.</p></li>
-<li><p>At a junction current is split into smaller currents, the sum of which is equal to the total current.</p></li>
+<li><p>Current is split into multiple smaller currents at a junction, the sum of which is equal to the total current.</p></li>
 </ul>
 <p>Taking this into consideration, we can now write an expression for the potential differences across the resistors arranged in parallel and the total voltage supplied ot the circuit:</p>
 <div class="math notranslate nohighlight">
