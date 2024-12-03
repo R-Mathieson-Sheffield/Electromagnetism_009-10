@@ -412,47 +412,62 @@ document.write(`
 </ul>
 <p>This example is analogous to a ball being rolled up or down a hill. The ball represents the charge and the steepness of the hill represents the electric field strength.</p>
 <p>In the example above, the electric field is <em>doing work</em> on the charge to cause it to accelerate or decelerate. Conservation of energy dictates that the sum of energies at its initial vs final position must be equal:</p>
-<p><span class="math notranslate nohighlight">\(K_a + U_a = K_b + U_b. \)</span></p>
+<div class="math notranslate nohighlight">
+\[K_a + U_a = K_b + U_b. \]</div>
 <p>The work done by the electric field on the particle must be equal to the change in its kinetic energy:</p>
-<p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = \Delta K, \)</span></p>
-<p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = K_b - K_a. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \Delta W_{a \to b} = \Delta K, \]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta W_{a \to b} = K_b - K_a. \]</div>
 <p>By rearranging our initial equation, the work done can be expressed in terms of the potential energy:</p>
-<p><span class="math notranslate nohighlight">\(K_a + U_a = K_b + U_b,  \)</span></p>
-<p><span class="math notranslate nohighlight">\( U_a - U_b = K_b - K_a,  \)</span></p>
-<p><span class="math notranslate nohighlight">\( -(U_b - U_a) = K_b - K_a, \)</span></p>
-<p><span class="math notranslate nohighlight">\( - \Delta U = \Delta K ,\)</span></p>
-<p><span class="math notranslate nohighlight">\( \Delta W_{a \to b} = - \Delta U.\)</span></p>
+<div class="math notranslate nohighlight">
+\[K_a + U_a = K_b + U_b,  \]</div>
+<div class="math notranslate nohighlight">
+\[ U_a - U_b = K_b - K_a,  \]</div>
+<div class="math notranslate nohighlight">
+\[ -(U_b - U_a) = K_b - K_a, \]</div>
+<div class="math notranslate nohighlight">
+\[ - \Delta U = \Delta K ,\]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta W_{a \to b} = - \Delta U.\]</div>
 <p>By recalling that work done has an alternative definition, we can write an expression for the potential energy of a charge in an electric field. Work done is also equal to force multiplied by displacement:</p>
-<p><span class="math notranslate nohighlight">\( W = F\Delta s, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ W = F\Delta s, \]</div>
 <p>therefore, continuing from above:</p>
-<p><span class="math notranslate nohighlight">\( F\Delta s = -\Delta U,\)</span></p>
-<p><span class="math notranslate nohighlight">\( \Delta U = - (F\Delta s). \)</span></p>
+<div class="math notranslate nohighlight">
+\[ F\Delta s = -\Delta U,\]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta U = - (F\Delta s). \]</div>
 <p>By considering the Coulomb force acting on the charge we can derive a general expression for the potential energy of two charges:</p>
-<p><span class="math notranslate nohighlight">\( U = \frac{kQq}{r} \)</span>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The derivation for the general expression for the potential energy of two charges is included here for completeness. This derivation is non-examinable, but may be of interest to keen students!</p>
-</div>
-<p>To derive the general expression above, consider a test charge moving from point <span class="math notranslate nohighlight">\(a\)</span> to point <span class="math notranslate nohighlight">\(b\)</span> in an electric field produced by a second charge as shown in the figure below.</p>
-<p><img alt="" src="_images/PotentialEnergyDerivation.png" /></p>
-<p>As the test charge moves along the path shown, the force it experiences will be different at each point along the path. This means that to determine the work done in moving the charge along this path, we must employ some integration:</p>
-<p><span class="math notranslate nohighlight">\( W = \int F dr. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned} U = \frac{kQq}{r} $$. \\```{Warning} 
+The derivation for the general expression for the potential energy of two charges is included here for completeness. This derivation is non-examinable, but may be of interest to keen students!
+```\\To derive the general expression above, consider a test charge moving from point $a$ to point $b$ in an electric field produced by a second charge as shown in the figure below.\\![](Figures/PotentialEnergyDerivation.png)\\As the test charge moves along the path shown, the force it experiences will be different at each point along the path. This means that to determine the work done in moving the charge along this path, we must employ some integration:\\$$ W = \int F dr. \end{aligned}\end{align} \]</div>
 <p>The force <span class="math notranslate nohighlight">\(F\)</span> is the Coulomb force and the limits of integration in this case will be the radial distances between the two charges at points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. Therefore the equation above can be expressed as:</p>
-<p><span class="math notranslate nohighlight">\( W = \int^{r_b}_{r_a} k\frac{Qq}{r^2} dr, \)</span></p>
-<p><span class="math notranslate nohighlight">\( W = \int^{r_b}_{r_a} kQq\frac{1}{r^2} dr, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ W = \int^{r_b}_{r_a} k\frac{Qq}{r^2} dr, \]</div>
+<div class="math notranslate nohighlight">
+\[ W = \int^{r_b}_{r_a} kQq\frac{1}{r^2} dr, \]</div>
 <p>which when evaluated becomes:</p>
-<p><span class="math notranslate nohighlight">\( W = kQq\left[-\frac{1}{r} \right]^{r_b}_{r_a}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( W = kQq\left[\frac{1}{r_a} - \frac{1}{r_b} \right], \)</span></p>
-<p><span class="math notranslate nohighlight">\( W = \frac{kQq}{r_a} - \frac{kQq}{r_b}.\)</span></p>
+<div class="math notranslate nohighlight">
+\[ W = kQq\left[-\frac{1}{r} \right]^{r_b}_{r_a}, \]</div>
+<div class="math notranslate nohighlight">
+\[ W = kQq\left[\frac{1}{r_a} - \frac{1}{r_b} \right], \]</div>
+<div class="math notranslate nohighlight">
+\[ W = \frac{kQq}{r_a} - \frac{kQq}{r_b}.\]</div>
 <p>Recalling that <span class="math notranslate nohighlight">\(W = -\Delta U \)</span>:</p>
-<p><span class="math notranslate nohighlight">\( - \Delta U = \frac{kQq}{r_a} - \frac{kQq}{r_b}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( U_a - U_b =  \frac{kQq}{r_a} - \frac{kQq}{r_b}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ - \Delta U = \frac{kQq}{r_a} - \frac{kQq}{r_b}, \]</div>
+<div class="math notranslate nohighlight">
+\[ U_a - U_b =  \frac{kQq}{r_a} - \frac{kQq}{r_b}. \]</div>
 <p>Therefore the general expression for the electric potential energy is simply:</p>
-<p><span class="math notranslate nohighlight">\( U = \frac{kQq}{r}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ U = \frac{kQq}{r}. \]</div>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
 <p>The general expression for electric potential energy is:</p>
-<p><span class="math notranslate nohighlight">\( U = \frac{kQq}{r}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ U = \frac{kQq}{r}. \]</div>
 <p>This expression is derived by considering the work done in moving a charge through an electric field and understanding that <span class="math notranslate nohighlight">\(W = - \Delta U\)</span>.</p>
 </div>
 </div>
@@ -460,23 +475,33 @@ document.write(`
 <div class="section" id="electric-potential">
 <h2>Electric Potential<a class="headerlink" href="#electric-potential" title="Permalink to this heading">#</a></h2>
 <p>Now that we have an understanding of electric potential energy and an expression to calculate it, it is possible to define what is meant by <em>electric potential</em>. The electric field strength is simply <em>the force per unit charge</em>. Similarly, the electric potential, <span class="math notranslate nohighlight">\(V\)</span>, is simply <em>the potential energy per unit charge</em>. This can be expressed mathematically as:</p>
-<p><span class="math notranslate nohighlight">\(V = \frac{U}{q}, \)</span></p>
+<div class="math notranslate nohighlight">
+\[V = \frac{U}{q}, \]</div>
 <p>which if we substitute the above derived expression for electric potential energy becomes:</p>
-<p><span class="math notranslate nohighlight">\( V = \frac{kQq}{qr}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( V = \frac{kQ}{r}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ V = \frac{kQq}{qr}, \]</div>
+<div class="math notranslate nohighlight">
+\[ V = \frac{kQ}{r}. \]</div>
 <p>A consistent definition for the electric potential at a point <span class="math notranslate nohighlight">\(r\)</span> in an electric field is <em>the work done per unit positive charge in bringing a test charge from infinity to that point r</em>. This can be expressed mathematically as:</p>
-<p><span class="math notranslate nohighlight">\( W_{\infty \to r} = kQq\left(\frac{1}{r} - \frac{1}{\infty} \right), \)</span></p>
-<p><span class="math notranslate nohighlight">\( \Delta U = kQq\left(\frac{1}{r} - \frac{1}{\infty} \right), \)</span></p>
-<p><span class="math notranslate nohighlight">\( U_r - U_\infty = \frac{kQq}{r} - \frac{kQq}{\infty}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( U_r - U_\infty = \frac{kQq}{r} - 0, \)</span></p>
-<p><span class="math notranslate nohighlight">\( \therefore \frac{U}{q} = \frac{kQ}{r}, \)</span></p>
-<p><span class="math notranslate nohighlight">\(  V = \frac{kQ}{r}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ W_{\infty \to r} = kQq\left(\frac{1}{r} - \frac{1}{\infty} \right), \]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta U = kQq\left(\frac{1}{r} - \frac{1}{\infty} \right), \]</div>
+<div class="math notranslate nohighlight">
+\[ U_r - U_\infty = \frac{kQq}{r} - \frac{kQq}{\infty}, \]</div>
+<div class="math notranslate nohighlight">
+\[ U_r - U_\infty = \frac{kQq}{r} - 0, \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore \frac{U}{q} = \frac{kQ}{r}, \]</div>
+<div class="math notranslate nohighlight">
+\[  V = \frac{kQ}{r}. \]</div>
 <p>The electric potential is a scalar field that can have many different values at different positions around a point charge. In any given position, the electric potential will have a value (magnitude), but no associated direction.</p>
 <p>Recalling that work done is measured in joules, the electric potential has units of joules per coulomb which is the same as a volt.</p>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
 <p>Electric Potential is the electric potential energy per unit charge and can be calculated using:</p>
-<p><span class="math notranslate nohighlight">\( V = \frac{U}{q} = \frac{kQ}{r}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ V = \frac{U}{q} = \frac{kQ}{r}. \]</div>
 <p>It has the unit of <strong>Volt</strong>.</p>
 </div>
 </div>
@@ -486,24 +511,32 @@ document.write(`
 <p>When discussing the transfer of energy from kinetic to potential or vice versa, I used the analogy of a ball rolling up or down a hill, where the steepness of the hill corresponded to the strength of the electric field. This analogy is also useful for understanding the relationship between electric potential and electric field strength.</p>
 <p>First, let’s introduce the idea of <em>equipotential</em>. <em>Equipotential lines</em> follow the regions of <strong>equal electric potential</strong>. For example, if you consider the region of space around a point charge, the electric potential at any distance <span class="math notranslate nohighlight">\(r\)</span> from the point charge will be the same regardless of the direction. Thus we can draw lines of equipotential around the charge. For a point charge, these lines will be circular, however for more complex distributions of charge, these lines form different patterns.</p>
 <p>How do we then relate the electric field strength to the electric potential? Well recall that:</p>
-<p><span class="math notranslate nohighlight">\( \Delta W = - \Delta U, \)</span></p>
-<p><span class="math notranslate nohighlight">\( F \Delta s = - \Delta U,\)</span></p>
+<div class="math notranslate nohighlight">
+\[ \Delta W = - \Delta U, \]</div>
+<div class="math notranslate nohighlight">
+\[ F \Delta s = - \Delta U,\]</div>
 <p>and</p>
-<p><span class="math notranslate nohighlight">\( E = \frac{F}{q}.\)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = \frac{F}{q}.\]</div>
 <p>Rearranging the latter equation and subbing into the second gives:</p>
-<p><span class="math notranslate nohighlight">\( F = Eq, \)</span></p>
-<p><span class="math notranslate nohighlight">\( (Eq)\Delta s = - \Delta U, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ F = Eq, \]</div>
+<div class="math notranslate nohighlight">
+\[ (Eq)\Delta s = - \Delta U, \]</div>
 <p>therefore,</p>
-<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta U}{q\Delta s}, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = -\frac{\Delta U}{q\Delta s}, \]</div>
 <p>as <span class="math notranslate nohighlight">\( \Delta V = -\frac{\Delta U}{\Delta q}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = -\frac{\Delta V}{\Delta x}. \]</div>
 <p>The electric field is therefore proportional the rate of change of the electric potential <span class="math notranslate nohighlight">\(V\)</span> over a given distance <span class="math notranslate nohighlight">\(x\)</span>. <strong>The electric field is the negative potential gradient</strong>.</p>
 <p>An easy way to think about equipotential is to consider a contour plot of a mountain. The countour lines represent regions of equal elevation. The closer together the contour lines, the steeper the mountain. Similarly, as we have shown above <strong>the closer the lines of equipotential, the steeper the gradient and consequently the greater the electric field strength!</strong>.</p>
 <p><img alt="" src="_images/Equipotential.png" /></p>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
 <p>Equipotential lines ares lines showing regions of equal potential. The gradient of the line that interects these equipotential lines perpendicularly gives the magnitude of the electric field in that direction. This can be calculated as:</p>
-<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = -\frac{\Delta V}{\Delta x}. \]</div>
 <p>The closer together the lines of equipotential, the great the electric field strength.</p>
 </div>
 </div>
@@ -515,8 +548,10 @@ document.write(`
 <h3>Charged Hollow Sphere<a class="headerlink" href="#charged-hollow-sphere" title="Permalink to this heading">#</a></h3>
 <p>Consider a hollow conducting sphere with charge evenly distributed across it surface. Electric field lines will radiate from the surface and the electric field strength will decay owing to the inverse square law. The electric field lines will also permiate into the sphere, however, for every field line their will be an equal and opposing field line originating from the opposite side of the sphere. This means that inside the sphere the electric field lines cancel out and there is no net electric field.</p>
 <p>The electric potential will also decay as one moves further from the surface of the sphere. This time the decay will simply be inversely proportional to the distance from the surface. As there is no electric field inside the sphere is equal to zero, this must mean that the rate of change of potential gradient is also equal to zero:</p>
-<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x} = 0, \)</span></p>
-<p><span class="math notranslate nohighlight">\( \therefore \Delta V = 0 \to V = constant.\)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = -\frac{\Delta V}{\Delta x} = 0, \]</div>
+<div class="math notranslate nohighlight">
+\[ \therefore \Delta V = 0 \to V = constant.\]</div>
 <p>The electric potential remains constant inside the sphere.</p>
 <p><img alt="" src="_images/HollowSphere.png" /></p>
 </div>
@@ -525,22 +560,31 @@ document.write(`
 <p>It is possible to produce a <em>uniform electric field</em> (one which does not change) using two charged parallel plates (ignoring edge effects). If these plates are connected to a the terminals of a power supply, one plate per terminal, they will have different potentials. Consider the example below where the plates are connected to a 9V battery - the top plate has a potential of <span class="math notranslate nohighlight">\(9\,\)</span>V whereas the bottom plate has a potential of <span class="math notranslate nohighlight">\(0\,\)</span>V.</p>
 <p><img alt="x" src="_images/ParallelPlates.png" /></p>
 <p>The electric field between the plates is simply dependant on the difference in potential and the plate seperation, <span class="math notranslate nohighlight">\(d\)</span>:</p>
-<p><span class="math notranslate nohighlight">\( E = -\frac{\Delta V}{\Delta x}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( E = \frac{V_i - V_f}{d}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = -\frac{\Delta V}{\Delta x}, \]</div>
+<div class="math notranslate nohighlight">
+\[ E = \frac{V_i - V_f}{d}. \]</div>
 <p>In the case of the example above, the electric field would simply equal:</p>
-<p><span class="math notranslate nohighlight">\( E = \frac{9-0}{0.2},\)</span></p>
-<p><span class="math notranslate nohighlight">\( E = 45 \, V\,m^{-1}.\)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = \frac{9-0}{0.2},\]</div>
+<div class="math notranslate nohighlight">
+\[ E = 45 \, V\,m^{-1}.\]</div>
 <p>Finally, let us consider the work done on a particle moving from one plate to the other. Let’s assume that a negative charge is placed at the positive plate and then accelerated towards the negative plate, the work done on it by the electric field (and its corresponding gain in kinetic energy) can be determined as follows:</p>
-<p><span class="math notranslate nohighlight">\( W = F \Delta s = F d, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ W = F \Delta s = F d, \]</div>
 <p>Rearranging <span class="math notranslate nohighlight">\( E = \frac{F}{q}\)</span> to <span class="math notranslate nohighlight">\(F=Eq\)</span>  and substituting gives:</p>
-<p><span class="math notranslate nohighlight">\( W = Eqd, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ W = Eqd, \]</div>
 <p>Recalling <span class="math notranslate nohighlight">\( E = \frac{V}{d} \)</span> and substituting gives:</p>
-<p><span class="math notranslate nohighlight">\( W = \frac{V}{d} q d, \)</span></p>
-<p><span class="math notranslate nohighlight">\( W = qV. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ W = \frac{V}{d} q d, \]</div>
+<div class="math notranslate nohighlight">
+\[ W = qV. \]</div>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
 <p>The energy gained by a charge moving through a potential difference of <span class="math notranslate nohighlight">\(V\)</span> across a distance <span class="math notranslate nohighlight">\(d\)</span> is given by:</p>
-<p><span class="math notranslate nohighlight">\(E = qV.\)</span></p>
+<div class="math notranslate nohighlight">
+\[ E = qV.\]</div>
 <p>This is an key equation to remember as charges are routinely accelerated through potentials.</p>
 </div>
 </div>
@@ -565,8 +609,8 @@ document.write(`
 <p class="admonition-title">Q1 Solution</p>
 <p>Recall that an electron and a proton have the same but opposite charges and use the appropriate equation to determine the electric potential energy:</p>
 <p><span class="math notranslate nohighlight">\( U = \frac {kQq}{r} \)</span></p>
-<p><span class="math notranslate nohighlight">\( U = \frac{8.99\times 10^9 \cdot 1.6\times10^{-19} \cdot 1.6 \times 10^{-19}}{5.3 \times 10^{-11}} \)</span></p>
-<p><span class="math notranslate nohighlight">\( U = 4.4 \times 10^{-18} \, J \)</span></p>
+<p><span class="math notranslate nohighlight">\( U = \frac{8.99\times 10^9 \cdot -1.6\times10^{-19} \cdot 1.6 \times 10^{-19}}{5.3 \times 10^{-11}} \)</span></p>
+<p><span class="math notranslate nohighlight">\( U = -4.4 \times 10^{-18} \, J \)</span></p>
 </div>
 </div>
 </div>
