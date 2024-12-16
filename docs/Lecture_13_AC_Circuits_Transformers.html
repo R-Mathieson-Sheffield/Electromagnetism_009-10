@@ -434,19 +434,28 @@ document.write(`
 <p>This derivation of the RMS current is included below for completeness, but there is no need to memorise it for your exams. You should however, memorise the equation for the root-mean-square current and voltage.</p>
 </div>
 <p>To determine the RMS value of current the instantaneous current is then squared:</p>
-<p><span class="math notranslate nohighlight">\( I^2 = \left( I_{peak}\sin\left(\omega t\right) \right) ^2, \)</span></p>
-<p><span class="math notranslate nohighlight">\( I^2 = I^2_{peak} \sin^2(\omega t) \)</span></p>
+<div class="math notranslate nohighlight">
+\[ I^2 = \left( I_{peak}\sin\left(\omega t\right) \right) ^2, \]</div>
+<div class="math notranslate nohighlight">
+\[ I^2 = I^2_{peak} \sin^2(\omega t) \]</div>
 <p>The double angle formula from trigonometry can then be used to get rid of the <span class="math notranslate nohighlight">\(\sin^2(\omega t)\)</span> term:</p>
-<p><span class="math notranslate nohighlight">\( \sin^2(\theta) = \frac{1}{2} \left( 1 - \sin(2\theta) \right), \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \sin^2(\theta) = \frac{1}{2} \left( 1 - \sin(2\theta) \right), \]</div>
 <p>Therefore:</p>
-<p><span class="math notranslate nohighlight">\( I^2 = I^2_{peak} \cdot \frac{1}{2} \left( 1 - \sin(2\omega t) \right), \)</span></p>
-<p><span class="math notranslate nohighlight">\( I^2 = \frac{1}{2}I^2_{peak} - \frac{1}{2}I^2_{peak}\sin(2\omega t), \)</span></p>
+<div class="math notranslate nohighlight">
+\[ I^2 = I^2_{peak} \cdot \frac{1}{2} \left( 1 - \sin(2\omega t) \right), \]</div>
+<div class="math notranslate nohighlight">
+\[ I^2 = \frac{1}{2}I^2_{peak} - \frac{1}{2}I^2_{peak}\sin(2\omega t), \]</div>
 <p>The time average value of <span class="math notranslate nohighlight">\(\sin(2\omega t)\)</span> is zero as half of the time the value is positive and the other half negative, this means that:</p>
-<p><span class="math notranslate nohighlight">\( I^2 = \frac{1}{2}I^2_{peak}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( I_{RMS} = \sqrt{\frac{1}{2}I^2_{peak}} \)</span></p>
-<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{I_{peak}}{\sqrt{2}}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ I^2 = \frac{1}{2}I^2_{peak}, \]</div>
+<div class="math notranslate nohighlight">
+\[ I_{RMS} = \sqrt{\frac{1}{2}I^2_{peak}} \]</div>
+<div class="math notranslate nohighlight">
+\[ I_{RMS} = \frac{I_{peak}}{\sqrt{2}}. \]</div>
 <p>The same is also true for the voltage output. Thus measuring the current flowing through a resistive element allows the voltage to be calculated:</p>
-<p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{V_{peak}}{\sqrt{2}}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ V_{RMS} = \frac{V_{peak}}{\sqrt{2}}. \]</div>
 <p>The plot below shows the RMS voltage superimposed onto a alternating voltage waveform.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -456,10 +465,13 @@ document.write(`
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
 <p>The root-mean-square value is an adjusted average that can be used to characterise alternating currents and voltages:</p>
-<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{I_{peak}}{\sqrt{2}}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{V_{peak}}{\sqrt{2}}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ I_{RMS} = \frac{I_{peak}}{\sqrt{2}}, \]</div>
+<div class="math notranslate nohighlight">
+\[ V_{RMS} = \frac{V_{peak}}{\sqrt{2}}. \]</div>
 <p>The average power of an AC circuit may then be calculated as:</p>
-<p><span class="math notranslate nohighlight">\( P_{RMS} = I_{RMS}V_{RMS} \)</span></p>
+<div class="math notranslate nohighlight">
+\[ P_{RMS} = I_{RMS}V_{RMS} \]</div>
 </div>
 </div>
 <hr class="docutils" />
@@ -470,44 +482,61 @@ document.write(`
 <p>The schematic below shows how the EMF that drives current is produced using an alternator. This is an example of Faraday and Lenz’s law:</p>
 <p><img alt="" src="_images/Alternator.png" /></p>
 <p>Recalling that the induced EMF is proportional to the rate of change of magnetic flux through the circuit, it is clear to see the relationship between the two lines shown on the plot. The flux here is shown to follow a cosine waveform:</p>
-<p><span class="math notranslate nohighlight">\( \Phi_B = \Phi_{B,0} \cos{(\omega t)}, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \Phi_B = |\vec{B}||\vec{A}| \cos{(\omega t)}, \]</div>
 <p>using Faraday and Lenz’s law:</p>
-<p><span class="math notranslate nohighlight">\(\epsilon = - \frac{d \Phi_B}{dt} \)</span></p>
-<p><span class="math notranslate nohighlight">\( \epsilon = - \frac{d}{dt} \left(\Phi_{B,0} \cos{(\omega t)}\right), \)</span></p>
-<p>The differential of <span class="math notranslate nohighlight">\(\cos(\theta)\)</span> is <span class="math notranslate nohighlight">\(-\sin(\theta)\)</span>, therefore:</p>
-<p><span class="math notranslate nohighlight">\( \epsilon = - ( - \Phi_{B,0}  \sin{(\omega t)}), \)</span></p>
-<p><span class="math notranslate nohighlight">\( \epsilon = \Phi_{B,0}\sin{(\omega t)}. \)</span></p>
-<p>Therefore we would expect the EMF to be a sine waveform, which is exactly what we see in the plot above! In the figure above, the slip rings and brushes are present to allow the coil of wire to continue to rotate without becoming twisted.</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = - \frac{d \Phi_B}{dt} \]</div>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = - \frac{d}{dt} \left(|\vec{B}||\vec{A}| \cos{(\omega t)}\right). \]</div>
+<p>It is apparent that the flux is changing as a function of <span class="math notranslate nohighlight">\(\cos{\omega t}\)</span>, therefore to determine the EMF, we must differentiate this function with respect to time. The differential of <span class="math notranslate nohighlight">\(\cos\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d(\cos(ax))}{dt} = -a \sin(ax), \]</div>
+<p>thus:</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = - ( - \omega|\vec{B}||\vec{A}|  \sin{(\omega t)}), \]</div>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = \omega|\vec{B}||\vec{A}| \sin{(\omega t)}. \]</div>
+<p>Accordingly, we would expect the EMF to be in the form a of a sine wave, which is exactly what we see in the plot above! In the figure above, the slip rings and brushes are present to allow the coil of wire to continue to rotate without becoming twisted.</p>
 </div>
 </div>
 <div class="section" id="inductors">
 <h2>Inductors<a class="headerlink" href="#inductors" title="Permalink to this heading">#</a></h2>
-<p>In previous lectures, we have briefly considered inductors, for example when conisdering LC resonance. An inductor is simply a coil of wire which produces a mangetic field when current flows through it. An inductor stores electrical energy in the form of magnetic energy.</p>
-<p>Considering Faraday’s law, any circuit with a changing current will have a <strong>self-induced EMF</strong> in the circuit due to the variation in magnetic flux. Considering Lenz’s law, the induced EMF will oppose the change in current that induced it, thus making variations in current more difficult. In an AC circuit, the inductor will suppress rapid variations in current.</p>
-<p>An example of a circuit containing an inductor is an LR circuit (an inductor and a resistor) - the equations used to describe current/voltage charactersitics in an LR circuit are very similar to those for an LC circuit, however the time constant in these circuits is simply <span class="math notranslate nohighlight">\(\tau = \frac{L}{R}\)</span>.</p>
+<p>In previous lectures, we have briefly considered inductors, for example when conisdering LC resonance. An inductor is simply a coil of wire which produces a mangetic field when current flows through it. An inductor stores energy in the form of a magnetic field.</p>
+<p>Considering Faraday’s law, any circuit with a changing current will have a <strong>self-induced EMF</strong> in the circuit due to the variation in magnetic flux. The self-induced emf in a circuit induced by a changing current is given by:</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = - L \frac{dI}{dt}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is the inductance of the coil (unit = the Henry), and the minus sign signifies that self-induced emf in the circuit opposes any change in current in the circuit as required by Lenz’s law (the induced EMF will oppose the change in current that induced it, thus making variations in current more difficult). In an AC circuit, the inductor will suppress rapid variations in current.</p>
 <p><img alt="" src="_images/LRCircuit.png" /></p>
-<p>If an LR circuit is connected to a DC supply, as shown above, as there is no change in the current flowing through it, it produces a static magnetic field. In this instance, as there is no change in magnetic flux through the the inductor there is no potential difference induced across the device… the inductor does not effectively store magnetic energy in a DC circuit and behaves as a normal wire. Inductors work most effectively when using an AC current.</p>
+<p>If an LR circuit (one containing a resistor and an inductor) is connected to a DC supply, as shown above, as there is no change in the current flowing through it, the inductor produces a static magnetic field. In this instance, as there is no change in magnetic flux through, there is no potential difference induced across the inductor and it behaves as a normal wire. If there are any slight variations in the DC current, the inductor will induce an emf that opposes these changes, thus maintaining a steady current.</p>
+<p>Inductors work most effectively when using an AC current. The continual change in the magnitude and direction of the current results in the inductor generating an oscillating magnetic field, which permits cyclical energy storage and release. One such example is the transfer of energy between circuits via a <em>transformer</em>.</p>
 </div>
 <div class="section" id="transformers">
 <h2>Transformers<a class="headerlink" href="#transformers" title="Permalink to this heading">#</a></h2>
-<p>A transformer comprises two or more inductors and a transformer core and operates via the principle of mutual induction. One of the inductors is powered using an alternating current, which in turn generates an alternating magnetic field/flux. The magnetic field is directed to the second inductor via the transformer core (this maximises efficiency). The magnetic field then induces a second alternating current across the other inductor.</p>
+<p>A transformer comprises two or more inductors and a transformer core and operates via the principle of <em>mutual induction</em>. One of the inductors is driven using an alternating current, which in turn generates an alternating magnetic field/flux. The magnetic field is directed to the second inductor via the transformer core (this maximises efficiency) and induces a second alternating current across the other inductor.</p>
 <p><img alt="" src="_images/Transformer.png" /></p>
-<p>Transformers are used to convert very large voltages to smaller, more manageable voltages, like the ones we use in our homes. The power grid uses much larger voltages than those that are needed to used in homes. The large voltage is used as it means a much smaller current is required to transport the same amount of power across the grid (P=IV). Over the gird wires, we loser power (P=I<span class="math notranslate nohighlight">\(^2\)</span>R), but this is much less than would be lost if using a smaller voltage!</p>
+<p>Transformers are used to convert very large voltages to smaller, more manageable voltages, like the ones we use in our homes. The power grid uses much larger voltages than those that are needed to used in homes. The large voltage is used as it means a much smaller current is required to transport the same amount of power across the grid (P=IV). Over the gird wires, power is lost (P=I<span class="math notranslate nohighlight">\(^2\)</span>R), but this is much less than would be lost if using a smaller voltage!</p>
 <p>Approximately <span class="math notranslate nohighlight">\(400\,kV\)</span> goes through the power grid over long distances. Therefore if we want <span class="math notranslate nohighlight">\(100\,W\)</span> of power, this would result in a current of <span class="math notranslate nohighlight">\(0.25\, mA\)</span>. Assuming a reasonable resistance, the power loss across the line will be relatively small.</p>
 <p>For safety reasons, we want to minimize household voltages - we must put the power through a transformer to lower the voltage going into our homes! Occasionally we want to increase the amount of voltage using transformers - for example, microwave ovens!</p>
 <p><img alt="" src="_images/TransformerGrid.png" /></p>
 <p>In an ideal transformer, the flux is perfectly conserved:</p>
-<p><span class="math notranslate nohighlight">\( \Phi_1 = \Phi_2. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \Phi_1 = \Phi_2. \]</div>
 <p>Using Faraday and Lenz’s laws the (induced) voltage in the inductor coils is calculated as:</p>
-<p><span class="math notranslate nohighlight">\( V_1 = - N_1 \frac{\Delta \Phi}{\Delta t}, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ V_1 = - N_1 \frac{\Delta \Phi}{\Delta t}, \]</div>
 <p>and</p>
-<p><span class="math notranslate nohighlight">\( V_2= - N_2 \frac{\Delta \Phi}{\Delta t}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ V_2= - N_2 \frac{\Delta \Phi}{\Delta t}. \]</div>
 <p>As the rate of change of flux is the same for each indutor in an ideal transformer, the two equations can be rearranged as:</p>
-<p><span class="math notranslate nohighlight">\( \frac{V_1}{N_1} = - \frac{\Delta \Phi}{\Delta t}, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_1}{N_1} = - \frac{\Delta \Phi}{\Delta t}, \]</div>
 <p>and</p>
-<p><span class="math notranslate nohighlight">\( \frac{V_2}{N_2} = - \frac{\Delta \Phi}{\Delta t}, \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_2}{N_2} = - \frac{\Delta \Phi}{\Delta t}, \]</div>
 <p>therefore the equations can be equated as:</p>
-<p><span class="math notranslate nohighlight">\( \frac{V_1}{N_1} = \frac{V_2}{N_2}. \)</span></p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_1}{N_1} = \frac{V_2}{N_2}. \]</div>
 <p><strong>The equation above can be used to determine the voltage step-up or step-down for transformers!</strong></p>
 <div class="section" id="transformer-losses">
 <h3>Transformer Losses<a class="headerlink" href="#transformer-losses" title="Permalink to this heading">#</a></h3>
@@ -545,14 +574,11 @@ document.write(`
 <p>The first thing to do is determine the average volage, the RMS voltage:</p>
 <p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{V_{peak}}{\sqrt{2}}, \)</span></p>
 <p><span class="math notranslate nohighlight">\( V_{RMS} = \frac{36.0}{\sqrt{2}}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( V_{RMS} =  25.5 \, V.\)</span></p>
-<p>Next, using the resistance, the average current can be determined using Ohms law:</p>
-<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{V_{RMS}}{R}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( I_{RMS} = \frac{25.5}{12.0}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( I_{RMS} = 2.12 \, A. \)</span></p>
-<p>Finally the power can be determined:</p>
-<p><span class="math notranslate nohighlight">\( P = I_{RMS} V_{RMS}, \)</span></p>
-<p><span class="math notranslate nohighlight">\( P = 54.1 \, W. \)</span></p>
+<p>Next, we can determine the average (RMS) power of the resistor using one of the power equations, as we have voltage and resistance it makes sense to use the following:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{V^2}{R} \)</span></p>
+<p>Finally the average power can be determined by subbing in the RMS voltage into the above equation:</p>
+<p><span class="math notranslate nohighlight">\( P = \frac{\left(\frac{36.0}{\sqrt{2}}\right)}{12}, \)</span></p>
+<p><span class="math notranslate nohighlight">\( P = 54.0 \, W. \)</span></p>
 </div>
 </div>
 <hr class="docutils" />
